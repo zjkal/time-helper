@@ -1,0 +1,21 @@
+{
+  "name": "zjkal/time-helper",
+  "description": "最方便的PHP时间助手类, 所有方法都可以传入任意类型的时间日期格式或者时间戳",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "zjkal",
+      "email": "zjkal@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "zjkal\\": "src/"
+    }
+  }
+}

@@ -3,13 +3,16 @@
 [![Latest Unstable Version](http://poser.pugx.org/zjkal/time-helper/v/unstable)](https://packagist.org/packages/zjkal/time-helper)
 [![License](http://poser.pugx.org/zjkal/time-helper/license)](https://packagist.org/packages/zjkal/time-helper)
 [![Total Downloads](http://poser.pugx.org/zjkal/time-helper/downloads)](https://packagist.org/packages/zjkal/time-helper)
+
 # TimeHelper
+
+### ⭐ ⭐请不要吝啬你的小星星 ⭐ ⭐
 
 * 这是一个最方便的PHP时间助手类
 * **所有方法都可以传入任意类型的时间日期格式或者时间戳**。
 * 作者将长期维护并不断完善使用率比较高的助手函数。
 * 使用过程中发现BUG或者希望添加其他助手函数，请直接提交Issues或者直接与我联系。
-### ⭐ ⭐请不要吝啬你的小星星 ⭐ ⭐
+
 # 通过Composer导入类库
 
 ```bash

@@ -97,7 +97,7 @@ TimeHelper::diffYears('2022-4-10 23:01:11','Apr 11, 2020');
 
 ### 5. 返回N小时/天/星期/月/年前或者后的时间戳
 
-*只传入一个参数以当前时间计算,传入第二个参数则以该时间计算*
+*只传入1个参数以当前时间计算,传入第2个参数则以该时间计算,传入第3个参数为true,则时间取整*
 
 ```php
 //返回指定时间3分钟前的时间戳
@@ -112,8 +112,8 @@ TimeHelper::beforeHour(datetime:'Apr 11, 2020');
 //返回2小时后的时间戳
 TimeHelper::afterHour(2);
 
-//返回指定时间15天前的时间戳
-TimeHelper::beforeDay(15,'2022-7-11');
+//返回指定时间15天前0点的时间戳
+TimeHelper::beforeDay(15,'2022-7-11',true);
 
 //返回15天后的时间戳
 TimeHelper::afterDay(15);

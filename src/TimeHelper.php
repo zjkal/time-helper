@@ -269,30 +269,34 @@ class TimeHelper
      * 返回N分钟前的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $minute 分钟数(默认为1分钟)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前分钟0秒的时间戳
      * @return int 时间戳
      */
-    public static function beforeMinute(int $minute = 1, $datetime = null): int
+    public static function beforeMinute(int $minute = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('-%d minute', $minute))->getTimestamp();
+        $timestamp = $date->modify(sprintf('-%d minute', $minute))->getTimestamp();
+        return $round ? strtotime(date('Y-m-d H:i:00', $timestamp)) : $timestamp;
     }
 
     /**
      * 返回N分钟后的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $minute 分钟数(默认为1分钟)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前分钟0秒的时间戳
      * @return int 时间戳
      */
-    public static function afterMinute(int $minute = 1, $datetime = null): int
+    public static function afterMinute(int $minute = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('+%d minute', $minute))->getTimestamp();
+        $timestamp = $date->modify(sprintf('+%d minute', $minute))->getTimestamp();
+        return $round ? strtotime(date('Y-m-d H:i:00', $timestamp)) : $timestamp;
     }
 
 
@@ -300,30 +304,34 @@ class TimeHelper
      * 返回N小时前的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $hour 小时数(默认为1小时)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前小时0分钟的时间戳
      * @return int 时间戳
      */
-    public static function beforeHour(int $hour = 1, $datetime = null): int
+    public static function beforeHour(int $hour = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('-%d hour', $hour))->getTimestamp();
+        $timestamp = $date->modify(sprintf('-%d hour', $hour))->getTimestamp();
+        return $round ? strtotime(date('Y-m-d H:00:00', $timestamp)) : $timestamp;
     }
 
     /**
      * 返回N小时后的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $hour 小时数(默认为1小时)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前小时0分钟的时间戳
      * @return int 时间戳
      */
-    public static function afterHour(int $hour = 1, $datetime = null): int
+    public static function afterHour(int $hour = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('+%d hour', $hour))->getTimestamp();
+        $timestamp = $date->modify(sprintf('+%d hour', $hour))->getTimestamp();
+        return $round ? strtotime(date('Y-m-d H:00:00', $timestamp)) : $timestamp;
     }
 
 
@@ -331,30 +339,35 @@ class TimeHelper
      * 返回N天前的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $day 天数(默认为1天)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期0点的时间戳
      * @return int 时间戳
      */
-    public static function beforeDay(int $day = 1, $datetime = null): int
+    public static function beforeDay(int $day = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('-%d day', $day))->getTimestamp();
+        $timestamp = $date->modify(sprintf('-%d day', $day))->getTimestamp();
+        return $round ? strtotime(date('Y-m-d 00:00:00', $timestamp)) : $timestamp;
     }
 
     /**
      * 返回N天后的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $day 天数(默认为1天)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期0点的时间戳
      * @return int 时间戳
      */
-    public static function afterDay(int $day = 1, $datetime = null): int
+    public static function afterDay(int $day = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('+%d day', $day))->getTimestamp();
+        $timestamp = $date->modify(sprintf('+%d day', $day))->getTimestamp();
+        return $round ? strtotime(date('Y-m-d 00:00:00', $timestamp)) : $timestamp;
+
     }
 
     /**
@@ -391,59 +404,67 @@ class TimeHelper
      * 返回N月前的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $month 月数(默认为1个月)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期1号0点的时间戳
      * @return int 时间戳
      */
-    public static function beforeMonth(int $month = 1, $datetime = null): int
+    public static function beforeMonth(int $month = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('-%d month', $month))->getTimestamp();
+        $timestamp = $date->modify(sprintf('-%d month', $month))->getTimestamp();
+        return $round ? strtotime(date('Y-m-1 00:00:00', $timestamp)) : $timestamp;
     }
 
     /**
      * 返回N月后的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $month 月数(默认为1个月)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期1号0点的时间戳
      * @return int 时间戳
      */
-    public static function afterMonth(int $month = 1, $datetime = null): int
+    public static function afterMonth(int $month = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('+%d month', $month))->getTimestamp();
+        $timestamp = $date->modify(sprintf('+%d month', $month))->getTimestamp();
+        return $round ? strtotime(date('Y-m-1 00:00:00', $timestamp)) : $timestamp;
     }
 
     /**
      * 返回N年前的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $year 年数(默认为1年)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期1月1号0点的时间戳
      * @return int 时间戳
      */
-    public static function beforeYear(int $year = 1, $datetime = null): int
+    public static function beforeYear(int $year = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('-%d year', $year))->getTimestamp();
+        $timestamp = $date->modify(sprintf('-%d year', $year))->getTimestamp();
+        return $round ? strtotime(date('Y-1-1 00:00:00', $timestamp)) : $timestamp;
     }
 
     /**
      * 返回N年后的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $year 年数(默认为1年)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期1月1号0点的时间戳
      * @return int 时间戳
      */
-    public static function afterYear(int $year = 1, $datetime = null): int
+    public static function afterYear(int $year = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
         if ($datetime !== null) {
             $date->setTimestamp(self::toTimestamp($datetime));
         }
-        return $date->modify(sprintf('+%d year', $year))->getTimestamp();
+        $timestamp = $date->modify(sprintf('+%d year', $year))->getTimestamp();
+        return $round ? strtotime(date('Y-1-1 00:00:00', $timestamp)) : $timestamp;
     }
 }

@@ -40,6 +40,7 @@ echo '相差周数:';
 var_dump(\zjkal\TimeHelper::diffWeeks(1586451741)) . PHP_EOL;
 echo 'N时间前&后:';
 var_dump(\zjkal\TimeHelper::beforeMinute(3, '2022-3-2 10:15:33'));
+var_dump(\zjkal\TimeHelper::beforeMinute(3, '2022-3-2 10:15:33', true));
 var_dump(\zjkal\TimeHelper::afterMinute(2, 1586451741));
 var_dump(\zjkal\TimeHelper::beforeHour(5, '2022-3-2 10:15:33'));
 var_dump(\zjkal\TimeHelper::afterHour(5));

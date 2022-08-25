@@ -89,7 +89,7 @@ TimeHelper::diffDays('2022-4-10 23:01:11','Apr 11, 2020');
 TimeHelper::diffWeeks('2022-4-10 23:01:11');
 
 //计算两个日期相差月数
-TimeHelper::diffMonth(1586451741,'Apr 11, 2020');
+TimeHelper::diffMonths(1586451741,'Apr 11, 2020');
 
 //计算两个日期相差年数
 TimeHelper::diffYears('2022-4-10 23:01:11','Apr 11, 2020');

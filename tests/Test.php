@@ -3,8 +3,11 @@ require '../vendor/autoload.php';
 
 echo \zjkal\TimeHelper::is_timestamp(1646186290) . PHP_EOL;
 echo \zjkal\TimeHelper::secondEndToday() . PHP_EOL;
+echo \zjkal\TimeHelper::secondMinute(5) . PHP_EOL;
+echo \zjkal\TimeHelper::secondHour(2) . PHP_EOL;
 echo \zjkal\TimeHelper::secondDay(7) . PHP_EOL;
 echo \zjkal\TimeHelper::secondWeek(4) . PHP_EOL;
+echo '友好日期:';
 echo \zjkal\TimeHelper::friendly_date('2022-3-2 10:15:33') . PHP_EOL;
 echo \zjkal\TimeHelper::friendly_date(1646186290, 365, 'Y-m-d', 'en') . PHP_EOL;
 
@@ -52,3 +55,5 @@ var_dump(\zjkal\TimeHelper::beforeMonth(1, 'March 3, 2010 10:15:33'));
 var_dump(\zjkal\TimeHelper::afterMonth(1));
 var_dump(\zjkal\TimeHelper::beforeYear(2));
 var_dump(\zjkal\TimeHelper::afterYear(2));
+echo '获得毫秒级时间戳:';
+var_dump(\zjkal\TimeHelper::getMillisecond());

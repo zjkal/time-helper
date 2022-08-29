@@ -68,6 +68,26 @@ class TimeHelper
     }
 
     /**
+     * 返回一分钟的秒数,传入参数可以返回数分钟的秒数
+     * @param int $minutes 分钟数,默认为1分钟
+     * @return int 秒数
+     */
+    public static function secondMinute(int $minutes = 1): int
+    {
+        return 60 * $minutes;
+    }
+
+    /**
+     * 返回一小时的秒数,传入参数可以返回数小时的秒数
+     * @param int $hours 小时数,默认为1小时
+     * @return int 秒数
+     */
+    public static function secondHour(int $hours = 1): int
+    {
+        return 3600 * $hours;
+    }
+
+    /**
      * 返回一天的秒数,传入参数可以返回数天的秒数
      * @param int $days 天数,默认为1天
      * @return int 秒数
@@ -466,5 +486,16 @@ class TimeHelper
         }
         $timestamp = $date->modify(sprintf('+%d year', $year))->getTimestamp();
         return $round ? strtotime(date('Y-1-1 00:00:00', $timestamp)) : $timestamp;
+    }
+
+    /**
+     * 获得毫秒级的时间戳
+     * @return int
+     */
+    public static function getMillisecond(): int
+    {
+        list($mtime, $time) = explode(' ', microtime());
+        $mtime = (float)sprintf('%.0f', (floatval($mtime) + floatval($time)) * 1000);
+        return intval(substr($mtime, 0, 13));
     }
 }

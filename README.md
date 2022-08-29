@@ -35,6 +35,12 @@ use zjkal\TimeHelper;
 //返回到今天晚上零点之前的秒数
 TimeHelper::secondEndToday();
 
+//返回N分钟的秒数(默认为1分钟)
+TimeHelper::secondMinute(5);
+
+//返回N小时的秒数(默认为1小时)
+TimeHelper::secondHour(2);
+
 //返回N天的秒数(默认为1天)
 TimeHelper::secondDay(10);
 

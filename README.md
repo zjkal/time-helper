@@ -153,4 +153,4 @@ TimeHelper::afterYear(2);
 
 # 开源协议
 
-[MIT](LICENSE.TXT)
+[MIT](LICENSE)

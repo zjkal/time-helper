@@ -4,6 +4,7 @@ declare (strict_types=1);
 namespace zjkal;
 
 use DateTime;
+use InvalidArgumentException;
 
 /**
  * 最方便的PHP时间助手类, 所有方法都可以传入任意类型的时间日期格式或者时间戳
@@ -39,7 +40,7 @@ class TimeHelper
     public static function toTimestamp($datetime): int
     {
         if (!$datetime) {
-            throw new \InvalidArgumentException('Param datetime must be a timestamp or a string time');
+            throw new InvalidArgumentException('Param datetime must be a timestamp or a string time');
         }
 
         $start = strtotime('1970-01-01 07:00:00'); // 0
@@ -52,7 +53,7 @@ class TimeHelper
             if ($timestamp) {
                 return $timestamp;
             } else {
-                throw new \InvalidArgumentException('Param datetime must be a timestamp or a string time');
+                throw new InvalidArgumentException('Param datetime must be a timestamp or a string time');
             }
         }
     }

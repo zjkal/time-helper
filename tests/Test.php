@@ -57,3 +57,6 @@ var_dump(\zjkal\TimeHelper::beforeYear(2));
 var_dump(\zjkal\TimeHelper::afterYear(2));
 echo '获得毫秒级时间戳:';
 var_dump(\zjkal\TimeHelper::getTimestamp(1));
+var_dump(\zjkal\TimeHelper::getMilliTimestamp());
+var_dump(\zjkal\TimeHelper::getMicroTimestamp());
+var_dump(\zjkal\TimeHelper::getNanoTimestamp());

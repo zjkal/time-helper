@@ -156,8 +156,14 @@ TimeHelper::is_timestamp(1646360133);
 //将任意时间类型的字符串转为时间戳
 TimeHelper::toTimestamp('Apr 11, 2020');
 
+//获取秒级的时间戳(普通,可用time()代替)
+TimeHelper::getStamp();
 //获取毫秒级的时间戳
-TimeHelper::getMillisecond();
+TimeHelper::getStamp(1);
+//获取微秒级的时间戳
+TimeHelper::getStamp(2);
+//获取纳秒级的时间戳
+TimeHelper::getStamp(3);
 ```
 
 > **特别说明**: 所有时间的方法都可以传入任意格式的时间或者时间戳, 但是有一点请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或其他格式.

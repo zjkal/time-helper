@@ -488,14 +488,22 @@ class TimeHelper
         return $round ? strtotime(date('Y-1-1 00:00:00', $timestamp)) : $timestamp;
     }
 
+
     /**
-     * 获得毫秒级的时间戳
+     * 获得秒级/毫秒级/微秒级/纳秒级时间戳
+     * @param int $level 默认0,获得秒级时间戳. 1.毫秒级时间戳; 2.微秒级时间戳; 3.纳米级时间戳
      * @return int
      */
-    public static function getMillisecond(): int
+    public static function getTimestamp(int $level = 0): int
     {
-        list($mtime, $time) = explode(' ', microtime());
-        $mtime = (float)sprintf('%.0f', (floatval($mtime) + floatval($time)) * 1000);
-        return intval(substr($mtime, 0, 13));
+        if ($level === 0) return time();
+        list($msc, $sec) = explode(' ', microtime());
+        if ($level === 1) {
+            return sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000);
+        } elseif ($level === 2) {
+            return sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000);
+        } else {
+            return sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000 * 1000);
+        }
     }
 }

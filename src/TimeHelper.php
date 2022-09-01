@@ -1,5 +1,5 @@
 <?php
-//declare (strict_types=1);
+declare (strict_types=1);
 
 namespace zjkal;
 
@@ -65,7 +65,7 @@ class TimeHelper
     public static function secondEndToday(): int
     {
         list($y, $m, $d) = explode('-', date('Y-m-d'));
-        return mktime(23, 59, 59, $m, $d, $y) - time();
+        return mktime(23, 59, 59, intval($m), intval($d), intval($y)) - time();
     }
 
     /**
@@ -292,7 +292,7 @@ class TimeHelper
             $new_datetime = date('Y-m-d');
         }
 
-        return date_diff(date_create($datetime), date_create($new_datetime))->days / 7;
+        return intval(date_diff(date_create($datetime), date_create($new_datetime))->days / 7);
     }
 
     /**

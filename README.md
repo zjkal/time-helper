@@ -145,9 +145,27 @@ TimeHelper::beforeYear(3,'2022-7-11');
 TimeHelper::afterYear(2);
 ```
 
-### 6.其他方法
+### 6.获取当前秒级/毫秒级/微秒级/纳秒级的时间戳
 
-*也是几个经常会用到的方法,暂时没有分类*
+*,生成订单号或者与其他编程语言对接时可能会用到*
+
+```php
+//获取秒级的时间戳,可用time()代替
+TimeHelper::getTimestamp();
+
+//获取毫秒级的时间戳
+TimeHelper::getMilliTimestamp();
+
+//获取微秒级的时间戳
+TimeHelper::getMicroTimestamp();
+
+//获取纳秒级的时间戳
+TimeHelper::getNanoTimestamp();
+```
+
+### 7.其他方法
+
+*也是经常会用到的方法,暂时没有分类*
 
 ```php
 //判断一个字符串是否为时间戳,是返回true,否返回false
@@ -155,15 +173,6 @@ TimeHelper::is_timestamp(1646360133);
 
 //将任意时间类型的字符串转为时间戳
 TimeHelper::toTimestamp('Apr 11, 2020');
-
-//获取秒级的时间戳(普通,可用time()代替)
-TimeHelper::getStamp();
-//获取毫秒级的时间戳
-TimeHelper::getStamp(1);
-//获取微秒级的时间戳
-TimeHelper::getStamp(2);
-//获取纳秒级的时间戳
-TimeHelper::getStamp(3);
 ```
 
 > **特别说明**: 所有时间的方法都可以传入任意格式的时间或者时间戳, 但是有一点请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或其他格式.

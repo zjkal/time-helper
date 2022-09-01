@@ -506,4 +506,31 @@ class TimeHelper
             return sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000 * 1000);
         }
     }
+
+    /**
+     * 获得毫秒级的时间戳
+     * @return int
+     */
+    public static function getMilliTimestamp(): int
+    {
+        return self::getTimestamp(1);
+    }
+
+    /**
+     * 获得微秒级的时间戳
+     * @return int
+     */
+    public static function getMicroTimestamp(): int
+    {
+        return self::getTimestamp(2);
+    }
+
+    /**
+     * 获得纳秒级的时间戳
+     * @return int
+     */
+    public static function getNanoTimestamp(): int
+    {
+        return self::getTimestamp(3);
+    }
 }

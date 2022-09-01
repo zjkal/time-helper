@@ -1,9 +1,9 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/zjkal/time-helper/PHP%20Composer)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/zjkal/time-helper/PHP%20Composer)](https://packagist.org/packages/zjkal/time-helper)
 [![PHP Version Require](http://poser.pugx.org/zjkal/time-helper/require/php)](https://packagist.org/packages/zjkal/time-helper)
 [![Latest Stable Version](http://poser.pugx.org/zjkal/time-helper/v)](https://packagist.org/packages/zjkal/time-helper)
 [![Latest Unstable Version](http://poser.pugx.org/zjkal/time-helper/v/unstable)](https://packagist.org/packages/zjkal/time-helper)
 [![License](http://poser.pugx.org/zjkal/time-helper/license)](https://packagist.org/packages/zjkal/time-helper)
-![GitHub top language](https://img.shields.io/github/languages/top/zjkal/time-helper)
+[![GitHub top language](https://img.shields.io/github/languages/top/zjkal/time-helper)](https://packagist.org/packages/zjkal/time-helper)
 [![Total Downloads](http://poser.pugx.org/zjkal/time-helper/downloads)](https://packagist.org/packages/zjkal/time-helper)
 
 # TimeHelper
@@ -143,6 +143,21 @@ TimeHelper::beforeYear(3,'2022-7-11');
 
 //返回2年后的时间戳
 TimeHelper::afterYear(2);
+```
+
+### 6.其他方法
+
+*也是几个经常会用到的方法,暂时没有分类*
+
+```php
+//判断一个字符串是否为时间戳,是返回true,否返回false
+TimeHelper::is_timestamp(1646360133);
+
+//将任意时间类型的字符串转为时间戳
+TimeHelper::toTimestamp('Apr 11, 2020');
+
+//获取毫秒级的时间戳
+TimeHelper::getMillisecond();
 ```
 
 > **特别说明**: 所有时间的方法都可以传入任意格式的时间或者时间戳, 但是有一点请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或其他格式.

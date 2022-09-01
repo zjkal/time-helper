@@ -1,5 +1,5 @@
 <?php
-
+declare (strict_types=1);
 
 namespace zjkal;
 
@@ -499,11 +499,11 @@ class TimeHelper
         if ($level === 0) return time();
         list($msc, $sec) = explode(' ', microtime());
         if ($level === 1) {
-            return sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000);
+            return intval(sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000));
         } elseif ($level === 2) {
-            return sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000);
+            return intval(sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000));
         } else {
-            return sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000 * 1000);
+            return intval(sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000 * 1000));
         }
     }
 

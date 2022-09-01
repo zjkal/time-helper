@@ -1,5 +1,5 @@
 <?php
-declare (strict_types=1);
+//declare (strict_types=1);
 
 namespace zjkal;
 
@@ -147,6 +147,52 @@ class TimeHelper
             return $diffs . ($lang == 'zh' ? '秒前' : ' seconds ago');
         } else {
             return $lang == 'zh' ? '刚刚' : 'just';
+        }
+    }
+
+    /**
+     * 讲时间转换为友好显示格式
+     * @param int|string $time 时间日期的字符串或数字
+     * @param string $lang 语言,默认为中文,如果要显示英文传入en即可
+     * @return string 转换后的友好时间格式
+     */
+    public static function toFriendly($time, string $lang = 'zh'): string
+    {
+        $time = self::toTimestamp($time);
+
+        $birthday = new DateTime();
+        $birthday->setTimestamp($time);
+
+        $now = new DateTime();
+        $interval = $birthday->diff($now);
+
+        $count = 0;
+        $type = '';
+
+        if ($interval->y) {
+            $count = $interval->y;
+            $type = $lang == 'zh' ? '年' : ' year';
+        } elseif ($interval->m) {
+            $count = $interval->m;
+            $type = $lang == 'zh' ? '月' : ' month';
+        } elseif ($interval->d) {
+            $count = $interval->d;
+            $type = $lang == 'zh' ? '天' : ' day';
+        } elseif ($interval->h) {
+            $count = $interval->h;
+            $type = $lang == 'zh' ? '小时' : ' hour';
+        } elseif ($interval->i) {
+            $count = $interval->i;
+            $type = $lang == 'zh' ? '分钟' : ' minute';
+        } elseif ($interval->s) {
+            $count = $interval->s;
+            $type = $lang == 'zh' ? '秒' : ' second';
+        }
+
+        if (empty($type)) {
+            return $lang == 'zh' ? '未知' : 'unknown';
+        } else {
+            return $count . $type . ($lang == 'zh' ? '前' : (($count > 1 ? 's' : '') . ' ago'));
         }
     }
 

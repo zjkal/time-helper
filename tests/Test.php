@@ -1,7 +1,8 @@
 <?php
 require '../vendor/autoload.php';
-
+echo '测试:';
 echo \zjkal\TimeHelper::isTimestamp(1646186290) . PHP_EOL;
+echo '测试:';
 echo \zjkal\TimeHelper::secondEndToday() . PHP_EOL;
 echo \zjkal\TimeHelper::secondMinute(5) . PHP_EOL;
 echo \zjkal\TimeHelper::secondHour(2) . PHP_EOL;
@@ -10,6 +11,7 @@ echo \zjkal\TimeHelper::secondWeek(4) . PHP_EOL;
 echo '友好日期:';
 echo \zjkal\TimeHelper::friendly_date('2022-3-2 10:15:33') . PHP_EOL;
 echo \zjkal\TimeHelper::friendly_date(1646186290, 365, 'Y-m-d', 'en') . PHP_EOL;
+echo \zjkal\TimeHelper::toFriendly('2020-3-2 10:15:33','en') . PHP_EOL;
 
 $datetime = '2020-04-10 22:22:22';
 

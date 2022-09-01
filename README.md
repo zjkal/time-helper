@@ -55,18 +55,12 @@ TimeHelper::secondWeek(4);
 *一般用于社交类平台,评论,论坛等*
 
 ```php
-//一共4个参数:
+//一共2个参数:
 //第1个参数传入字符串类型的时间或者时间戳都可以，
-//第2个参数为多少天以上直接显示为日期格式（默认365天）
-//第3个参数为显示日期的格式，与PHP自带的date函数的格式化规则一致(默认为Y-m-d)
-//第4个参数为语言(默认为zh,即中文)
-
-TimeHelper::friendly_date('2022-3-2 10:15:33');
-TimeHelper::friendly_date(1646186290, 365, 'Y-m-d');
-
-//也可以显示英文
-TimeHelper::friendly_date('2022-3-2 10:15:33',lang:'en');//php>8.0的用法
-TimeHelper::friendly_date('2022-3-2 10:15:33',365,'Y-m-d','en');//php<8.0需要写全参数
+//第2个参数为语言(默认为中文,需要英文请传入en)
+TimeHelper::toFriendly('2022-3-2 10:15:33');
+//英文
+TimeHelper::toFriendly(1646186290, 'en');
 ```
 
 ### 3. 判断时间范围

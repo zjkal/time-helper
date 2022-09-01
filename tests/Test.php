@@ -1,7 +1,7 @@
 <?php
 require '../vendor/autoload.php';
 
-echo \zjkal\TimeHelper::is_timestamp(1646186290) . PHP_EOL;
+echo \zjkal\TimeHelper::isTimestamp(1646186290) . PHP_EOL;
 echo \zjkal\TimeHelper::secondEndToday() . PHP_EOL;
 echo \zjkal\TimeHelper::secondMinute(5) . PHP_EOL;
 echo \zjkal\TimeHelper::secondHour(2) . PHP_EOL;

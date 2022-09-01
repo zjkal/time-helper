@@ -169,7 +169,7 @@ TimeHelper::getNanoTimestamp();
 
 ```php
 //判断一个字符串是否为时间戳,是返回true,否返回false
-TimeHelper::is_timestamp(1646360133);
+TimeHelper::isTimestamp(1646360133);
 
 //将任意时间类型的字符串转为时间戳
 TimeHelper::toTimestamp('Apr 11, 2020');

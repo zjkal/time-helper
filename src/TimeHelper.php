@@ -18,7 +18,7 @@ class TimeHelper
      * @param int|string $timestamp 要判断的字符串
      * @return bool 如果是时间戳返回True,否则返回False
      */
-    public static function is_timestamp($timestamp): bool
+    public static function isTimestamp($timestamp): bool
     {
         if (!is_int($timestamp)) {
             return false;

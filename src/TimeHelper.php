@@ -20,11 +20,10 @@ class TimeHelper
      */
     public static function isTimestamp($timestamp): bool
     {
-        if (!is_int($timestamp)) {
-            return false;
-        }
-
-        if (strtotime(date('Y-m-d H:i:s', $timestamp)) === $timestamp) {
+        $start = strtotime('1970-01-01 00:00:00');
+        $end = strtotime('2099-12-31 23:59:59');
+        //判断是否为时间戳
+        if (!empty($timestamp) && is_numeric($timestamp) && $timestamp <= $end && $timestamp >= $start) {
             return true;
         } else {
             return false;
@@ -39,12 +38,12 @@ class TimeHelper
      */
     public static function toTimestamp($datetime): int
     {
-        if (!$datetime) {
+        if (empty($datetime)) {
             throw new InvalidArgumentException('Param datetime must be a timestamp or a string time');
         }
 
-        $start = strtotime('1970-01-01 07:00:00'); // 0
-        $end = strtotime('2038-01-19 03:14:07'); // 2147454847
+        $start = strtotime('1970-01-01 00:00:00');
+        $end = strtotime('2099-12-31 23:59:59');
         //判断是否为时间戳
         if (is_numeric($datetime) && $datetime <= $end && $datetime >= $start) {
             return intval($datetime);

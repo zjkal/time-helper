@@ -1,3 +1,7 @@
+> Version 1.0.7
+> * 增加了将任意格式的时间转换为指定格式的方法
+> * 删除废弃方法friendly_date(),请使用toFriendly()代替
+
 > Version 1.0.6
 > * 修复BUG
  

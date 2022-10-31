@@ -108,48 +108,6 @@ class TimeHelper
     }
 
     /**
-     * 友好的时间显示
-     * @param int|string $time 时间日期的字符串或数字
-     * @param int $max_days 转换格式的最大天数,超过此天数则直接显示日期,默认为365
-     * @param string $format 格式,和date函数格式一致,默认为Y年m月d日
-     * @param string $lang 语言,默认为中文,如果要显示英文传入en即可
-     * @return false|string 转换后的友好时间格式
-     */
-    public static function friendly_date($time, int $max_days = 365, string $format = 'Y年m月d日', string $lang = 'zh')
-    {
-
-        $time = self::toTimestamp($time);
-        $now_time = time();
-        if ($time > $now_time) {
-            return date($format, $time);
-        }
-
-        $z = date('z', $time);//当前的第几天
-        $now_days = date('z', $now_time);
-        if ($z > $now_days) {
-            $now_days += 365;
-        }
-        $diff_days = $now_days - $z;//获取差异天
-        $diffs = $now_time - $time;//获取差异秒
-
-        if ($diff_days >= $max_days) {
-            return date($format, $time);
-        } elseif ($diff_days >= 2) {
-            return $diff_days . ($lang == 'zh' ? '天前' : ' days ago');
-        } elseif ($diff_days >= 1) {
-            return $lang == 'zh' ? '昨天' : 'yesterday';
-        } elseif ($diffs >= 3600) {
-            return floor($diffs / 3600) . ($lang == 'zh' ? '小时前' : ' hours ago');
-        } elseif ($diffs >= 60) {
-            return floor($diffs / 60) . ($lang == 'zh' ? '分钟前' : ' minutes ago');
-        } elseif ($diffs >= 10) {
-            return $diffs . ($lang == 'zh' ? '秒前' : ' seconds ago');
-        } else {
-            return $lang == 'zh' ? '刚刚' : 'just';
-        }
-    }
-
-    /**
      * 讲时间转换为友好显示格式
      * @param int|string $time 时间日期的字符串或数字
      * @param string $lang 语言,默认为中文,如果要显示英文传入en即可
@@ -579,4 +537,18 @@ class TimeHelper
     {
         return self::getTimestamp(3);
     }
+
+    /**
+     * 将任意格式的时间转换为指定格式
+     * @param string $format
+     * @param int|string $datetime
+     * @return false|string
+     */
+    public static function format(string $format = 'Y-m-d H:i:s', $datetime = null): string
+    {
+        $datetime = $datetime ?: time();
+        return date($format, self::toTimestamp($datetime));
+    }
+
+    //开发计划: 1.判断当前日期是星期几;2.判断当前时间是工作日还是周六日;3.判断当前时间是不是星期一,星期二,...
 }

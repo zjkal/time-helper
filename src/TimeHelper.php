@@ -496,7 +496,7 @@ class TimeHelper
     /**
      * 获得秒级/毫秒级/微秒级/纳秒级时间戳
      * @param int $level 默认0,获得秒级时间戳. 1.毫秒级时间戳; 2.微秒级时间戳; 3.纳米级时间戳
-     * @return int
+     * @return int 时间戳
      */
     public static function getTimestamp(int $level = 0): int
     {
@@ -513,7 +513,7 @@ class TimeHelper
 
     /**
      * 获得毫秒级的时间戳
-     * @return int
+     * @return int 毫秒级时间戳
      */
     public static function getMilliTimestamp(): int
     {
@@ -522,7 +522,7 @@ class TimeHelper
 
     /**
      * 获得微秒级的时间戳
-     * @return int
+     * @return int 微秒级时间戳
      */
     public static function getMicroTimestamp(): int
     {
@@ -531,7 +531,7 @@ class TimeHelper
 
     /**
      * 获得纳秒级的时间戳
-     * @return int
+     * @return int 纳秒级时间戳
      */
     public static function getNanoTimestamp(): int
     {
@@ -540,9 +540,9 @@ class TimeHelper
 
     /**
      * 将任意格式的时间转换为指定格式
-     * @param string $format
-     * @param int|string $datetime
-     * @return false|string
+     * @param string $format 格式化字符串
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return false|string 格式化后的时间字符串
      */
     public static function format(string $format = 'Y-m-d H:i:s', $datetime = null): string
     {
@@ -550,5 +550,13 @@ class TimeHelper
         return date($format, self::toTimestamp($datetime));
     }
 
-    //开发计划: 1.判断当前日期是星期几;2.判断当前时间是工作日还是周六日;3.判断当前时间是不是星期一,星期二,...
+    /**
+     * 获得指定日期是星期几(默认为当前时间)
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 星期几(1-7)
+     */
+    public static function getWeekDay($datetime = null): int
+    {
+        return intval($datetime ? date('N', self::toTimestamp($datetime)) : date('N'));
+    }
 }

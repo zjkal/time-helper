@@ -217,6 +217,16 @@ class TimeHelper
     }
 
     /**
+     * 获得指定日期是星期几(默认为当前时间)
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 星期几(1-7)
+     */
+    public static function getWeekDay($datetime = null): int
+    {
+        return intval($datetime ? date('N', self::toTimestamp($datetime)) : date('N'));
+    }
+
+    /**
      * 返回两个日期相差天数(如果只传入一个日期,则与当天时间比较)
      * @param int|string $datetime 要计算的时间
      * @param int|string $new_datetime 要比较的时间(默认为当前时间)
@@ -548,15 +558,5 @@ class TimeHelper
     {
         $datetime = $datetime ?: time();
         return date($format, self::toTimestamp($datetime));
-    }
-
-    /**
-     * 获得指定日期是星期几(默认为当前时间)
-     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @return int 星期几(1-7)
-     */
-    public static function getWeekDay($datetime = null): int
-    {
-        return intval($datetime ? date('N', self::toTimestamp($datetime)) : date('N'));
     }
 }

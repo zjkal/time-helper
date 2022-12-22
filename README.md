@@ -1,4 +1,4 @@
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/zjkal/time-helper/PHP%20Composer)](https://packagist.org/packages/zjkal/time-helper)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/php.yml?branch=main)](https://github.com/zjkal/time-helper/actions)
 [![PHP Version Require](http://poser.pugx.org/zjkal/time-helper/require/php)](https://packagist.org/packages/zjkal/time-helper)
 [![Latest Stable Version](http://poser.pugx.org/zjkal/time-helper/v)](https://packagist.org/packages/zjkal/time-helper)
 [![Latest Unstable Version](http://poser.pugx.org/zjkal/time-helper/v/unstable)](https://packagist.org/packages/zjkal/time-helper)

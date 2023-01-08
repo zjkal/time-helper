@@ -33,13 +33,13 @@ class TimeHelper
     /**
      * 将任意时间类型的参数转为时间戳
      * 请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或者使用 date_create_from_format() 函数。
-     * @param int|string $datetime 要转换为时间戳的字符串或数字
+     * @param int|string $datetime 要转换为时间戳的字符串或数字,如果为空则返回当前时间戳
      * @return int 时间戳
      */
-    public static function toTimestamp($datetime): int
+    public static function toTimestamp($datetime = null): int
     {
         if (empty($datetime)) {
-            throw new InvalidArgumentException('Param datetime must be a timestamp or a string time');
+            return time();
         }
 
         $start = strtotime('1970-01-01 00:00:00');
@@ -184,7 +184,6 @@ class TimeHelper
             return false;
         }
     }
-
 
     /**
      * 判断日期是否为本月
@@ -333,7 +332,6 @@ class TimeHelper
         return $round ? strtotime(date('Y-m-d H:i:00', $timestamp)) : $timestamp;
     }
 
-
     /**
      * 返回N小时前的时间戳,传入第二个参数,则从该时间开始计算
      * @param int $hour 小时数(默认为1小时)
@@ -367,7 +365,6 @@ class TimeHelper
         $timestamp = $date->modify(sprintf('+%d hour', $hour))->getTimestamp();
         return $round ? strtotime(date('Y-m-d H:00:00', $timestamp)) : $timestamp;
     }
-
 
     /**
      * 返回N天前的时间戳,传入第二个参数,则从该时间开始计算
@@ -502,7 +499,6 @@ class TimeHelper
         return $round ? strtotime(date('Y-1-1 00:00:00', $timestamp)) : $timestamp;
     }
 
-
     /**
      * 获得秒级/毫秒级/微秒级/纳秒级时间戳
      * @param int $level 默认0,获得秒级时间戳. 1.毫秒级时间戳; 2.微秒级时间戳; 3.纳米级时间戳
@@ -556,7 +552,36 @@ class TimeHelper
      */
     public static function format(string $format = 'Y-m-d H:i:s', $datetime = null): string
     {
-        $datetime = $datetime ?: time();
         return date($format, self::toTimestamp($datetime));
+    }
+
+    /**
+     * 判断该日期是否为闰年
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return bool 闰年返回true,否则返回false
+     */
+    public static function isLeapYear($datetime = null): bool
+    {
+        return date('L', self::toTimestamp($datetime)) == 1;
+    }
+
+    /**
+     * 判断该日期的当年有多少天
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 该年的天数
+     */
+    public static function daysInYear($datetime = null): int
+    {
+        return self::isLeapYear($datetime) ? 366 : 365;
+    }
+
+    /**
+     * 判断该日期的当月有多少天
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 该月的天数
+     */
+    public static function daysInMonth($datetime = null): int
+    {
+        return intval(date('t', self::toTimestamp($datetime)));
     }
 }

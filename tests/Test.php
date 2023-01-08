@@ -66,3 +66,11 @@ var_dump(\zjkal\TimeHelper::format('Y-m-d H:i:s', 'May 3, 2021'));
 
 echo '今天是星期几:' . PHP_EOL;
 var_dump(\zjkal\TimeHelper::getWeekDay('Nov 28, 2022'));
+
+echo '是否为闰年:' . PHP_EOL;
+var_dump(\zjkal\TimeHelper::isLeapYear('2020-3-2 10:15:33'));
+
+echo '该日期的当年有多少天:' . PHP_EOL;
+var_dump(\zjkal\TimeHelper::daysInYear('2020-3-2 10:15:33'));
+echo '该日期的当月有多少天:' . PHP_EOL;
+var_dump(\zjkal\TimeHelper::daysInMonth('2020-3-2 10:15:33'));

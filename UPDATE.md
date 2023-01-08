@@ -1,13 +1,19 @@
+> Version 1.0.9
+> * 修改toTimestamp()方法不传参数或传入空参数时,不再抛出异常,而是返回当前时间戳
+> * 增加了判断是否是闰年的方法isLeapYear()
+> * 增加了获取该日期当年的天数的方法daysInYear()
+> * 增加了获取该日期当月的天数的方法daysInMonth()
+
 > Version 1.0.8
-> * 增加了判断指定时间是星期几的方法
- 
+> * 增加了判断指定时间是星期几的方法getWeekDay()
+
 > Version 1.0.7
-> * 增加了将任意格式的时间转换为指定格式的方法
+> * 增加了将任意格式的时间转换为指定格式的方法format()
 > * 删除废弃方法friendly_date(),请使用toFriendly()代替
 
 > Version 1.0.6
 > * 修复BUG
- 
+
 > Version 1.0.5
 > * 优化了友好的时间显示算法
 

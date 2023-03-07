@@ -8,7 +8,7 @@ use InvalidArgumentException;
 
 /**
  * 最方便的PHP时间助手类, 所有方法都可以传入任意类型的时间日期格式或者时间戳
- * Class Time
+ * Class TimeHelper
  * @package zjkal
  */
 class TimeHelper
@@ -223,6 +223,26 @@ class TimeHelper
     public static function getWeekDay($datetime = null): int
     {
         return intval($datetime ? date('N', self::toTimestamp($datetime)) : date('N'));
+    }
+
+    /**
+     * 判断指定日期是否为平常日(周一到周五)
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return bool 是平常日返回true,否则返回false
+     */
+    public static function isWeekday($datetime = null): bool
+    {
+        return in_array(self::getWeekDay($datetime), [1, 2, 3, 4, 5]);
+    }
+
+    /**
+     * 判断指定日期是否为周末(周六和周日)
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return bool 是周末返回true,否则返回false
+     */
+    public static function isWeekend($datetime = null): bool
+    {
+        return in_array(self::getWeekDay($datetime), [6, 7]);
     }
 
     /**

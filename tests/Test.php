@@ -74,3 +74,8 @@ echo '该日期的当年有多少天:' . PHP_EOL;
 var_dump(\zjkal\TimeHelper::daysInYear('2020-3-2 10:15:33'));
 echo '该日期的当月有多少天:' . PHP_EOL;
 var_dump(\zjkal\TimeHelper::daysInMonth('2020-3-2 10:15:33'));
+
+echo '是否为平常日:'.PHP_EOL;
+var_dump(\zjkal\TimeHelper::isWeekday('2023-01-02'));
+echo '是否为周末:'.PHP_EOL;
+var_dump(\zjkal\TimeHelper::isWeekend('2023-01-02'));

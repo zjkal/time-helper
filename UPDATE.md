@@ -1,3 +1,9 @@
+
+> Version 1.1.0
+> * 增加了ChinaHoliday类,专门用于维护国内节假日相关的方法
+> * 增加了判断是否为国内工作日的方法isWorkday()
+> * 增加了判断是否为国内节假日的方法isHoliday()
+
 > Version 1.0.10
 > * 增加判断指定日期是否为平常日的方法isWeekday()
 > * 增加判断指定日期是否为周末的方法isWeekend()

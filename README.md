@@ -5,11 +5,10 @@
 [![License](http://poser.pugx.org/zjkal/time-helper/license)](https://packagist.org/packages/zjkal/time-helper)
 [![Total Downloads](http://poser.pugx.org/zjkal/time-helper/downloads)](https://packagist.org/packages/zjkal/time-helper)
 
-# TimeHelper
+# TimeHelper - 最方便的PHP时间助手类库
 
-### ⭐ 请不要吝啬你的小星星 ⭐
+### ⭐ 请不要吝啬您的小星星,您的认可才是我继续前行的动力 ⭐
 
-* 这是一个最方便的PHP时间助手类
 * **所有方法都可以传入任意类型的时间日期格式或者时间戳**
 * 作者将**长期维护**并不断完善使用率比较高的助手函数
 * 使用过程中发现BUG或者任何建议，请提交Issues 或[点击此处](https://jq.qq.com/?_wv=1027&k=pI1Ky6fD)加入QQ群

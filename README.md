@@ -219,4 +219,4 @@ ChinaHoliday::isHoliday(1646360133);
 [UPDATE.md](UPDATE.md)
 
 # 开源协议
-TimeHelper遵循[MIT](LICENSE)开源协议，意味着您无需支付任何费用，也无需授权，即可将TimeHelper应用到您的产品中。
+TimeHelper遵循[MIT](LICENSE)开源协议, 意味着您无需任何授权, 即可免费将TimeHelper应用到您的项目中

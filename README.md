@@ -5,6 +5,8 @@
 [![License](http://poser.pugx.org/zjkal/time-helper/license)](https://packagist.org/packages/zjkal/time-helper)
 [![Total Downloads](http://poser.pugx.org/zjkal/time-helper/downloads)](https://packagist.org/packages/zjkal/time-helper)
 
+### 中文文档 | [English Document](https://github.com/zjkal/time-helper/blob/main/README.en.md)
+
 # TimeHelper - 最方便的PHP时间助手类库
 
 ### ⭐ 请不要吝啬您的小星星, 您的认可才是我继续前行的动力 ⭐
@@ -153,7 +155,7 @@ TimeHelper::afterYear(2);
 
 ### 6.获取当前秒级/毫秒级/微秒级/纳秒级的时间戳
 
-*,生成订单号或者与其他编程语言对接时可能会用到*
+*生成订单号或者与其他编程语言对接时可能会用到*
 
 ```php
 //获取秒级的时间戳,可用time()代替

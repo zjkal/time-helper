@@ -9,7 +9,7 @@
 
 # TimeHelper - the most convenient PHP time helper class library.
 
-### ⭐ Please give a star, it motivates me to keep going. ⭐
+### ⭐ Please give me a star, it motivates me to keep going. ⭐
 
 ### Features:
 1. ***Simplicity***: All methods can accept any type of date/time format or timestamp.

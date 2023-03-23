@@ -7,14 +7,14 @@
 
 # TimeHelper - 最方便的PHP时间助手类库
 
-### ⭐ 请不要吝啬您的小星星,您的认可才是我继续前行的动力 ⭐
+### ⭐ 请不要吝啬您的小星星, 您的认可才是我继续前行的动力 ⭐
 
-### 本项目的特色:
+### 特色:
 1. **化繁为简**: 所有方法都可以传入任意类型的时间日期格式或者时间戳
 2. **快捷高效**: 所有操作都是只需要一个静态方法即可实现
 3. **长期维护**: 作者为自由职业者,长期维护,保证项目的长期更新
 
-#### 使用过程中发现BUG或者任何建议，请提交Issues 或[点击此处](https://jq.qq.com/?_wv=1027&k=pI1Ky6fD)加入QQ群
+#### 使用过程中发现BUG或者任何建议，请[提交Issues](https://github.com/zjkal/time-helper/issues) 或[QQ群交流](https://jq.qq.com/?_wv=1027&k=pI1Ky6fD)
 
 # 通过Composer导入类库
 
@@ -218,7 +218,7 @@ ChinaHoliday::isHoliday(1646360133);
 
 # 更新日志
 
-[UPDATE.md](UPDATE.md)
+[UPDATE.md](https://github.com/zjkal/time-helper/blob/main/UPDATE.md)
 
 # 开源协议
-TimeHelper遵循[MIT](LICENSE)开源协议, 意味着您无需任何授权, 即可免费将TimeHelper应用到您的项目中
+TimeHelper遵循[MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE)开源协议, 意味着您无需任何授权, 即可免费将TimeHelper应用到您的项目中

@@ -5,7 +5,7 @@
 [![License](http://poser.pugx.org/zjkal/time-helper/license)](https://packagist.org/packages/zjkal/time-helper)
 [![Total Downloads](http://poser.pugx.org/zjkal/time-helper/downloads)](https://packagist.org/packages/zjkal/time-helper)
 
-**[中文文档](https://github.com/zjkal/time-helper/blob/main/README.md) | English Document**
+**[中文文档](https://github.com/zjkal/time-helper/) | English Document**
 
 # TimeHelper - the most convenient PHP time helper class library.
 

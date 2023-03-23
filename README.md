@@ -5,7 +5,7 @@
 [![License](http://poser.pugx.org/zjkal/time-helper/license)](https://packagist.org/packages/zjkal/time-helper)
 [![Total Downloads](http://poser.pugx.org/zjkal/time-helper/downloads)](https://packagist.org/packages/zjkal/time-helper)
 
-### 中文文档 | [English Document](https://github.com/zjkal/time-helper/blob/main/README.en.md)
+* 中文文档 | [English Document](https://github.com/zjkal/time-helper/blob/main/README.en.md)
 
 # TimeHelper - 最方便的PHP时间助手类库
 

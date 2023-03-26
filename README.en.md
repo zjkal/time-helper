@@ -223,4 +223,4 @@ ChinaHoliday::isHoliday(1646360133);
 [UPDATE.md](https://github.com/zjkal/time-helper/blob/main/UPDATE.md)
 
 # License
-TimeHelper follows the [MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE) open source license, which means that you can freely use TimeHelper in your projects without any authorization.
+TimeHelper follows the [MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE) license, which means that you can freely use TimeHelper in your projects without any authorization.

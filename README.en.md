@@ -224,3 +224,8 @@ ChinaHoliday::isHoliday(1646360133);
 
 # License
 TimeHelper follows the [MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE) license, which means that you can freely use TimeHelper in your projects without any authorization.
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/zjkal/time-helper.svg)](https://starchart.cc/zjkal/time-helper)

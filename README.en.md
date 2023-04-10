@@ -218,10 +218,6 @@ ChinaHoliday::isHoliday(1646360133);
 
 > **Special Notes**: All time-related methods can accept time in any format or timestamp. However, please note that for dates in the format of m/d/y or d-m-y, if the separator is a slash (/), the American m/d/y format is used. If the separator is a hyphen (-) or a dot (.), the European d-m-y format is used. To avoid potential errors, it is recommended to use the YYYY-MM-DD format or other formats as much as possible.
 
-# Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/zjkal/time-helper.svg)](https://starchart.cc/zjkal/time-helper)
-
 # Changelog
 
 [UPDATE.md](https://github.com/zjkal/time-helper/blob/main/UPDATE.md)

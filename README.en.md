@@ -220,7 +220,53 @@ ChinaHoliday::isHoliday(1646360133);
 
 # Changelog
 
-[UPDATE.md](https://github.com/zjkal/time-helper/blob/main/UPDATE.md)
+<details><summary>Click to view the changelog</summary>
+
+> Version 1.1.0
+> * The ChinaHoliday class has been added, which is specially used to maintain methods related to Chinese holidays
+> * Added the method isWorkday() to judge whether it is a Chinese working day
+> * Added the method isHoliday() to judge whether it is a Chinese holiday
+
+> Version 1.0.10
+> * Add the method isWeekday() to judge whether the specified date is a normal day
+> * Add the method isWeekend() to judge whether the specified date is a weekend
+
+> Version 1.0.9
+> * Modify the toTimestamp() method to return the current timestamp instead of throwing an exception when no parameter is passed or an empty parameter is passed in
+> * Added the method isLeapYear() to judge whether it is a leap year
+> * Added the method daysInYear() to get the number of days in the current year
+> * Added the method daysInMonth() to get the number of days in the month of the date
+
+> Version 1.0.8
+> * Added the method getWeekDay() to judge the day of the week for the specified time
+
+> Version 1.0.7
+> * Added the method format() to convert time in any format to a specified format
+> * Delete the obsolete method friendly_date(), please use toFriendly() instead
+
+> Version 1.0.6
+> * fix bugs
+
+> Version 1.0.5
+> * Optimized friendly time display algorithm
+
+> Version 1.0.4
+> * Fixed the BUG of variable type
+
+> Version 1.0.3
+> * Added a method to judge whether a string is a timestamp
+> * Added a method to convert a string of any time type into a timestamp
+> * Added a method to obtain timestamps at the second/millisecond/microsecond/nanosecond level
+
+> Version 1.0.2
+> * Added method to return seconds for N minutes/hours
+
+> Version 1.0.1
+> * For all methods that return timestamps of N minutes/hours/days/months/years ago or later, the parameter of rounding up is added.
+
+> Version 1.0.0
+> * Separate from tp-helper's time class
+</details>
 
 # License
 [MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE)

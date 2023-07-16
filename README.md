@@ -7,8 +7,8 @@
 </div>
 <br/>
 <p align="center">
-    <a href="https://github.com/zjkal/time-helper" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/php.yml?branch=main" alt="GitHub Workflow Status">
+    <a href="https://github.com/zjkal/time-helper/blob/main/LICENSE" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/license" alt="License">
     </a>
     <a href="https://github.com/zjkal/time-helper" target="_blank">
         <img src="https://poser.pugx.org/zjkal/time-helper/require/php" alt="PHP Version Require">
@@ -22,8 +22,8 @@
     <a href="https://packagist.org/packages/zjkal/time-helper" target="_blank">
         <img src="https://poser.pugx.org/zjkal/time-helper/downloads" alt="Total Downloads">
     </a>
-    <a href="https://github.com/zjkal/time-helper/blob/main/LICENSE" target="_blank">
-        <img src="https://poser.pugx.org/zjkal/time-helper/license" alt="License">
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/php.yml?branch=main" alt="GitHub Workflow Status">
     </a>
 </p>
 

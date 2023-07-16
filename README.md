@@ -2,8 +2,8 @@
 <div align="center">
     <img src="logo.svg" alt="TimeHelper" width="240" />
     <br/>
-    中文文档 | 
-    <a href="https://github.com/zjkal/time-helper/blob/main/README.en.md" target="_blank">English Document</a>
+    <br/>
+    中文文档 | <a href="https://github.com/zjkal/time-helper/blob/main/README.en.md" target="_blank">English Document</a>
 </div>
 <br/>
 <p align="center">

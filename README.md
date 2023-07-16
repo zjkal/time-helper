@@ -1,30 +1,53 @@
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/php.yml?branch=main)](https://github.com/zjkal/time-helper/actions)
-[![PHP Version Require](http://poser.pugx.org/zjkal/time-helper/require/php)](https://packagist.org/packages/zjkal/time-helper)
-[![Latest Stable Version](http://poser.pugx.org/zjkal/time-helper/v)](https://packagist.org/packages/zjkal/time-helper)
-[![Latest Unstable Version](http://poser.pugx.org/zjkal/time-helper/v/unstable)](https://packagist.org/packages/zjkal/time-helper)
-[![License](http://poser.pugx.org/zjkal/time-helper/license)](https://packagist.org/packages/zjkal/time-helper)
-[![Total Downloads](http://poser.pugx.org/zjkal/time-helper/downloads)](https://packagist.org/packages/zjkal/time-helper)
+<br/>
+<div align="center">
+    <img src="logo.svg" alt="TimeHelper" width="240" />
+    <br/>
+    中文文档 | 
+    <a href="https://github.com/zjkal/time-helper/blob/main/README.en.md" target="_blank">English Document</a>
+</div>
+<br/>
+<p align="center">
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/php.yml?branch=main" alt="GitHub Workflow Status">
+    </a>
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/require/php" alt="PHP Version Require">
+    </a>
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/v" alt="Latest Stable Version">
+    </a>
+    <a href="https://github.com/zjkal/time-helper/blob/main/LICENSE" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/license" alt="License">
+    </a>
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://img.shields.io/github/stars/zjkal/time-helper" alt="GitHub Repo stars">
+    </a>
+    <a href="https://packagist.org/packages/zjkal/time-helper" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/downloads" alt="Total Downloads">
+    </a>
+</p>
+<br/>
 
-**中文文档 | [English Document](https://github.com/zjkal/time-helper/blob/main/README.en.md)**
+## 简介
 
-# TimeHelper - 最方便的PHP时间助手类库
+`TimeHelper` 是一个简单易用的`PHP`
+时间日期助手类库,可以快速实现常用的时间日期操作,比如获取指定时间的秒数,获取友好的时间格式,判断时间范围,计算两个时间相差值,返回N小时/天/星期/月/年前或者后的时间戳等等
 
-### ⭐ 请不要吝啬您的小星星, 您的认可才是我继续前行的动力 ⭐
+## 特性
 
-### 特色:
-1. **化繁为简**: 所有方法都可以传入任意类型的时间日期格式或者时间戳
-2. **快捷高效**: 所有操作都是只需要一个静态方法即可实现
-3. **长期维护**: 作者为自由职业者,保证项目的长期稳定
+- **简单易用**: 不依赖任何扩展,`开箱即用`
+- **化繁为简**: 所有方法都可以传入`任意类型的时间日期格式`或`时间戳`
+- **快捷高效**: 所有操作只需要`一个静态方法`即可完成
+- **长期维护**: 作者为自由职业者,保证项目的`长期稳定`和`持续更新`
 
-#### 使用过程中发现BUG或者任何建议，请[提交Issues](https://github.com/zjkal/time-helper/issues) 或[QQ群交流](https://jq.qq.com/?_wv=1027&k=pI1Ky6fD)
+## 安装使用
 
-# 通过Composer导入类库
-
+- 通过Composer导入类库
 ```bash
 composer require zjkal/time-helper
 ```
 
-# 使用方法
+## 使用文档
 
 首先在类中引用TimeHelper助手类
 
@@ -203,9 +226,11 @@ TimeHelper::daysInYear(1646360133);
 TimeHelper::daysInMonth('Apr 11, 2020');
 ```
 
-### 9.国内节假日/工作日相关  🆕
+### 9.国内节假日/工作日相关 🆕
+
 *专门针对国内的节假日进行判断,目前包含2020年-2023年的节假日数据,后续也会持续更新.*
 *为了便于维护,另起了一个类ChinaHoliday,同样可以传入任意类型的时间格式或时间戳*
+
 ```php
 use zjkal\ChinaHoliday;
 
@@ -216,9 +241,11 @@ ChinaHoliday::isWorkday('2023-01-23');
 ChinaHoliday::isHoliday(1646360133);
 ```
 
-> **特别说明**: 所有时间的方法都可以传入任意格式的时间或者时间戳, 但是有一点请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或其他格式.
+> **特别说明**: 所有时间的方法都可以传入任意格式的时间或者时间戳, 但是有一点请注意 m/d/y 或 d-m-y
+> 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y
+> 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或其他格式.
 
-# 更新日志
+## 更新日志
 
 <details><summary>点击查看更新日志</summary>
 
@@ -268,6 +295,7 @@ ChinaHoliday::isHoliday(1646360133);
 > * 从tp-helper的时间类中独立出来
 </details>
 
-# 开源协议
+## 开源协议
 
-TimeHelper遵循[MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE)开源协议, 意味着您无需任何授权, 即可免费将TimeHelper应用到您的项目中
+TimeHelper遵循[MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE)开源协议, 意味着您无需任何授权,
+即可免费将TimeHelper应用到您的项目中

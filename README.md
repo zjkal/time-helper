@@ -5,7 +5,6 @@
     <br/>
     中文文档 | <a href="https://github.com/zjkal/time-helper/blob/main/README.en.md" target="_blank">English Document</a>
 </p>
-<br/>
 <p align="center">
     <a href="https://github.com/zjkal/time-helper/blob/main/LICENSE" target="_blank">
         <img src="https://poser.pugx.org/zjkal/time-helper/license" alt="License">

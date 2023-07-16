@@ -1,30 +1,50 @@
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/php.yml?branch=main)](https://github.com/zjkal/time-helper/actions)
-[![PHP Version Require](http://poser.pugx.org/zjkal/time-helper/require/php)](https://packagist.org/packages/zjkal/time-helper)
-[![Latest Stable Version](http://poser.pugx.org/zjkal/time-helper/v)](https://packagist.org/packages/zjkal/time-helper)
-[![Latest Unstable Version](http://poser.pugx.org/zjkal/time-helper/v/unstable)](https://packagist.org/packages/zjkal/time-helper)
-[![License](http://poser.pugx.org/zjkal/time-helper/license)](https://packagist.org/packages/zjkal/time-helper)
-[![Total Downloads](http://poser.pugx.org/zjkal/time-helper/downloads)](https://packagist.org/packages/zjkal/time-helper)
+<br/>
+<p align="center">
+    <img src="https://github.com/zjkal/time-helper/raw/main/logo.svg" alt="TimeHelper" width="180" />
+    <br/>
+    <br/>
+    <a href="https://github.com/zjkal/time-helper/blob/main/README.md" target="_blank">中文文档</a> | English Document
+</p>
+<p align="center">
+    <a href="https://github.com/zjkal/time-helper/blob/main/LICENSE" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/license" alt="License">
+    </a>
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/require/php" alt="PHP Version Require">
+    </a>
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/v" alt="Latest Stable Version">
+    </a>
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://img.shields.io/github/stars/zjkal/time-helper" alt="GitHub Repo stars">
+    </a>
+    <a href="https://packagist.org/packages/zjkal/time-helper" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/downloads" alt="Total Downloads">
+    </a>
+    <a href="https://github.com/zjkal/time-helper" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/php.yml?branch=main" alt="GitHub Workflow Status">
+    </a>
+</p>
 
-**[中文文档](https://github.com/zjkal/time-helper/) | English Document**
+## Introduction
 
-# TimeHelper - the most convenient PHP time helper class library.
+`TimeHelper` is a simple and user-friendly `PHP Date and Time Helper Library` that enables quick implementation of common date and time operations. It includes functionalities such as getting the number of seconds from a specified time, obtaining a user-friendly time format, checking time ranges, calculating the difference between two times, and providing timestamps for N hours/days/weeks/months/years ago or in the future, among other features.
 
-### ⭐ Please give me a star, it motivates me to keep going. ⭐
+## Features
 
-### Features:
-1. ***Simplicity***: All methods can accept any type of date/time format or timestamp.
-2. ***Efficient***: All operations can be achieved with just one static method.
-3. ***Long-term***: The author is a freelancer who will maintain the project for a long time to ensure its continuous updates.
+- Easy to use: It does not rely on any extensions and is ready to use out of the box.
+- Simplicity through complexity reduction: All methods can accept `either arbitrary date and time formats` or `timestamps`.
+- Quick and efficient: All operations can be accomplished with just `one static method` for each.
+- Long-term maintenance: The author is a freelancer committed to ensuring the project's `long-term stability` and `continuous updates`.
 
-####  If you encounter any bugs or have any suggestions during use, please [submit issues](https://github.com/zjkal/time-helper/issues)
+## Usage
 
-# Install via Composer.
-
+- Install via Composer.
 ```bash
 composer require zjkal/time-helper
 ```
 
-# Usage
+## Documents
 
 import the TimeHelper helper class into your class.
 
@@ -218,7 +238,7 @@ ChinaHoliday::isHoliday(1646360133);
 
 > **Special Notes**: All time-related methods can accept time in any format or timestamp. However, please note that for dates in the format of m/d/y or d-m-y, if the separator is a slash (/), the American m/d/y format is used. If the separator is a hyphen (-) or a dot (.), the European d-m-y format is used. To avoid potential errors, it is recommended to use the YYYY-MM-DD format or other formats as much as possible.
 
-# Changelog
+## Changelog
 
 <details><summary>Click to view the changelog</summary>
 
@@ -268,6 +288,6 @@ ChinaHoliday::isHoliday(1646360133);
 > * Separate from tp-helper's time class
 </details>
 
-# License
+## License
 [MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE)
 

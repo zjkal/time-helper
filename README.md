@@ -16,14 +16,14 @@
     <a href="https://github.com/zjkal/time-helper" target="_blank">
         <img src="https://poser.pugx.org/zjkal/time-helper/v" alt="Latest Stable Version">
     </a>
-    <a href="https://github.com/zjkal/time-helper/blob/main/LICENSE" target="_blank">
-        <img src="https://poser.pugx.org/zjkal/time-helper/license" alt="License">
-    </a>
     <a href="https://github.com/zjkal/time-helper" target="_blank">
         <img src="https://img.shields.io/github/stars/zjkal/time-helper" alt="GitHub Repo stars">
     </a>
     <a href="https://packagist.org/packages/zjkal/time-helper" target="_blank">
         <img src="https://poser.pugx.org/zjkal/time-helper/downloads" alt="Total Downloads">
+    </a>
+    <a href="https://github.com/zjkal/time-helper/blob/main/LICENSE" target="_blank">
+        <img src="https://poser.pugx.org/zjkal/time-helper/license" alt="License">
     </a>
 </p>
 

@@ -258,6 +258,9 @@ ChinaHoliday::isHoliday(1646360133);
 
 <details><summary>Click to view the changelog</summary>
 
+> v1.1.1 Aug 15, 2023
+> * Added time zone-related methods, which can convert time or timestamp in any format to the time in the specified time zone
+
 > v1.1.0 Mar 19, 2023
 > * The ChinaHoliday class has been added, which is specially used to maintain methods related to Chinese holidays
 > * Added the method isWorkday() to judge whether it is a Chinese working day

@@ -220,7 +220,26 @@ TimeHelper::daysInYear(1646360133);
 TimeHelper::daysInMonth('Apr 11, 2020');
 ```
 
-### 9.Chinese holiday/workday related  🆕
+### 9.Time zone related 🆕
+*It mainly provides methods for obtaining time in different time zones and converting time in different time zones*
+
+```php
+//Converts a time or timestamp in any format to a time in the specified time zone
+//The first parameter is the target time zone to convert
+//The second parameter is the original time zone, if not passed, it defaults to the current time zone
+//The third parameter is a time or timestamp in any format, if not passed, it defaults to the current time
+//The fourth parameter is the time format, which is consistent with the format of the system function date(). If not passed, the default is Y-m-d H:i:s
+TimeHelper::timezoneFormat('Europe/London', 'Asia/Shanghai', '2023-8-15 19:16:43', 'H:i:s');
+//Get the current time in Los Angeles
+TimeHelper::timezoneFormat('America/Los_Angeles');
+//Convert Los Angeles Time to London Time
+TimeHelper::timezoneFormat('America/Los_Angeles', 'Europe/London', 'Aug 15, 2023 10:15:33', 'H:i:s');
+//Convert timestamp to London time
+TimeHelper::timezoneFormat('Europe/London', null, 1692097543);
+```
+For the list of supported time zones, please refer to [List of Supported Timezones](https://www.php.net/manual/en/timezones.php)
+
+### 10.Chinese holiday/workday related 🔥
 *This is a function specifically designed for judging Chinese holidays. It currently includes holiday data from 2020 to 2023 and will be continuously updated in the future.*
 *For the convenience of maintenance, a separate class ChinaHoliday is created, which can also accept any type of time format or timestamp as input.*
 ```php

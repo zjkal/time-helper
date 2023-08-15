@@ -4,6 +4,8 @@ declare (strict_types=1);
 namespace zjkal;
 
 use DateTime;
+use DateTimeZone;
+use Exception;
 use InvalidArgumentException;
 
 /**
@@ -604,4 +606,30 @@ class TimeHelper
     {
         return intval(date('t', self::toTimestamp($datetime)));
     }
+
+    /**
+     * 不同时区的时间转换
+     * @param string $toTimezone 目标时区
+     * @param string $fromTimezone 原时区(默认为当前PHP运行环境所设置的时区)
+     * @param int|string $datetime 任意格式的时间字符串或时间戳(默认为当前时间)
+     * @param string $format 格式化字符串
+     * @throws Exception
+     */
+    public static function timezoneFormat(string $toTimezone, string $fromTimezone = null, $datetime = 'now', string $format = 'Y-m-d H:i:s'): string
+    {
+        if (self::isTimestamp($datetime)) {
+            $date = new DateTime();
+            $date->setTimestamp($datetime);
+            $date->setTimezone(new DateTimeZone('UTC'));
+        } else {
+            if ($fromTimezone === null) {
+                $fromTimezone = date_default_timezone_get();
+            }
+            $date = new DateTime($datetime, new DateTimeZone($fromTimezone));
+        }
+        $date->setTimezone(new DateTimeZone($toTimezone));
+        return $date->format($format);
+    }
+
+    /* 开发计划: 日期早晚的比较 */
 }

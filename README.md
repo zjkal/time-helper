@@ -37,6 +37,7 @@
 ## 安装使用
 
 - 通过Composer导入类库
+
 ```bash
 composer require zjkal/time-helper
 ```
@@ -220,7 +221,26 @@ TimeHelper::daysInYear(1646360133);
 TimeHelper::daysInMonth('Apr 11, 2020');
 ```
 
-### 9.国内节假日/工作日相关 🆕
+### 9.时区相关 🆕
+*主要提供获取不同时区的时间和转换不同时区的时间的方法*
+
+```php
+//将任意格式的时间或时间戳转换为指定时区的时间
+//第一个参数为要转换的目标时区
+//第二个参数为原时区,不传则默认为当前时区
+//第三个参数为任意格式的时间或时间戳,不传则默认为当前时间
+//第四个参数为时间格式,与系统函数date()的格式保持一致,不传则默认为Y-m-d H:i:s
+TimeHelper::timezoneFormat('Europe/London', 'Asia/Shanghai', '2023-8-15 19:16:43', 'H:i:s');
+//获得当前洛杉矶的时间
+TimeHelper::timezoneFormat('America/Los_Angeles');
+//将洛杉矶时间转换为伦敦时间
+TimeHelper::timezoneFormat('America/Los_Angeles', 'Europe/London', 'Aug 15, 2023 10:15:33', 'H:i:s');
+//将时间戳转换为伦敦时间
+TimeHelper::timezoneFormat('Europe/London', null, 1692097543);
+```
+所支持的时区列表请参考[时区列表](https://www.php.net/manual/zh/timezones.php)
+
+### 10.国内节假日/工作日相关 🔥
 
 *专门针对国内的节假日进行判断,目前包含2020年-2023年的节假日数据,后续也会持续更新.*
 *为了便于维护,另起了一个类ChinaHoliday,同样可以传入任意类型的时间格式或时间戳*

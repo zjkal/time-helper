@@ -78,7 +78,15 @@ var_dump(TimeHelper::daysInYear('2020-3-2 10:15:33'));
 echo '该日期的当月有多少天:' . PHP_EOL;
 var_dump(TimeHelper::daysInMonth('2020-3-2 10:15:33'));
 
-echo '是否为平常日:'.PHP_EOL;
+echo '是否为平常日:' . PHP_EOL;
 var_dump(TimeHelper::isWeekday('2023-01-02'));
-echo '是否为周末:'.PHP_EOL;
+echo '是否为周末:' . PHP_EOL;
 var_dump(TimeHelper::isWeekend('2023-01-02'));
+
+echo '时区转换:' . PHP_EOL;
+echo '洛杉矶时间:';
+var_dump(TimeHelper::timezoneFormat('America/Los_Angeles'));
+echo '洛杉矶时间转换为伦敦时间:';
+var_dump(TimeHelper::timezoneFormat('America/Los_Angeles', 'Europe/London', 'Aug 15, 2023 10:15:33', 'H:i:s'));
+echo '时间戳转换为伦敦时间:';
+var_dump(TimeHelper::timezoneFormat('Europe/London', null, 1692097543));

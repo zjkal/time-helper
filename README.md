@@ -234,7 +234,7 @@ TimeHelper::timezoneFormat('Europe/London', 'Asia/Shanghai', '2023-8-15 19:16:43
 //获得当前洛杉矶的时间
 TimeHelper::timezoneFormat('America/Los_Angeles');
 //将洛杉矶时间转换为伦敦时间
-TimeHelper::timezoneFormat('America/Los_Angeles', 'Europe/London', 'Aug 15, 2023 10:15:33', 'H:i:s');
+TimeHelper::timezoneFormat('Europe/London', 'America/Los_Angeles', 'Aug 15, 2023 10:15:33', 'H:i:s');
 //将时间戳转换为伦敦时间
 TimeHelper::timezoneFormat('Europe/London', null, 1692097543);
 ```

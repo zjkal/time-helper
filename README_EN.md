@@ -233,7 +233,7 @@ TimeHelper::timezoneFormat('Europe/London', 'Asia/Shanghai', '2023-8-15 19:16:43
 //Get the current time in Los Angeles
 TimeHelper::timezoneFormat('America/Los_Angeles');
 //Convert Los Angeles Time to London Time
-TimeHelper::timezoneFormat('America/Los_Angeles', 'Europe/London', 'Aug 15, 2023 10:15:33', 'H:i:s');
+TimeHelper::timezoneFormat('Europe/London', 'America/Los_Angeles', 'Aug 15, 2023 10:15:33', 'H:i:s');
 //Convert timestamp to London time
 TimeHelper::timezoneFormat('Europe/London', null, 1692097543);
 ```

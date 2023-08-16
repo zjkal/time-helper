@@ -87,6 +87,6 @@ echo '时区转换:' . PHP_EOL;
 echo '洛杉矶时间:';
 var_dump(TimeHelper::timezoneFormat('America/Los_Angeles'));
 echo '洛杉矶时间转换为伦敦时间:';
-var_dump(TimeHelper::timezoneFormat('America/Los_Angeles', 'Europe/London', 'Aug 15, 2023 10:15:33', 'H:i:s'));
+var_dump(TimeHelper::timezoneFormat('Europe/London', 'America/Los_Angeles', 'Aug 15, 2023 10:15:33', 'H:i:s'));
 echo '时间戳转换为伦敦时间:';
 var_dump(TimeHelper::timezoneFormat('Europe/London', null, 1692097543));

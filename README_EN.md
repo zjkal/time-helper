@@ -23,25 +23,23 @@
     </a>
 </p>
 
-## Introduction
-
 `TimeHelper` is a simple and user-friendly `PHP Date and Time Helper Library` that enables quick implementation of common date and time operations. It includes functionalities such as getting the number of seconds from a specified time, obtaining a user-friendly time format, checking time ranges, calculating the difference between two times, and providing timestamps for N hours/days/weeks/months/years ago or in the future, among other features.
 
-## Features
+## 🧩Features
 
 - Easy to use: It does not rely on any extensions and is ready to use out of the box.
 - Simplicity through complexity reduction: All methods can accept `either arbitrary date and time formats` or `timestamps`.
 - Quick and efficient: All operations can be accomplished with just `one static method` for each.
 - Long-term maintenance: The author is a freelancer committed to ensuring the project's `long-term stability` and `continuous updates`.
 
-## Usage
+## 🚀Installation
 
 - Install via Composer.
 ```bash
 composer require zjkal/time-helper
 ```
 
-## Documents
+## 🌈Usage
 
 import the TimeHelper helper class into your class.
 
@@ -254,9 +252,7 @@ ChinaHoliday::isHoliday(1646360133);
 
 > **Special Notes**: All time-related methods can accept time in any format or timestamp. However, please note that for dates in the format of m/d/y or d-m-y, if the separator is a slash (/), the American m/d/y format is used. If the separator is a hyphen (-) or a dot (.), the European d-m-y format is used. To avoid potential errors, it is recommended to use the YYYY-MM-DD format or other formats as much as possible.
 
-## Changelog
-
-<details><summary>Click to view the changelog</summary>
+## 📃Changelog
 
 > v1.1.1 Aug 15, 2023
 > * Added time zone-related methods, which can convert time or timestamp in any format to the time in the specified time zone
@@ -269,6 +265,8 @@ ChinaHoliday::isHoliday(1646360133);
 > v1.0.10 Mar 13, 2023
 > * Add the method isWeekday() to judge whether the specified date is a normal day
 > * Add the method isWeekend() to judge whether the specified date is a weekend
+
+<details><summary>Click to read more</summary>
 
 > v1.0.9 Mar 8, 2023
 > * Modify the toTimestamp() method to return the current timestamp instead of throwing an exception when no parameter is passed or an empty parameter is passed in
@@ -307,6 +305,5 @@ ChinaHoliday::isHoliday(1646360133);
 > * Separate from tp-helper's time class
 </details>
 
-## License
-[MIT](https://github.com/zjkal/time-helper/blob/main/LICENSE)
-
+## 📖License
+The MIT License (MIT). Please see [License File](https://github.com/zjkal/time-helper/blob/main/LICENSE) for more information.

@@ -34,7 +34,7 @@
 
 ## 🚀Installation
 
-- Install via Composer.
+Install via Composer.
 ```bash
 composer require zjkal/time-helper
 ```

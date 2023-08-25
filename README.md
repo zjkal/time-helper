@@ -34,7 +34,7 @@
 
 ## 🚀安装
 
-- 通过Composer导入类库
+通过Composer导入类库
 
 ```bash
 composer require zjkal/time-helper

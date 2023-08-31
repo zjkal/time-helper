@@ -343,7 +343,7 @@ Your recognition is the motivation to move on, if you think TimeHelper is helpfu
 | ¥ 2.11  |   **福    | 2023-08-07 | Alipay  |
 | ¥ 18.88 |    *杰    | 2023-07-29 | Wechat  |
 | ¥ 20.00 |   **帅    | 2023-07-22 | Wechat  |
-| ¥ 0.99  |   T*k    | 2023-07-13 |   微信    |
+| ¥ 0.99  |   T*k    | 2023-07-13 | Wechat  |
 | ¥ 1.00  |    *蓝    | 2023-06-19 | Alipay  |
 | ¥ 66.66 |   B*y    | 2023-06-01 | Alipay  |
 | ¥ 2.00  |   **乐    | 2023-05-26 | Wechat  |

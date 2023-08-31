@@ -333,7 +333,7 @@ ChinaHoliday::isHoliday(1646360133);
 Your recognition is the motivation to move on, if you think TimeHelper is helpful to you, please support me, thank you!
 
 * Method 1: Click the `⭐Star` button in the upper right corner
-* Method 2: Scan the QR code below
+* Method 2: Scan the QR code below  
   <img src="https://github.com/zjkal/time-helper/blob/main/sponsor.png" alt="sponsor me" width="480" />
 
 | Amount  | Nickname |    Date    | Payment |

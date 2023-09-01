@@ -2,3 +2,4 @@
 .idea
 /.github/
 composer.lock
+.phpunit.result.cache

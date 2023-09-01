@@ -12,11 +12,19 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "psr-4": {
             "zjkal\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "zjkal\\tests\\": "tests/"
         }
     }
 }

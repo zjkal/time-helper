@@ -1,6 +1,6 @@
 {
   "name": "zjkal/time-helper",
-  "description": "最方便的PHP时间助手类, 所有方法都可以传入任意类型的时间日期格式或者时间戳",
+  "description": "一个简单快捷的PHP日期时间助手类库。 \na smart PHP datetime helper library.",
   "type": "library",
   "license": "MIT",
   "authors": [

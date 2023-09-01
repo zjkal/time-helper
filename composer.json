@@ -15,7 +15,7 @@
         "php": ">=7.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "@stable"
     },
     "autoload": {
         "psr-4": {

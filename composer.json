@@ -1,21 +1,22 @@
 {
-  "name": "zjkal/time-helper",
-  "description": "一个简单快捷的PHP日期时间助手类库。 <br/>a smart PHP datetime helper library.",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "zjkal",
-      "email": "zjkal@qq.com"
+    "name": "zjkal/time-helper",
+    "description": "一个简单快捷的PHP日期时间助手类库。 a smart PHP datetime helper library.",
+    "keywords": ["php", "datetime", "helper", "time", "date", "zjkal"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zjkal",
+            "email": "zjkal@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "zjkal\\": "src/"
+        }
     }
-  ],
-  "minimum-stability": "dev",
-  "require": {
-    "php": ">=7.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "zjkal\\": "src/"
-    }
-  }
 }

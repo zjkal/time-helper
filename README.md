@@ -318,7 +318,7 @@ ChinaHoliday::isHoliday(1646360133);
 
 * 方式一: 点击右上角`⭐Star`按钮
 * 方式二: 扫描下方二维码,打赏我  
-  <img src="https://gitee.com/xc-soft/time-helper/raw/main/sponsor.png" alt="扫码打赏我" width="480" />
+<br/><img src="https://gitee.com/xc-soft/time-helper/raw/main/sponsor.png" alt="扫码打赏我" width="480" />
 
 |   金额    | 昵称  |     日期     | 平台  |
 |:-------:|:---:|:----------:|:---:|

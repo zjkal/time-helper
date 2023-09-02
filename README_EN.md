@@ -23,19 +23,14 @@
     </a>
 </p>
 
-`TimeHelper` is a simple and user-friendly `PHP Date and Time Helper Library` that enables quick implementation of
-common date and time operations. It includes functionalities such as getting the number of seconds from a specified
-time, obtaining a user-friendly time format, checking time ranges, calculating the difference between two times, and
-providing timestamps for N hours/days/weeks/months/years ago or in the future, among other features.
+`TimeHelper` is a simple and user-friendly `PHP Date and Time Helper Library` that enables quick implementation of common date and time operations. It includes functionalities such as getting the number of seconds from a specified time, obtaining a user-friendly time format, checking time ranges, calculating the difference between two times, and providing timestamps for N hours/days/weeks/months/years ago or in the future, among other features.
 
 ## 🧩Features
 
 - Easy to use: It does not rely on any extensions and is ready to use out of the box.
-- Simplicity through complexity reduction: All methods can accept `either arbitrary date and time formats`
-  or `timestamps`.
+- Simplicity through complexity reduction: All methods can accept `either arbitrary date and time formats` or `timestamps`.
 - Quick and efficient: All operations can be accomplished with just `one static method` for each.
-- Long-term maintenance: The author is a freelancer committed to ensuring the project's `long-term stability`
-  and `continuous updates`.
+- Long-term maintenance: The author is a freelancer committed to ensuring the project's `long-term stability` and `continuous updates`.
 
 ## 🚀Installation
 
@@ -134,9 +129,7 @@ TimeHelper::diffYears('2022-4-10 23:01:11','Apr 11, 2020');
 
 ### 5. Return the timestamp of N hours/days/weeks/months/years ago or in the future.
 
-*If only one argument is passed, the calculation will be based on the current time. If a second argument is passed, the
-calculation will be based on that time. If the third argument is set to true, the calculated time will be rounded to the
-nearest integer.*
+*If only one argument is passed, the calculation will be based on the current time. If a second argument is passed, the calculation will be based on that time. If the third argument is set to true, the calculated time will be rounded to the nearest integer.*
 
 ```php
 //Return the timestamp of 0 seconds 3 minutes ago from the specified time.
@@ -196,8 +189,7 @@ TimeHelper::getNanoTimestamp();
 
 ### 7.Date Conversion
 
-*This function is used for converting date format when crawling web pages or integrating with third-party programs with
-inconsistent date formats.*
+*This function is used for converting date format when crawling web pages or integrating with third-party programs with inconsistent date formats.*
 
 ```php
 //Convert any format of time to a specified format.
@@ -251,10 +243,8 @@ to [List of Supported Timezones](https://www.php.net/manual/en/timezones.php)
 
 ### 10.Chinese holiday/workday related 🔥
 
-*This is a function specifically designed for judging Chinese holidays. It currently includes holiday data from 2020 to
-2023 and will be continuously updated in the future.*
-*For the convenience of maintenance, a separate class ChinaHoliday is created, which can also accept any type of time
-format or timestamp as input.*
+*This is a function specifically designed for judging Chinese holidays. It currently includes holiday data from 2020 to 2023 and will be continuously updated in the future.*
+*For the convenience of maintenance, a separate class ChinaHoliday is created, which can also accept any type of time format or timestamp as input.*
 
 ```php
 use zjkal\ChinaHoliday;
@@ -266,17 +256,12 @@ ChinaHoliday::isWorkday('2023-01-23');
 ChinaHoliday::isHoliday(1646360133);
 ```
 
-> **Special Notes**: All time-related methods can accept time in any format or timestamp. However, please note that for
-> dates in the format of m/d/y or d-m-y, if the separator is a slash (/), the American m/d/y format is used. If the
-> separator is a hyphen (-) or a dot (.), the European d-m-y format is used. To avoid potential errors, it is
-> recommended
-> to use the YYYY-MM-DD format or other formats as much as possible.
+> **Special Notes**: All time-related methods can accept time in any format or timestamp. However, please note that for dates in the format of m/d/y or d-m-y, if the separator is a slash (/), the American m/d/y format is used. If the separator is a hyphen (-) or a dot (.), the European d-m-y format is used. To avoid potential errors, it is recommended to use the YYYY-MM-DD format or other formats as much as possible.
 
 ## 📃Changelog
 
 > v1.1.1 Aug 15, 2023
-> * Added time zone-related methods, which can convert time or timestamp in any format to the time in the specified time
-    zone
+> * Added time zone-related methods, which can convert time or timestamp in any format to the time in the specified time zone
 
 > v1.1.0 Mar 19, 2023
 > * The ChinaHoliday class has been added, which is specially used to maintain methods related to Chinese holidays
@@ -290,8 +275,7 @@ ChinaHoliday::isHoliday(1646360133);
 <details><summary>Click to read more</summary>
 
 > v1.0.9 Mar 8, 2023
-> * Modify the toTimestamp() method to return the current timestamp instead of throwing an exception when no parameter
-    is passed or an empty parameter is passed in
+> * Modify the toTimestamp() method to return the current timestamp instead of throwing an exception when no parameter is passed or an empty parameter is passed in
 > * Added the method isLeapYear() to judge whether it is a leap year
 > * Added the method daysInYear() to get the number of days in the current year
 > * Added the method daysInMonth() to get the number of days in the month of the date
@@ -321,8 +305,7 @@ ChinaHoliday::isHoliday(1646360133);
 > * Added method to return seconds for N minutes/hours
 
 > v1.0.1 Jan 4, 2023
-> * For all methods that return timestamps of N minutes/hours/days/months/years ago or later, the parameter of rounding
-    up is added.
+> * For all methods that return timestamps of N minutes/hours/days/months/years ago or later, the parameter of rounding up is added.
 
 > v1.0.0 Aug 25, 2022
 > * Separate from tp-helper's time class
@@ -357,5 +340,4 @@ Your recognition is the motivation to move on, if you think TimeHelper is helpfu
 
 ## 📖License
 
-The MIT License (MIT). Please see [License File](https://github.com/zjkal/time-helper/blob/main/LICENSE) for more
-information.
+The MIT License (MIT). Please see [License File](https://github.com/zjkal/time-helper/blob/main/LICENSE) for more information.

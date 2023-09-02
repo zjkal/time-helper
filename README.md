@@ -23,8 +23,7 @@
     </a>
 </p>
 
-`TimeHelper` 是一个简单易用的`PHP时间日期助手类库`
-,可以快速实现常用的时间日期操作,比如获取指定时间的秒数,获取友好的时间格式,判断时间范围,计算两个时间相差值,返回N小时/天/星期/月/年前或者后的时间戳等等
+`TimeHelper` 是一个简单易用的`PHP时间日期助手类库`,可以快速实现常用的时间日期操作,比如获取指定时间的秒数,获取友好的时间格式,判断时间范围,计算两个时间相差值,返回N小时/天/星期/月/年前或者后的时间戳等等
 
 ## 🧩特性
 
@@ -256,9 +255,7 @@ ChinaHoliday::isWorkday('2023-01-23');
 ChinaHoliday::isHoliday(1646360133);
 ```
 
-> **特别说明**: 所有时间的方法都可以传入任意格式的时间或者时间戳, 但是有一点请注意 m/d/y 或 d-m-y
-> 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y
-> 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或其他格式.
+> **特别说明**: 所有时间的方法都可以传入任意格式的时间或者时间戳, 但是有一点请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或其他格式.
 
 ## 📃更新日志
 
@@ -314,11 +311,12 @@ ChinaHoliday::isHoliday(1646360133);
 </details>
 
 ## 💖支持我
+
 您的认可是我继续前行的动力,如果您觉得TimeHelper对您有帮助,请支持我,谢谢您!
 
 * 方式一: 点击右上角`⭐Star`按钮
 * 方式二: 扫描下方二维码,打赏我  
-<br/><img src="https://gitee.com/xc-soft/time-helper/raw/main/sponsor.png" alt="扫码打赏我" width="480" />
+  <br/><img src="https://gitee.com/xc-soft/time-helper/raw/main/sponsor.png" alt="扫码打赏我" width="480" />
 
 |   金额    | 昵称  |     日期     | 平台  |
 |:-------:|:---:|:----------:|:---:|
@@ -340,5 +338,5 @@ ChinaHoliday::isHoliday(1646360133);
 | ¥ 9.99  | **婷 | 2023-03-06 | 微信  |
 
 ## 📖开源协议
-TimeHelper遵循[MIT开源协议](https://github.com/zjkal/time-helper/blob/main/LICENSE), 意味着您无需任何授权,
-即可免费将TimeHelper应用到您的项目中
+
+TimeHelper遵循[MIT开源协议](https://github.com/zjkal/time-helper/blob/main/LICENSE), 意味着您无需任何授权, 即可免费将TimeHelper应用到您的项目中

@@ -125,6 +125,10 @@ TimeHelper::diffMonths(1586451741,'Apr 11, 2020');
 
 //Calculate the difference in years between two dates.
 TimeHelper::diffYears('2022-4-10 23:01:11','Apr 11, 2020');
+
+//Compare two times. If the second parameter is empty, compare it with the current time.
+//If the first time is greater than the second time, 1 is returned, if it is less than -1, and if they are equal, 0 is returned.
+TimeHelper::compare('2022-4-10 23:01:11','Apr 11, 2020');
 ```
 
 ### 5. Return the timestamp of N hours/days/weeks/months/years ago or in the future.
@@ -260,6 +264,9 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃Changelog
 
+> v1.1.2 Sep 16, 2023
+> * Added method compare() to compare two times sooner or later
+
 > v1.1.1 Aug 15, 2023
 > * Added time zone-related methods, which can convert time or timestamp in any format to the time in the specified time zone
 
@@ -268,11 +275,11 @@ ChinaHoliday::isHoliday(1646360133);
 > * Added the method isWorkday() to judge whether it is a Chinese working day
 > * Added the method isHoliday() to judge whether it is a Chinese holiday
 
+<details><summary>Click to read more</summary>
+
 > v1.0.10 Mar 13, 2023
 > * Add the method isWeekday() to judge whether the specified date is a normal day
 > * Add the method isWeekend() to judge whether the specified date is a weekend
-
-<details><summary>Click to read more</summary>
 
 > v1.0.9 Mar 8, 2023
 > * Modify the toTimestamp() method to return the current timestamp instead of throwing an exception when no parameter is passed or an empty parameter is passed in
@@ -321,6 +328,7 @@ Your recognition is the motivation to move on, if you think TimeHelper is helpfu
 
 | Amount  | Nickname |    Date    | Payment |
 |:-------:|:--------:|:----------:|:-------:|
+| ¥ 9.90  |    *杰    | 2023-09-16 | Wechat  |
 | ¥ 1.88  |   W*r    | 2023-08-31 | Alipay  |
 | ¥ 10.00 |   **月    | 2023-08-19 | Wechat  |
 | ¥ 2.11  |   **福    | 2023-08-07 | Alipay  |

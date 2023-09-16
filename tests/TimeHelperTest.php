@@ -211,4 +211,10 @@ class TimeHelperTest extends TestCase
         $this->expectOutputString('86400');
         print TimeHelper::secondDay(1);
     }
+
+    public function testCompare()
+    {
+        $this->expectOutputString('1');
+        print TimeHelper::compare('2023-9-1 12:00:00', '2023-8-1 12:00:00');
+    }
 }

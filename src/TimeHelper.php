@@ -112,7 +112,7 @@ class TimeHelper
     /**
      * 讲时间转换为友好显示格式
      * @param int|string $time 时间日期的字符串或数字
-     * @param string $lang 语言,默认为中文,如果要显示英文传入en即可
+     * @param string     $lang 语言,默认为中文,如果要显示英文传入en即可
      * @return string 转换后的友好时间格式
      */
     public static function toFriendly($time, string $lang = 'zh'): string
@@ -249,7 +249,7 @@ class TimeHelper
 
     /**
      * 返回两个日期相差天数(如果只传入一个日期,则与当天时间比较)
-     * @param int|string $datetime 要计算的时间
+     * @param int|string $datetime     要计算的时间
      * @param int|string $new_datetime 要比较的时间(默认为当前时间)
      * @return int 相差天数
      */
@@ -267,7 +267,7 @@ class TimeHelper
 
     /**
      * 返回两个日期相差星期数(如果只传入一个日期,则与当天时间比较)
-     * @param int|string $datetime 要计算的时间
+     * @param int|string $datetime     要计算的时间
      * @param int|string $new_datetime 要比较的时间(默认为当前时间)
      * @return int 相差星期数
      */
@@ -285,7 +285,7 @@ class TimeHelper
 
     /**
      * 返回两个日期相差月数(如果只传入一个日期,则与当天时间比较)
-     * @param int|string $datetime 要计算的时间
+     * @param int|string $datetime     要计算的时间
      * @param int|string $new_datetime 要比较的时间(默认为当前时间)
      * @return int 相差月数
      */
@@ -304,7 +304,7 @@ class TimeHelper
 
     /**
      * 返回两个日期相差年数(如果只传入一个日期,则与当前时间比较)
-     * @param int|string $datetime 要计算的时间
+     * @param int|string $datetime     要计算的时间
      * @param int|string $new_datetime 要比较的时间(默认为当前时间)
      * @return int 相差年数
      */
@@ -322,9 +322,9 @@ class TimeHelper
 
     /**
      * 返回N分钟前的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $minute 分钟数(默认为1分钟)
+     * @param int        $minute   分钟数(默认为1分钟)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前分钟0秒的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前分钟0秒的时间戳
      * @return int 时间戳
      */
     public static function beforeMinute(int $minute = 1, $datetime = null, bool $round = false): int
@@ -339,9 +339,9 @@ class TimeHelper
 
     /**
      * 返回N分钟后的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $minute 分钟数(默认为1分钟)
+     * @param int        $minute   分钟数(默认为1分钟)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前分钟0秒的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前分钟0秒的时间戳
      * @return int 时间戳
      */
     public static function afterMinute(int $minute = 1, $datetime = null, bool $round = false): int
@@ -356,9 +356,9 @@ class TimeHelper
 
     /**
      * 返回N小时前的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $hour 小时数(默认为1小时)
+     * @param int        $hour     小时数(默认为1小时)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前小时0分钟的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前小时0分钟的时间戳
      * @return int 时间戳
      */
     public static function beforeHour(int $hour = 1, $datetime = null, bool $round = false): int
@@ -373,9 +373,9 @@ class TimeHelper
 
     /**
      * 返回N小时后的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $hour 小时数(默认为1小时)
+     * @param int        $hour     小时数(默认为1小时)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前小时0分钟的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前小时0分钟的时间戳
      * @return int 时间戳
      */
     public static function afterHour(int $hour = 1, $datetime = null, bool $round = false): int
@@ -390,9 +390,9 @@ class TimeHelper
 
     /**
      * 返回N天前的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $day 天数(默认为1天)
+     * @param int        $day      天数(默认为1天)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期0点的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前日期0点的时间戳
      * @return int 时间戳
      */
     public static function beforeDay(int $day = 1, $datetime = null, bool $round = false): int
@@ -407,9 +407,9 @@ class TimeHelper
 
     /**
      * 返回N天后的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $day 天数(默认为1天)
+     * @param int        $day      天数(默认为1天)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期0点的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前日期0点的时间戳
      * @return int 时间戳
      */
     public static function afterDay(int $day = 1, $datetime = null, bool $round = false): int
@@ -425,7 +425,7 @@ class TimeHelper
 
     /**
      * 返回N星期前的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $week 星期数(默认为1星期)
+     * @param int        $week     星期数(默认为1星期)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
      * @return int 时间戳
      */
@@ -440,7 +440,7 @@ class TimeHelper
 
     /**
      * 返回N星期后的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $week 星期数(默认为1星期)
+     * @param int        $week     星期数(默认为1星期)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
      * @return int 时间戳
      */
@@ -455,9 +455,9 @@ class TimeHelper
 
     /**
      * 返回N月前的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $month 月数(默认为1个月)
+     * @param int        $month    月数(默认为1个月)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期1号0点的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前日期1号0点的时间戳
      * @return int 时间戳
      */
     public static function beforeMonth(int $month = 1, $datetime = null, bool $round = false): int
@@ -472,9 +472,9 @@ class TimeHelper
 
     /**
      * 返回N月后的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $month 月数(默认为1个月)
+     * @param int        $month    月数(默认为1个月)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期1号0点的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前日期1号0点的时间戳
      * @return int 时间戳
      */
     public static function afterMonth(int $month = 1, $datetime = null, bool $round = false): int
@@ -489,9 +489,9 @@ class TimeHelper
 
     /**
      * 返回N年前的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $year 年数(默认为1年)
+     * @param int        $year     年数(默认为1年)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期1月1号0点的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前日期1月1号0点的时间戳
      * @return int 时间戳
      */
     public static function beforeYear(int $year = 1, $datetime = null, bool $round = false): int
@@ -506,9 +506,9 @@ class TimeHelper
 
     /**
      * 返回N年后的时间戳,传入第二个参数,则从该时间开始计算
-     * @param int $year 年数(默认为1年)
+     * @param int        $year     年数(默认为1年)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @param bool $round 是否取整(默认false),如果传入true,则返回当前日期1月1号0点的时间戳
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前日期1月1号0点的时间戳
      * @return int 时间戳
      */
     public static function afterYear(int $year = 1, $datetime = null, bool $round = false): int
@@ -568,7 +568,7 @@ class TimeHelper
 
     /**
      * 将任意格式的时间转换为指定格式
-     * @param string $format 格式化字符串
+     * @param string     $format   格式化字符串
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
      * @return false|string 格式化后的时间字符串
      */
@@ -609,10 +609,11 @@ class TimeHelper
 
     /**
      * 不同时区的时间转换
-     * @param string $toTimezone 目标时区
-     * @param string $fromTimezone 原时区(默认为当前PHP运行环境所设置的时区)
-     * @param int|string $datetime 任意格式的时间字符串或时间戳(默认为当前时间)
-     * @param string $format 格式化字符串
+     * @param string      $toTimezone   目标时区
+     * @param string|null $fromTimezone 原时区(默认为当前PHP运行环境所设置的时区)
+     * @param int|string  $datetime     任意格式的时间字符串或时间戳(默认为当前时间)
+     * @param string      $format       格式化字符串
+     * @return string
      * @throws Exception
      */
     public static function timezoneFormat(string $toTimezone, string $fromTimezone = null, $datetime = 'now', string $format = 'Y-m-d H:i:s'): string
@@ -631,5 +632,24 @@ class TimeHelper
         return $date->format($format);
     }
 
-    /* 开发计划: 日期早晚的比较 */
+    /**
+     * 比较两个时间的大小,如果第二个参数为空,则与当前时间比较
+     * @param $datetime1
+     * @param $datetime2
+     * @return int 第一个时间大于第二个时间则返回1,小于则返回-1,相等时则返回0
+     */
+    public static function compare($datetime1, $datetime2 = null): int
+    {
+        $timestamp1 = self::toTimestamp($datetime1);
+        $timestamp2 = self::toTimestamp($datetime2);
+        if ($timestamp1 > $timestamp2) {
+            return 1;
+        } elseif ($timestamp1 < $timestamp2) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+    /* 开发计划: 返回日期范围,主要用于SQL查询, 比如今天,昨天,最近7天, 本月, 本周等等. 为了方便使用, 会另外再起一个类 */
 }

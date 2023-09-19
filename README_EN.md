@@ -320,25 +320,7 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 💖sponsor me
 
-Your recognition is the motivation to move on, if you think TimeHelper is helpful to you, please support me, thank you!
-
-* Method 1: Click the `⭐Star` button in the upper right corner
-* Method 2: Scan the QR code below  
-  <img src="https://github.com/zjkal/time-helper/blob/main/sponsor.png" alt="sponsor me" width="480" />
-
-| Amount  | Nickname |    Date    | Payment |
-|:-------:|:--------:|:----------:|:-------:|
-| ¥ 9.90  |    *杰    | 2023-09-16 | Wechat  |
-| ¥ 1.88  |   W*r    | 2023-08-31 | Alipay  |
-| ¥ 10.00 |   **月    | 2023-08-19 | Wechat  |
-| ¥ 2.11  |   **福    | 2023-08-07 | Alipay  |
-| ¥ 0.99  |   T*k    | 2023-07-13 | Wechat  |
-| ¥ 1.00  |    *蓝    | 2023-06-19 | Alipay  |
-| ¥ 1.11  |    *超    | 2023-05-17 | Wechat  |
-| ¥ 5.00  |   **鱼    | 2023-05-08 | Wechat  |
-| ¥ 6.66  |   R*r    | 2023-04-01 | Wechat  |
-| ¥ 10.00 |    *彬    | 2023-03-18 | Alipay  |
-| ¥ 9.99  |   **婷    | 2023-03-06 | Wechat  |
+Your recognition is the motivation to move on, if you think TimeHelper is helpful to you, please [🙏support me](https://zjkal.cn/sponsor), thank you!
 
 ## 📖License
 

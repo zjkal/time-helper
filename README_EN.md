@@ -320,7 +320,7 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 💖sponsor me
 
-Your recognition is the motivation to move on, if you think TimeHelper is helpful to you, please [🙏support me](https://zjkal.cn/sponsor), thank you!
+Your recognition is the motivation to move on, if you think `TimeHelper` is helpful to you, please [🙏support me](https://zjkal.cn/sponsor), thank you!
 
 ## 📖License
 

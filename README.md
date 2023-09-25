@@ -321,7 +321,7 @@ ChinaHoliday::isHoliday(1646360133);
 
 您的认可是我继续前行的动力, 如果您觉得`TimeHelper`对您有帮助, 请[🙏支持我](https://zjkal.cn/sponsor), 谢谢您!
 
-## 🐧QQ频道
+## 🐧加入我的QQ频道
 
 [![QQ频道:世界上最好的编程语言](https://zjkal.cn/assets/images/qq_pindao_a1.png)](https://pd.qq.com/s/7h2hvcuxs)
 

@@ -98,7 +98,7 @@ TimeHelper::isThisMonth(1586451741);
 TimeHelper::isThisYear('Apr 11, 2020');
 
 // Determine the day of the week for a given time. If no time is passed in, the current time is used. Returns a value from 1 to 7, where 1 is Monday and 7 is Sunday.
-TimeHelper::getWeek('2022-11-27');
+TimeHelper::getWeekDay('2022-11-27');
 
 // Determine if a given time is a weekday (Monday through Friday).
 TimeHelper::isWeekday('2023-03-08');

@@ -98,7 +98,7 @@ TimeHelper::isThisMonth(1586451741);
 TimeHelper::isThisYear('Apr 11, 2020');
 
 //判断指定时间是星期几,不传默认为当前时间. 返回值为1-7,1为星期一,7为星期日
-TimeHelper::getWeek('2022-11-27');
+TimeHelper::getWeekDay('2022-11-27');
 
 //判断指定时间是否为平常日(周一到周五)
 TimeHelper::isWeekday('2023-03-08');

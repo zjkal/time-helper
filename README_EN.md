@@ -264,6 +264,9 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃Changelog
 
+> v1.1.3 Oct 19, 2023
+> * Improved the compatibility of the toTimestamp() method and can convert time in some special formats
+
 > v1.1.2 Sep 16, 2023
 > * Added method compare() to compare two times sooner or later
 

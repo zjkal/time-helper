@@ -247,7 +247,7 @@ to [List of Supported Timezones](https://www.php.net/manual/en/timezones.php)
 
 ### 10.Chinese holiday/workday related 🔥
 
-*This is a function specifically designed for judging Chinese holidays. It currently includes holiday data from 2020 to 2023 and will be continuously updated in the future.*
+*This is a function specifically designed for judging Chinese holidays. It currently includes holiday data from 2020 to 2024 and will be continuously updated in the future.*
 *For the convenience of maintenance, a separate class ChinaHoliday is created, which can also accept any type of time format or timestamp as input.*
 
 ```php
@@ -263,6 +263,9 @@ ChinaHoliday::isHoliday(1646360133);
 > **Special Notes**: All time-related methods can accept time in any format or timestamp. However, please note that for dates in the format of m/d/y or d-m-y, if the separator is a slash (/), the American m/d/y format is used. If the separator is a hyphen (-) or a dot (.), the European d-m-y format is used. To avoid potential errors, it is recommended to use the YYYY-MM-DD format or other formats as much as possible.
 
 ## 📃Changelog
+
+> v1.1.4 Oct 25, 2023
+> * Added data for Chinese holidays in 2024
 
 > v1.1.3 Oct 19, 2023
 > * Improved the compatibility of the toTimestamp() method and can convert time in some special formats

@@ -26,7 +26,8 @@ secondEndToday(): int
 
 ### 示例
 
-<pre class="language-php"><code class="lang-php"><strong>//获取到今天晚上零点之前的秒数
-</strong><strong>TimeHelper::secondEndToday(); 
-</strong><strong>//返回 32811
-</strong></code></pre>
+```php
+//获取到今天晚上零点之前的秒数
+TimeHelper::secondEndToday(); 
+//返回 32811
+```

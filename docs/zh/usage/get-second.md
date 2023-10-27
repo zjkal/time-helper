@@ -6,6 +6,8 @@ _一般用于设置缓存时间,设置结束时间等_
 
 ## secondEndToday()
 
+---
+
 #### 说明
 
 获取到今天晚上零点之前的秒数
@@ -31,6 +33,8 @@ TimeHelper::secondEndToday();
 ```
 
 ## secondMinute()
+
+---
 
 #### 说明
 
@@ -60,6 +64,8 @@ TimeHelper::secondMinute(5);
 
 ## secondHour()
 
+---
+
 #### 说明
 
 获取N小时的秒数
@@ -88,6 +94,8 @@ TimeHelper::secondHour(10);
 
 ## secondDay()
 
+---
+
 #### 说明
 
 获取N天的秒数
@@ -115,6 +123,8 @@ TimeHelper::secondDay();
 ```
 
 ## secondWeek()
+
+---
 
 #### 说明
 

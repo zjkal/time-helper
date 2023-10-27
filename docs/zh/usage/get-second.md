@@ -60,7 +60,7 @@ TimeHelper::secondMinute(5);
 
 ## secondHour()
 
-### 说明
+#### 说明
 
 获取N小时的秒数
 
@@ -68,8 +68,20 @@ TimeHelper::secondMinute(5);
 secondHour(int $hours = 1): int
 ```
 
-### 参数
+#### 参数
 
 |   参数    |     描述     |   是否必须    |
 |:-------:|:----------:|:---------:|
 | minutes | 要返回多少小时的秒数 | 可选, 默认值为1 |
+
+#### 返回值
+
+N小时的秒数
+
+#### 示例
+
+```php
+/* 返回10小时的秒数 */
+TimeHelper::secondHour(10);
+//36000
+```

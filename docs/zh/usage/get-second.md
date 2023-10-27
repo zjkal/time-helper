@@ -8,7 +8,7 @@ _一般用于设置缓存时间,设置结束时间等_
 
 #### 说明
 
-> 获取到今天晚上零点之前的秒数
+获取到今天晚上零点之前的秒数
 
 ```php
 secondEndToday(): int
@@ -34,7 +34,7 @@ TimeHelper::secondEndToday();
 
 ### 说明
 
-> 获取N分钟的秒数
+获取N分钟的秒数
 
 ```php
 secondMinute(int $minutes = 1): int

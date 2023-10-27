@@ -7,7 +7,7 @@
 
 ## 用法 <a href="#usage" id="usage"></a>
 
-* [🐶 获取需要的秒数](usage/get-second.md)
+* [🍇 获取需要的秒数](usage/get-second.md)
 
 ***
 

@@ -121,13 +121,13 @@ class TimeHelper
 
     /**
      * 讲时间转换为友好显示格式
-     * @param int|string $time 时间日期的字符串或数字
+     * @param int|string $datetime 时间日期的字符串或数字
      * @param string     $lang 语言,默认为中文,如果要显示英文传入en即可
      * @return string 转换后的友好时间格式
      */
-    public static function toFriendly($time, string $lang = 'zh'): string
+    public static function toFriendly($datetime, string $lang = 'zh'): string
     {
-        $time = self::toTimestamp($time);
+        $time = self::toTimestamp($datetime);
 
         $birthday = new DateTime();
         $birthday->setTimestamp($time);

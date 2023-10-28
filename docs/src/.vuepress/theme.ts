@@ -11,7 +11,7 @@ export default hopeTheme({
   iconAssets: "fontawesome-with-brands",
   logo: "/logo.svg",
   repo: "zjkal/time-helper",
-  docsDir: "src",
+  docsDir: "docs/src",
   locales: {
     "/": {
       // navbar

@@ -2,7 +2,7 @@
 order: 1
 ---
 
-# 🍏 获取需要的秒数
+# 🍇 获取需要的秒数
 
 ::: tip
 一般用于设置缓存时间,设置结束时间等
@@ -25,7 +25,7 @@ order: 1
 ```php
 /* 获取到今天晚上零点之前的秒数 */
 TimeHelper::secondEndToday(); 
-//32811
+// 32811
 ```
 
 ## secondMinute()
@@ -47,7 +47,7 @@ TimeHelper::secondEndToday();
 ```php
 /* 获取5分钟的秒数 */
 TimeHelper::secondMinute(5);
-//300
+// 300
 ```
 
 ## secondHour()
@@ -69,7 +69,7 @@ TimeHelper::secondMinute(5);
 ```php
 /* 获取10小时的秒数 */
 TimeHelper::secondHour(10);
-//36000
+// 36000
 ```
 
 ## secondDay()
@@ -91,7 +91,7 @@ TimeHelper::secondHour(10);
 ```php
 /* 获取1天的秒数 */
 TimeHelper::secondDay();
-//86400
+// 86400
 ```
 
 ## secondWeek()
@@ -113,5 +113,5 @@ TimeHelper::secondDay();
 ```php
 /* 获取1周的秒数 */
 TimeHelper::secondWeek(1);
-//604800
+// 604800
 ```

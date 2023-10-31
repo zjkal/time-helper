@@ -4,17 +4,17 @@ export const zhNavbar = navbar([
     "/",
     {
         text: "使用文档",
-        icon: "book",
+        icon: "laptop-code",
         link: "/getting-started/introduction.md",
     },
     {
         text: "更新日志",
         icon: "book",
-        link: "https://theme-hope.vuejs.press/",
+        link: "/appendices/chang-log.md",
     },
     {
         text: "支持作者",
-        icon: "book",
+        icon: "heart",
         link: "https://zjkal.cn/sponsor/",
     },
 ]);

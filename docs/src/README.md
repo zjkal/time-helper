@@ -30,10 +30,6 @@ features:
     icon: umbrella
     details: 作者为自由职业者,保证项目的长期稳定和持续更新
     link: false
-
-
-copyright: false
-footer: MIT Licensed | Copyright © 2023 zjkal
 ---
 
 ## 安装

@@ -2,7 +2,7 @@
 order: 6
 ---
 
-# 🍌 获取高精度时间戳
+# 🍌 High Precision Timestamp
 
 ::: tip
 生成订单号或者与其他编程语言对接时可能会用到
@@ -12,15 +12,15 @@ order: 6
 
 ### 获取秒级的时间戳,可用系统函数time()代替
 
-#### 参数
+#### Parameters
 
 > 无
 
-#### 返回值
+#### Return Values
 
 > 当前秒级的时间戳
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取当前秒级的时间戳 */
@@ -32,15 +32,15 @@ TimeHelper::getTimestamp();
 
 ### 获取毫秒级的时间戳
 
-#### 参数
+#### Parameters
 
 > 无
 
-#### 返回值
+#### Return Values
 
 > 当前毫秒级的时间戳
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取当前毫秒级的时间戳 */
@@ -52,15 +52,15 @@ TimeHelper::getMilliTimestamp();
 
 ### 获取微秒级的时间戳
 
-#### 参数
+#### Parameters
 
 > 无
 
-#### 返回值
+#### Return Values
 
 > 当前微秒级的时间戳
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取当前微秒级的时间戳 */
@@ -72,15 +72,15 @@ TimeHelper::getMicroTimestamp();
 
 ### 获取纳秒级的时间戳
 
-#### 参数
+#### Parameters
 
 > 无
 
-#### 返回值
+#### Return Values
 
 > 当前纳秒级的时间戳
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取当前纳秒级的时间戳 */

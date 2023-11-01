@@ -2,23 +2,23 @@
 order: 1
 ---
 
-# 🛎️ 简介
+# 🛎️ Introduction
 
-## 什么是TimeHelper?
+## What is TimeHelper?
 
-`TimeHelper` 是一个简单易用的`PHP时间日期助手类库`,可以快速实现常用的时间日期操作,比如获取指定时间的秒数,获取友好的时间格式,判断时间范围,计算两个时间相差值,返回N小时/天/星期/月/年前或者后的时间戳等等。
+`TimeHelper` is a simple and user-friendly `PHP Date and Time Helper Library` that enables quick implementation of common date and time operations. It includes functionalities such as getting the number of seconds from a specified time, obtaining a user-friendly time format, checking time ranges, calculating the difference between two times, and providing timestamps for N hours/days/weeks/months/years ago or in the future, among other features.
 
-## 主要特性有哪些？
+## What are the main features?
 
-* 简单易用: 不依赖任何扩展,`开箱即用`
-* 化繁为简: 所有方法都可以传入`任意类型的时间日期格式`或`时间戳`
-* 快捷高效: 所有操作只需要`一个静态方法`即可完成
-* 长期维护: 作者为自由职业者,保证项目的`长期稳定`和`持续更新`
+* Light: It does not rely on any extensions and is ready to use out of the box
+* Easy: All methods can accept either arbitrary date and time formats or timestamps
+* Smart: All operations can be accomplished with just one static method for each
+* Long-term: The author is a freelancer committed to ensuring the project's long-term.
 
-## 为什么不是`Carbon`?
+## Why not `Carbon`?
 
-毫无疑问，carbon作为PHP时间日期助手类库，是十分强大的，但是我觉得还是不够简洁。因此TimeHelper出现了。个人观点，不喜勿喷。
+There is no doubt that carbon, as a PHP time and date assistant class library, is very powerful, but I think it is still not simple enough. So TimeHelper appeared. Personal opinion, don’t comment if you don’t like it.
 
-## 开源初衷是什么？
+## What is the original intention of open source?
 
-时间日期的操作，是经常会用到的。刚开始只是自己使用，后来做成Composer包分享给朋友们以后，反响还不错。所以决定把文档完善起来，希望让更多的程序Yuan不需要重复造轮子。
+Time and date operations are often used. At first, I just used it myself. Later, I made it into a Composer package and shared it with my friends. The response was pretty good. So I decided to improve the documentation, hoping that more programmers would not need to reinvent the wheel.

@@ -1,23 +1,23 @@
 ---
 order: 2
-next: /usage/get-second.md
+next: /en/usage/get-second.md
 ---
 
-# 🚀 安装
+# 🚀 Installation
 
 ::: tip
-版本要求: PHP >= 7.1
+Require: PHP >= 7.1
 :::
 
-## 安装
+## Installation
 
-安装非常简单，因为它是一个标准的 [Composer](https://getcomposer.org/) 包，直接使用以下命令安装。
+Installation is very simple as it is a standard [Composer](https://getcomposer.org/) package, which can be installed directly using the following command.
 
 ```bash
 composer require zjkal/time-helper
 ```
 
-## 更新
+## Update
 ```bash
 composer update
 ```

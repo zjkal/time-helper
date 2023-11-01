@@ -1,27 +1,27 @@
 ---
 order: 1
-prev: /getting-started/installation.md
+prev: /en/getting-started/installation.md
 ---
 
-# 🍇 获取需要的秒数
+# 🍇 Get Second
 
 ::: tip
-一般用于设置缓存时间,设置结束时间等
+This is usually used for setting cache expiration time, setting end time, and so on.
 :::
 
 ## secondEndToday()
 
 ### 获取到今天晚上零点之前的秒数
 
-#### 参数
+#### Parameters
 
 > 无
 
-#### 返回值
+#### Return Values
 
 > 从此刻到今天晚上0点的秒数
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取到今天晚上零点之前的秒数 */
@@ -39,11 +39,11 @@ TimeHelper::secondEndToday();
 |:-------:|:----------:|:---------:|
 | minutes | 要返回多少分钟的秒数 | 可选, 默认值为1 |
 
-#### 返回值
+#### Return Values
 
 > N分钟的秒数
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取5分钟的秒数 */
@@ -55,17 +55,17 @@ TimeHelper::secondMinute(5);
 
 ### 获取N小时的秒数
 
-#### 参数
+#### Parameters
 
 |  参数   |     描述     |   是否必须    |
 |:-----:|:----------:|:---------:|
 | hours | 要返回多少小时的秒数 | 可选, 默认值为1 |
 
-#### 返回值
+#### Return Values
 
 > N小时的秒数
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取10小时的秒数 */
@@ -77,17 +77,17 @@ TimeHelper::secondHour(10);
 
 ### 获取N天的秒数
 
-#### 参数
+#### Parameters
 
 |  参数  |    描述     |   是否必须    |
 |:----:|:---------:|:---------:|
 | days | 要返回多少天的秒数 | 可选, 默认值为1 |
 
-#### 返回值
+#### Return Values
 
 > N天的秒数
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取1天的秒数 */
@@ -99,17 +99,17 @@ TimeHelper::secondDay();
 
 ### 获取N周的秒数
 
-#### 参数
+#### Parameters
 
 |  参数   |    描述     |   是否必须    |
 |:-----:|:---------:|:---------:|
 | weeks | 要返回多少周的秒数 | 可选, 默认值为1 |
 
-#### 返回值
+#### Return Values
 
 > N周的秒数
 
-#### 示例代码
+#### Example code
 
 ```php
 /* 获取1周的秒数 */

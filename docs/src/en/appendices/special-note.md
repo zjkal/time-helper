@@ -1,10 +1,10 @@
 ---
 order: 1
-prev: /usage/china-holiday.md
+prev: /en/usage/china-holiday.md
 ---
 
-# 🪧 特别说明
+# 🪧 Special Note
 
 ::: warning
-所有时间的方法都可以传入任意格式的字符串时间或者时间戳, 但是有一点请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或其他格式.
+All time-related methods can accept time in any format or timestamp. However, please note that for dates in the format of m/d/y or d-m-y, if the separator is a slash (/), the American m/d/y format is used. If the separator is a hyphen (-) or a dot (.), the European d-m-y format is used. To avoid potential errors, it is recommended to use the YYYY-MM-DD format or other formats as much as possible.
 :::

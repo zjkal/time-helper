@@ -33,7 +33,7 @@ features:
 
 
 copyright: false
-footer: MIT Licensed | Copyright © 2023 zjkal
+footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>"
 ---
 
 ## 安装

@@ -1,5 +1,6 @@
 ---
 order: 1
+prev: /getting-started/installation.md
 ---
 
 # 🍇 获取需要的秒数

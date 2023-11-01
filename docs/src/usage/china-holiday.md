@@ -1,5 +1,6 @@
 ---
 order: 10
+next: /appendices/special-note.md
 ---
 
 # 🍏 判断国内节假日

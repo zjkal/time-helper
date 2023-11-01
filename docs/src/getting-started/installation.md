@@ -1,5 +1,6 @@
 ---
 order: 2
+next: /usage/get-second.md
 ---
 
 # 🚀 安装

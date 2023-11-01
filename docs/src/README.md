@@ -30,6 +30,10 @@ features:
     icon: umbrella
     details: 作者为自由职业者,保证项目的长期稳定和持续更新
     link: false
+
+
+copyright: "<a href='https://beian.miit.gov.cn/' target='_blank' style='color:var(--dark-grey);font-weight: normal'>冀ICP备2023033034号</a>"
+footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>"
 ---
 
 ## 安装

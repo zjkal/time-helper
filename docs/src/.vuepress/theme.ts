@@ -19,7 +19,7 @@ export default hopeTheme({
             // sidebar
             sidebar: zhSidebar,
             displayFooter: true,
-            copyright: "<a href='https://beian.miit.gov.cn/' target='_blank' style='color:var(--dark-grey);font-weight: normal'>冀ICP备2023033034号</a>",
+            copyright: false,
             footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>",
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
@@ -35,6 +35,8 @@ export default hopeTheme({
             // sidebar
             sidebar: enSidebar,
             displayFooter: true,
+            copyright: false,
+            footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>",
             // page meta
             metaLocales: {
                 editLink: "Edit this page on GitHub",

@@ -28,7 +28,7 @@ features:
 
   - title: Long-term
     icon: umbrella
-    details: The author is a freelancer committed to ensuring the project's long-term.
+    details: The author is a freelancer committed to ensuring the project's long-term
     link: false
 
 

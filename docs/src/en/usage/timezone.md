@@ -5,42 +5,42 @@ order: 9
 # 🍎 Timezone
 
 ::: tip
-主要提供获取不同时区的时间和转换不同时区的时间的方法
+It mainly provides a way to get the time of different time zones and convert the time of different time zones
 :::
 
 ## timezoneFormat()
 
-### 时区转换
+### Time zone conversion
 
 #### Parameters
 
-|  Parameter   |     Introduction      |        Require         |
-|:------------:|:---------------------:|:----------------------:|
-|  toTimezone  |         目标时区          |           必须           |
-| fromTimezone |          原时区          | 可选, 默认为当前PHP运行环境所设置的时区 |
-|   datetime   |    任意格式的时间字符串或时间戳     |      可选, 默认为当前时间       |
-|    format    | 日期格式,用法与系统函数date()的一致 |   可选, 默认为Y-m-d H:i:s   |
+|  Parameter   |                            Introduction                            |                                      Require                                      |
+|:------------:|:------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|
+|  toTimezone  |                          Target time zone                          |                                     required                                      |
+| fromTimezone |                         Original time zone                         | Optional, the default is the time zone set by the current PHP runtime environment |
+|   datetime   |                any type of string time or timestamp                |                      Optional, defaults to the current time                       |
+|    format    | The date format is the same as that of the system function date(). |                         Optional, default is Y-m-d H:i:s                          |
 
 #### Return Values
 
-> 返回值为目标时区的时间字符串
+> The return value is a time string for the target time zone
 
 #### Example code
 
 ```php
-/* 将中国时区的指定时间转换为伦敦时间 */
+/* Convert a specified time in the China time zone to London time */
 TimeHelper::timezoneFormat('Europe/London', 'Asia/Shanghai', '2023-8-5 19:16:43', 'H:i:s');
 // 11:16:43
 
-/* 获取当前洛杉矶的时间 */
+/* Get the current time in Los Angeles */
 TimeHelper::timezoneFormat('America/Los_Angeles');
 // 04:16:43
 
-/* 将时间戳转换为伦敦时间 */
+/* Convert timestamps to London time */
 TimeHelper::timezoneFormat('Europe/London', null, 1692097543);
 // 11:19:03
 ```
 
 ::: info
-支持时区列表请参考[PHP支持的时区列表](https://www.php.net/manual/zh/timezones.php)
+For a list of supported time zones, refer to [List of PHP Supported Time Zones](https://www.php.net/manual/zh/timezones.php)
 :::

@@ -6,123 +6,123 @@ order: 4
 
 ## diffDays()
 
-### 计算两个日期相差的天数
+### Calculate the number of days between the two dates
 
 #### Parameters
 
-|  Parameter   |      Introduction       |   Require   |
-|:------------:|:-----------------------:|:-----------:|
-|   datetime   | 要计算的时间 (任意类型的字符串时间或时间戳) |     必须      |
-| new_datetime | 要比较的时间 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间 |
+|  Parameter   |                         Introduction                         |                Require                 |
+|:------------:|:------------------------------------------------------------:|:--------------------------------------:|
+|   datetime   | Time to be calculated (any type of string time or timestamp) |                required                |
+| new_datetime |    Time to compare (any type of string time or timestamp)    | Optional, defaults to the current time |
 
 #### Return Values
 
-> 两个日期相差的天数
+> The number of days between the two dates
 
 #### Example code
 
 ```php
-/* 计算以下两个日期相差的天数 */
+/* Calculate the number of days between the following two dates */
 TimeHelper::diffDays('2023-9-1 12:00:00', '2024-9-1 12:00:00');
 // 366
 
-/* 计算以下时间与当前时间相差的天数 */
+/* Calculate the number of days in which the following time differs from the current time */
 TimeHelper::diffDays('2023-9-1 12:00:00');
 // 30
 ```
 
 ## diffWeeks()
 
-### 计算两个日期相差的周数
+### Calculate the number of weeks between two dates
 
 #### Parameters
 
-|  Parameter   |      Introduction       |   Require   |
-|:------------:|:-----------------------:|:-----------:|
-|   datetime   | 要计算的时间 (任意类型的字符串时间或时间戳) |     必须      |
-| new_datetime | 要比较的时间 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间 |
+|  Parameter   |                         Introduction                         |                Require                 |
+|:------------:|:------------------------------------------------------------:|:--------------------------------------:|
+|   datetime   | Time to be calculated (any type of string time or timestamp) |                required                |
+| new_datetime |    Time to compare (any type of string time or timestamp)    | Optional, defaults to the current time |
 
 #### Return Values
 
-> 两个日期相差的周数
+> The number of weeks between the two dates
 
 #### Example code
 
 ```php
-/* 计算以下两个日期相差的周数 */
+/* Calculate the number of weeks between the following two dates */
 TimeHelper::diffWeeks('2023-9-1 12:00:00', 'Sep 8, 2023');
 // 1
 ```
 
 ## diffMonths()
 
-### 计算两个日期相差的月数
+### Calculate the number of months between two dates
 
 #### Parameters
 
-|  Parameter   |      Introduction       |   Require   |
-|:------------:|:-----------------------:|:-----------:|
-|   datetime   | 要计算的时间 (任意类型的字符串时间或时间戳) |     必须      |
-| new_datetime | 要比较的时间 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间 |
+|  Parameter   |                         Introduction                         |                Require                 |
+|:------------:|:------------------------------------------------------------:|:--------------------------------------:|
+|   datetime   | Time to be calculated (any type of string time or timestamp) |                required                |
+| new_datetime |    Time to compare (any type of string time or timestamp)    | Optional, defaults to the current time |
 
 #### Return Values
 
-> 两个日期相差的月数
+> The number of months between the two dates
 
 #### Example code
 
 ```php
-/* 计算以下两个日期相差的月数 */
+/* Calculate the number of months between the following two dates */
 TimeHelper::diffMonths(1693540800, '2024-9-1 12:00:00');
 // 12
 ```
 
 ## diffYears()
 
-### 计算两个日期相差的年数
+### Calculate the number of years between the two dates
 
 #### Parameters
 
-|  Parameter   |      Introduction       |   Require   |
-|:------------:|:-----------------------:|:-----------:|
-|   datetime   | 要计算的时间 (任意类型的字符串时间或时间戳) |     必须      |
-| new_datetime | 要比较的时间 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间 |
+|  Parameter   |                         Introduction                         |                Require                 |
+|:------------:|:------------------------------------------------------------:|:--------------------------------------:|
+|   datetime   | Time to be calculated (any type of string time or timestamp) |                required                |
+| new_datetime |    Time to compare (any type of string time or timestamp)    | Optional, defaults to the current time |
 
 #### Return Values
 
-> 两个日期相差的年数
+> The number of years between the two dates
 
 #### Example code
 
 ```php
-/* 计算以下两个日期相差年数 */
+/* Calculate the number of years between the following two dates */
 TimeHelper::diffYears(1693540800, 1756699200);
 // 2
 ```
 
 ## compare()
 
-### 比较两个时间的大小
+### Compare the size of the two times
 
 #### Parameters
 
-|  Parameter   |      Introduction       |   Require   |
-|:------------:|:-----------------------:|:-----------:|
-|   datetime   | 要计算的时间 (任意类型的字符串时间或时间戳) |     必须      |
-| new_datetime | 要比较的时间 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间 |
+|  Parameter   |                         Introduction                         |                Require                 |
+|:------------:|:------------------------------------------------------------:|:--------------------------------------:|
+|   datetime   | Time to be calculated (any type of string time or timestamp) |                required                |
+| new_datetime |    Time to compare (any type of string time or timestamp)    | Optional, defaults to the current time |
 
 #### Return Values
 
-> 如果第一个时间大于第二个时间则返回1,小于则返回-1,相等时则返回0
+> If the first time is greater than the second time, it returns 1, less than -1, and if it is equal, it returns 0
 
 #### Example code
 
 ```php
-/* 比较以下两个时间的大小 */
+/* Compare the sizes of the following two times */
 TimeHelper::compare('2023-9-1 12:00:00', '2023-8-1 12:00:00');
 // 1
 
-/* 计算以下时间是否大于当前时间 */
+/* Calculate whether the following time is greater than the current time */
 TimeHelper::compare('2023-9-1 12:00:00');
 //-1
 ```

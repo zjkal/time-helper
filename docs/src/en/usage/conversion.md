@@ -5,84 +5,84 @@ order: 7
 # 🍍 Conversion
 
 ::: tip
-用于爬虫爬取网页或第三方程序对接时,时间格式不统一的转换
+It is used to convert crawlers crawling web pages or third-party programs to connect with different time formats
 :::
 
 ## format()
 
-### 任意格式时间转换为指定格式
+### Convert any format time to the specified format
 
 #### Parameters
 
-| Parameter |     Introduction      |      Require       |
-|:---------:|:---------------------:|:------------------:|
-|  format   | 日期格式,用法与系统函数date()的一致 | 可选, 默认为Y-m-d H:i:s |
-| datetime  |    任意类型的字符串时间或时间戳     |    可选, 默认为当前时间     |
+| Parameter |                            Introduction                            |                Require                 |
+|:---------:|:------------------------------------------------------------------:|:--------------------------------------:|
+|  format   | The date format is the same as that of the system function date(). |    Optional, default is Y-m-d H:i:s    |
+| datetime  |                Any type of string time or timestamp                | Optional, defaults to the current time |
 
 #### Return Values
 
-> 指定格式的时间字符串
+> Specifies the format of the time string
 
 #### Example code
 
 ```php
-/* 将以下日期转换为中国常用的日期格式 */
+/* Convert the following dates to a date format commonly used in China */
 TimeHelper::format('Y-m-d H:i:s','May 3, 2022 12:01:33');
 // 2022-03-03 12:01:33
 
-/* 将时间戳转换为西方常用的日期格式 */
+/* Convert timestamps to date formats commonly used in the West */
 TimeHelper::format('F j, Y, g:i a',1698762509);
 // October 31, 2023, 10:28 pm
 ```
 
 ## isTimestamp()
 
-### 判断字符串或数字是否为时间戳
+### Determines whether a string or number is a timestamp
 
 #### Parameters
 
-| Parameter | Introduction | Require |
-|:---------:|:------------:|:-------:|
-| timestamp |  要判断的字符串或数字  |   必须    |
+| Parameter |           Introduction            | Require  |
+|:---------:|:---------------------------------:|:--------:|
+| timestamp | The string or number to be judged | required |
 
 #### Return Values
 
-> 如果是时间戳则返回`true`,否则返回`false`
+> 'true' if it's a timestamp, 'false' if it's otherwise
 
 #### Example code
 
 ```php
-/* 判断以下字符串是否为时间戳 */
+/* Check whether the following strings are timestamps */
 TimeHelper::isTimestamp('1646360133');
 // true
 
-/* 判断以下数字是否为时间戳 */
+/* Determine whether the following numbers are timestamps */
 TimeHelper::isTimestamp(164636013);
 // false
 ```
 
 ## toTimestamp()
 
-### 任意格式时间转换为时间戳
+### Arbitrary format time is converted to a timestamp
 
 #### Parameters
 
-| Parameter |  Introduction  |   Require   |
-|:---------:|:--------------:|:-----------:|
-| datetime  | 任意类型的字符串时间或时间戳 | 可选, 默认为当前时间 |
+| Parameter |             Introduction             |                Require                 |
+|:---------:|:------------------------------------:|:--------------------------------------:|
+| datetime  | Any type of string time or timestamp | Optional, defaults to the current time |
 
 #### Return Values
 
-> 转换后的时间戳
+> The timestamp after the conversion
 
 #### Example code
 
 ```php
-/* 将以下日期转换为时间戳 */
+/* Convert the following dates to timestamps */
 TimeHelper::toTimestamp('Apr 11, 2020');
 // 1586534400
 
-/* 将不规则的日期转换为时间戳 */
+/* Convert irregular dates to timestamps */
 TimeHelper::toTimestamp('2023年9月 5点');
 // 1693515600
 ```

@@ -6,53 +6,53 @@ next: /en/appendices/special-note.md
 # 🍏 China Holiday
 
 ::: tip
-专门针对国内的节假日进行判断, 目前包含`2020年-2024年`的节假日数据, 后续也会持续更新. 为了便于维护和使用, 另起一个类`ChinaHoliday`
+Specifically for China's holidays, it currently includes the holiday data of '2020-2024', and will continue to be updated in the future. In order to facilitate maintenance and use, a new class 'ChinaHoliday' was created
 :::
 
 ## isWorkday()
 
-### 判断日期是否为国内的工作日
+### Determine whether the date is a working day in China
 
 #### Parameters
 
-| Parameter |  Introduction  |   Require   |
-|:---------:|:--------------:|:-----------:|
-| datetime  | 任意格式的时间字符串或时间戳 | 可选, 默认为当前时间 |
+| Parameter |             Introduction             |                Require                 |
+|:---------:|:------------------------------------:|:--------------------------------------:|
+| datetime  | Any type of string time or timestamp | Optional, defaults to the current time |
 
 #### Return Values
 
-> 如果是工作日则返回`true`, 否则返回`false`
+> 'true' if it's a working day, 'false' if it's otherwise
 
 #### Example code
 
 ```php
-/* 判断以下日期是否为国内工作日 */
+/* Determine whether the following dates are working days in China */
 ChinaHoliday::isWorkday('2023-01-29');
 // true
 
-/* 判断今天是否为国内工作日 */
+/* Determine whether today is a Chinese working day */
 ChinaHoliday::isWorkday();
 // true
 ```
 
 ## isHoliday()
 
-### 判断日期是否为国内的节假日
+### Determine whether the date is a Chinese holiday
 
 #### Parameters
 
-| Parameter |  Introduction  |   Require   |
-|:---------:|:--------------:|:-----------:|
-| datetime  | 任意格式的时间字符串或时间戳 | 可选, 默认为当前时间 |
+| Parameter |             Introduction             |                Require                 |
+|:---------:|:------------------------------------:|:--------------------------------------:|
+| datetime  | Any type of string time or timestamp | Optional, defaults to the current time |
 
 #### Return Values
 
-> 如果是节假日则返回`true`, 否则返回`false`
+> 'true' if it's a holiday, 'false' if it's otherwise
 
 #### Example code
 
 ```php
-/* 判断以下日期是否为国内的节假日 */
+/* Determine whether the following dates are Chinese holidays */
 ChinaHoliday::isHoliday('2023-01-28');
 // false
 ```

@@ -6,322 +6,322 @@ order: 5
 
 ## beforeMinute()
 
-### 获取指定时间N分钟前的时间戳
+### Gets the timestamp N minutes before the specified time
 
 #### Parameters
 
-| Parameter |        Introduction        |   Require    |
-|:---------:|:--------------------------:|:------------:|
-|  minute   |            分钟数             |  可选, 默认为1分钟  |
-| datetime  | 从指定时间开始计算 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该分钟的0秒开始计算  | 可选, 默认为false |
+| Parameter |                                                   Introduction                                                   |                 Require                 |
+|:---------:|:----------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|
+|  minute   |                                                     minutes                                                      | Optional, the default value is 1 minute |
+| datetime  |                        Starts at a specified time (any type of string time or timestamp)                         | Optional, defaults to the current time  |
+|   round   | If true, the whole number is rounded up or not, and if true, the calculation starts from 0 seconds of the minute |       Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N分钟前的时间戳
+> The timestamp is calculated from the specified time between N minutes ago
 
 #### Example code
 
 ```php
-/* 获取指定时间3分钟前0秒的时间戳 */
+/* Obtain the timestamp of 0 seconds before the specified time of 3 minutes */
 TimeHelper::beforeMinute(3,'2022-3-2 10:15:33',true);
 // 1646187120
 
-/* 获取指定时间10分钟前的时间戳 */
+/* Obtain the timestamp 10 minutes before the specified time */
 TimeHelper::beforeMinute(10,'2022-3-2 10:15:33');
 // 1646186733
 
-/* 获取5分钟前的时间戳 */
+/* Get a timestamp from 5 minutes ago */
 TimeHelper::beforeMinute(5);
 // 1698734495
 ```
 
 ## afterMinute()
 
-### 获取指定时间N分钟后的时间戳
+### Obtain the timestamp after the specified time N minutes
 
 #### Parameters
 
-| Parameter |        Introduction        |   Require    |
-|:---------:|:--------------------------:|:------------:|
-|  minute   |            分钟数             |  可选, 默认为1分钟  |
-| datetime  | 从指定时间开始计算 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该分钟的0秒开始计算  | 可选, 默认为false |
+| Parameter |                                                   Introduction                                                   |                 Require                 |
+|:---------:|:----------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|
+|  minute   |                                                     minutes                                                      | Optional, the default value is 1 minute |
+| datetime  |                        Starts at a specified time (any type of string time or timestamp)                         | Optional, defaults to the current time  |
+|   round   | If true, the whole number is rounded up or not, and if true, the calculation starts from 0 seconds of the minute |       Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N分钟后的时间戳
+> The timestamp is calculated from the specified time between N minutes
 
 #### Example code
 
 ```php
-/* 获取指定时间20分钟后的时间戳 */
+/* Obtain the timestamp 20 minutes after the specified time */
 TimeHelper::afterMinute(20,'2022-3-2 10:15:33');
 // 1646188533
 
-/* 获取1分钟后的时间戳 */
+/* 获取1分钟后的时间戳Get the timestamp after 1 minute */
 TimeHelper::afterMinute();
 // 1698734495
 ```
 
 ## beforeHour()
 
-### 获取指定时间N小前的时间戳
+### Obtain the timestamp N hours before the specified time
 
 #### Parameters
 
-| Parameter |        Introduction         |   Require    |
-|:---------:|:---------------------------:|:------------:|
-|   hour    |             小时数             |  可选, 默认为1小时  |
-| datetime  | 从指定时间开始计算 (任意类型的字符串时间或时间戳)  | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该小时的0分0秒开始计算 | 可选, 默认为false |
+| Parameter |                           Introduction                            |                Require                 |
+|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+|   hour    |                               hours                               | Optional, the default value is 1 hour  |
+| datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
+|   round   |      If true, the whole is calculated from 0:00 of the hour       |      Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N小时前的时间戳
+> The timestamp is calculated from the specified time between N hours ago
 
 #### Example code
 
 ```php
-/* 获取3小时前的0分0秒开始计算的时间戳 */
+/* Obtain the timestamp that started at 0:00 3 hours ago */
 TimeHelper::beforeHour(3,null,true);
 // 1698734495
 
-/* 获取指定时间1小时前的时间戳(请注意此处为php8之后的用法) */
+/* Get the timestamp 1 hour before the specified time (note that this is the usage after php 8) */
 TimeHelper::beforeHour(datetime:'Apr 11, 2020');
 // 1586534400
 ```
 
 ## afterHour()
 
-### 获取指定时间N小后的时间戳
+### Obtain the timestamp after the specified time N hours
 
 #### Parameters
 
-| Parameter |        Introduction         |   Require    |
-|:---------:|:---------------------------:|:------------:|
-|   hour    |             小时数             |  可选, 默认为1小时  |
-| datetime  | 从指定时间开始计算 (任意类型的字符串时间或时间戳)  | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该小时的0分0秒开始计算 | 可选, 默认为false |
+| Parameter |                           Introduction                            |                Require                 |
+|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+|   hour    |                               hours                               | Optional, the default value is 1 hour  |
+| datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
+|   round   |      If true, the whole is calculated from 0:00 of the hour       |      Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N小时后的时间戳
+> The timestamp is calculated from the specified time between N hours
 
 #### Example code
 
 ```php
-/* 返回2小时后的时间戳 */
+/* Returns a timestamp 2 hours later */
 TimeHelper::afterHour(2);
 // 1698734495
 ```
 
 ## beforeDay()
 
-### 获取指定时间N天前的时间戳
+### Get the timestamp N days before the specified time
 
 #### Parameters
 
-| Parameter |         Introduction         |   Require    |
-|:---------:|:----------------------------:|:------------:|
-|    day    |              天数              |  可选, 默认为1天   |
-| datetime  |  从指定时间开始计算 (任意类型的字符串时间或时间戳)  | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该天的0点0分0秒开始计算 | 可选, 默认为false |
+| Parameter |                           Introduction                            |                Require                 |
+|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+|    day    |                               days                                |  Optional, the default value is 1 day  |
+| datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
+|   round   |  If true, the whole value is calculated from 0:00:00 on that day  |      Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N天前的时间戳
+> The timestamp is calculated from N days ago between the specified
 
 #### Example code
 
 ```php
-/* 获取15天前0点的时间戳 */
+/* Get the timestamp of 0:00 15 days ago */
 TimeHelper::beforeDay(15,null,true);
 // 1698734495
 
-/* 获取指定时间3天前的时间戳 */
+/* Obtain the timestamp 3 days before the specified time */
 TimeHelper::beforeDay(3,1698734495);
 // 1698475295
 ```
 
 ## afterDay()
 
-### 获取指定时间N天后的时间戳
+### Obtain the timestamp after N days of the specified time
 
 #### Parameters
 
-| Parameter |         Introduction         |   Require    |
-|:---------:|:----------------------------:|:------------:|
-|    day    |              天数              |  可选, 默认为1天   |
-| datetime  |  从指定时间开始计算 (任意类型的字符串时间或时间戳)  | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该天的0点0分0秒开始计算 | 可选, 默认为false |
+| Parameter |                           Introduction                            |                Require                 |
+|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+|    day    |                               days                                |  Optional, the default value is 1 day  |
+| datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
+|   round   |  If true, the whole value is calculated from 0:00:00 on that day  |      Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N天后的时间戳
+> The timestamp is calculated from the specified time between N days
 
 #### Example code
 
 ```php
-/* 获取15天后的时间戳 */
+/* Get the timestamp after 15 days */
 TimeHelper::afterDay(15);
 // 1698483295
 ```
 
 ## beforeWeek()
 
-### 获取指定时间N周前的时间戳
+### Get the timestamp N weeks before the specified time
 
 #### Parameters
 
-| Parameter |        Introduction        |   Require   |
-|:---------:|:--------------------------:|:-----------:|
-|   week    |             周数             |  可选, 默认为1周  |
-| datetime  | 从指定时间开始计算 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间 |
+| Parameter |                           Introduction                            |                Require                 |
+|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+|   week    |                               weeks                               |      Optional, default is 1 week       |
+| datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
 
 #### Return Values
 
-> 从指定之间开始计算,N周前的时间戳
+> The timestamp is calculated from the specified time between N weeks ago
 
 #### Example code
 
 ```php
-/* 获取指定时间2周前的时间戳 */
+/* Obtain the timestamp 2 weeks before the specified time */
 TimeHelper::beforeWeek(2,'2022-4-24 23:01:11');
 // 1649602871
 ```
 
 ## afterWeek()
 
-### 获取指定时间N周后的时间戳
+### Gets the timestamp after N weeks of the specified time
 
 #### Parameters
 
-| Parameter |        Introduction        |   Require   |
-|:---------:|:--------------------------:|:-----------:|
-|   week    |             周数             |  可选, 默认为1周  |
-| datetime  | 从指定时间开始计算 (任意类型的字符串时间或时间戳) | 可选, 默认为当前时间 |
+| Parameter |                           Introduction                            |                Require                 |
+|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+|   week    |                               weeks                               |      Optional, default is 1 week       |
+| datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
 
 #### Return Values
 
-> 从指定之间开始计算,N周后的时间戳
+> The timestamp is calculated from the specified time between N weeks
 
 #### Example code
 
 ```php
-/* 获取一周后的时间戳 */
+/* Get a timestamp one week later */
 TimeHelper::afterWeek();
 // 1698734495
 ```
 
 ## beforeMonth()
 
-### 获取指定时间N月前的时间戳
+### Obtain the timestamp of the specified time N months ago
 
 #### Parameters
 
-| Parameter |          Introduction          |   Require    |
-|:---------:|:------------------------------:|:------------:|
-|   month   |               月数               |  可选, 默认为1个月  |
-| datetime  |   从指定时间开始计算 (任意类型的字符串时间或时间戳)   | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该月的1日0点0分0秒开始计算 | 可选, 默认为false |
+| Parameter |                               Introduction                                |                Require                 |
+|:---------:|:-------------------------------------------------------------------------:|:--------------------------------------:|
+|   month   |                                  months                                   | Optional, the default value is 1 month |
+| datetime  |     Starts at a specified time (any type of string time or timestamp)     | Optional, defaults to the current time |
+|   round   | If true, the rounding is calculated from 00:00:00 on the 1st of the month |      Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N月前的时间戳
+> The timestamp from N months ago is calculated from the specified period
 
 #### Example code
 
 ```php
-/* 获取以下时间1个月前的时间戳(请注意此处为php8之后的用法) */
+/* Get the timestamp 1 month ago for the following time (note that this is the usage after php 8) */
 TimeHelper::beforeMonth(datetime:1646360133);
 // 1643940933
 
-/* 获取2个月前1日0点0分的时间戳 */
+/* Get the timestamp of 00:00 on the 1st day 2 months ago */
 TimeHelper::beforeMonth(2,null,true);
 // 1698734495
 
-/* 获取3个月前的时间戳 */
+/* Get a timestamp from 3 months ago */
 TimeHelper::beforeMonth(3);
 // 1698624481
 ```
 
 ## afterMonth()
 
-### 获取指定时间N月后的时间戳
+### Obtain the timestamp after N months of the specified time
 
 #### Parameters
 
-| Parameter |          Introduction          |   Require    |
-|:---------:|:------------------------------:|:------------:|
-|   month   |               月数               |  可选, 默认为1个月  |
-| datetime  |   从指定时间开始计算 (任意类型的字符串时间或时间戳)   | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该月的1日0点0分0秒开始计算 | 可选, 默认为false |
+| Parameter |                               Introduction                                |                Require                 |
+|:---------:|:-------------------------------------------------------------------------:|:--------------------------------------:|
+|   month   |                                  months                                   | Optional, the default value is 1 month |
+| datetime  |     Starts at a specified time (any type of string time or timestamp)     | Optional, defaults to the current time |
+|   round   | If true, the rounding is calculated from 00:00:00 on the 1st of the month |      Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N月后的时间戳
+> The timestamp after N months is calculated from the specified period
 
 #### Example code
 
 ```php
-/* 获取5个月后的时间戳 */
+/* Get the timestamp after 5 months */
 TimeHelper::afterMonth(5);
 // 1698734495
 
-/* 获取下个月1日0点0分的时间戳(请注意此处为php8之后的用法) */
+/* Get the timestamp of 0:00 on the 1st of the following month (note that this is the usage after php 8) */
 TimeHelper::afterMonth(round:true);
 // 1643940933
 ```
 
 ## beforeYear()
 
-### 获取指定时间N年前的时间戳
+### Obtain the timestamp of the specified time N years ago
 
 #### Parameters
 
-| Parameter |           Introduction           |   Require    |
-|:---------:|:--------------------------------:|:------------:|
-|   year    |                年数                |  可选, 默认为1年   |
-| datetime  |    从指定时间开始计算 (任意类型的字符串时间或时间戳)    | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该年的1月1日0点0分0秒开始计算 | 可选, 默认为false |
+| Parameter |                                Introduction                                |                Require                 |
+|:---------:|:--------------------------------------------------------------------------:|:--------------------------------------:|
+|   year    |                                   years                                    |      Optional, default is 1 year       |
+| datetime  |     Starts at a specified time (any type of string time or timestamp)      | Optional, defaults to the current time |
+|   round   | If true, the rounding is calculated from 00:00:00 on January 1 of the year |      Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N年前的时间戳
+> The timestamp is calculated from the specified time between N years ago
 
 #### Example code
 
 ```php
-/* 获取指定时间3年前的时间戳 */
+/* Obtain a timestamp from 3 years ago to the specified time */
 TimeHelper::beforeYear(3,'2022-7-11');
 // 1562774400
 
-/* 获取明年1月1日0点0分0秒的时间戳 */
+/* Get the timestamp of 00:00:00 on January 1 next year */
 TimeHelper::beforeYear(0,null,true);
 // 1640995200
 ```
 
 ## afterYear()
 
-### 获取指定时间N年后的时间戳
+### Obtain the timestamp after the specified time N years later
 
 #### Parameters
 
-| Parameter |           Introduction           |   Require    |
-|:---------:|:--------------------------------:|:------------:|
-|   year    |                年数                |  可选, 默认为1年   |
-| datetime  |    从指定时间开始计算 (任意类型的字符串时间或时间戳)    | 可选, 默认为当前时间  |
-|   round   | 是否取整,如果为true,则从该年的1月1日0点0分0秒开始计算 | 可选, 默认为false |
+| Parameter |                                Introduction                                |                Require                 |
+|:---------:|:--------------------------------------------------------------------------:|:--------------------------------------:|
+|   year    |                                   years                                    |      Optional, default is 1 year       |
+| datetime  |     Starts at a specified time (any type of string time or timestamp)      | Optional, defaults to the current time |
+|   round   | If true, the rounding is calculated from 00:00:00 on January 1 of the year |      Optional, defaults to false       |
 
 #### Return Values
 
-> 从指定之间开始计算,N年后的时间戳
+> The timestamp is calculated from the specified time between years and N years later
 
 #### Example code
 
 ```php
-/* 获取2年后的时间戳 */
+/* Get a timestamp after 2 years */
 TimeHelper::afterYear(2);
 // 1698734495
 ```

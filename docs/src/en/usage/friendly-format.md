@@ -5,32 +5,32 @@ order: 2
 # 🍈 Friendly Format
 
 ::: tip
-一般用于社交类平台,评论,论坛等
+It is generally used on social platforms, comments, forums, etc
 :::
 
 ## toFriendly()
 
-### 返回友好的日期格式,如N秒前
+### Returns a friendly date format, such as N seconds ago
 
 #### Parameters
 
-| Parameter |   Introduction   |  Require   |
-|:---------:|:----------------:|:----------:|
-|   time    |  任意类型的字符串时间或时间戳  |     必须     |
-|   lang    | 语言: 中文是zh, 英文是en | 可选, 默认值为zh |
+| Parameter |               Introduction               |              Require              |
+|:---------:|:----------------------------------------:|:---------------------------------:|
+|   time    |   Any type of string time or timestamp   |             required              |
+|   lang    | Language: zh for Chinese, en for English | Optional, the default value is zh |
 
 #### Return Values
 
-> 友好的日期格式
+> Friendly date format
 
 #### Example code
 
 ```php
-/* 转换为友好的日期格式 */
+/* Convert to a friendly date format */
 TimeHelper::toFriendly('2022-3-2 10:15:33');
 // 3天前
 
-/* 转换为友好的日期格式(英文) */
+/* Convert to a friendly date format */
 TimeHelper::toFriendly(1646186290, 'en');
 // 6 hours ago
 ```

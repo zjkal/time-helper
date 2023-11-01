@@ -11,108 +11,108 @@ This is usually used for setting cache expiration time, setting end time, and so
 
 ## secondEndToday()
 
-### 获取到今天晚上零点之前的秒数
+### Get the number of seconds until midnight tonight
 
 #### Parameters
 
-> 无
+> nothing
 
 #### Return Values
 
-> 从此刻到今天晚上0点的秒数
+> The number of seconds between this moment and 0:00 tonight
 
 #### Example code
 
 ```php
-/* 获取到今天晚上零点之前的秒数 */
+/* Get the number of seconds until midnight tonight */
 TimeHelper::secondEndToday(); 
 // 32811
 ```
 
 ## secondMinute()
 
-### 获取N分钟的秒数
+### Get the number of seconds for N minutes
 
 * Parameter
 
-| Parameter | Introduction |  Require  |
-|:---------:|:------------:|:---------:|
-|  minutes  |  要返回多少分钟的秒数  | 可选, 默认值为1 |
+| Parameter |                     Introduction                     |             Require              |
+|:---------:|:----------------------------------------------------:|:--------------------------------:|
+|  minutes  | The number of seconds for how many minutes to return | Optional, the default value is 1 |
 
 #### Return Values
 
-> N分钟的秒数
+> N minutes of seconds
 
 #### Example code
 
 ```php
-/* 获取5分钟的秒数 */
+/* Get 5 minutes of seconds */
 TimeHelper::secondMinute(5);
 // 300
 ```
 
 ## secondHour()
 
-### 获取N小时的秒数
+### Get the number of seconds for N hours
 
 #### Parameters
 
-| Parameter | Introduction |  Require  |
-|:---------:|:------------:|:---------:|
-|   hours   |  要返回多少小时的秒数  | 可选, 默认值为1 |
+| Parameter |                    Introduction                    |             Require              |
+|:---------:|:--------------------------------------------------:|:--------------------------------:|
+|   hours   | The number of seconds for how many hours to return | Optional, the default value is 1 |
 
 #### Return Values
 
-> N小时的秒数
+> The number of seconds for N hours
 
 #### Example code
 
 ```php
-/* 获取10小时的秒数 */
+/* Get 10 hours of seconds */
 TimeHelper::secondHour(10);
 // 36000
 ```
 
 ## secondDay()
 
-### 获取N天的秒数
+### Get the number of seconds for N days
 
 #### Parameters
 
-| Parameter | Introduction |  Require  |
-|:---------:|:------------:|:---------:|
-|   days    |  要返回多少天的秒数   | 可选, 默认值为1 |
+| Parameter |                   Introduction                   |             Require              |
+|:---------:|:------------------------------------------------:|:--------------------------------:|
+|   days    | The number of seconds of how many days to return | Optional, the default value is 1 |
 
 #### Return Values
 
-> N天的秒数
+> The number of seconds in N days
 
 #### Example code
 
 ```php
-/* 获取1天的秒数 */
+/* Get the number of seconds in 1 day */
 TimeHelper::secondDay();
 // 86400
 ```
 
 ## secondWeek()
 
-### 获取N周的秒数
+### Get the number of seconds for N weeks
 
 #### Parameters
 
-| Parameter | Introduction |  Require  |
-|:---------:|:------------:|:---------:|
-|   weeks   |  要返回多少周的秒数   | 可选, 默认值为1 |
+| Parameter |                   Introduction                    |             Require              |
+|:---------:|:-------------------------------------------------:|:--------------------------------:|
+|   weeks   | The number of seconds of how many weeks to return | Optional, the default value is 1 |
 
 #### Return Values
 
-> N周的秒数
+> N weeks of seconds
 
 #### Example code
 
 ```php
-/* 获取1周的秒数 */
+/* Get the seconds for 1 week */
 TimeHelper::secondWeek(1);
 // 604800
 ```

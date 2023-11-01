@@ -5,79 +5,79 @@ order: 8
 # 🥭 Leap Year
 
 ::: tip
-比原生方法使用起来更方便
+It is more convenient to use than the native method
 :::
 
 ## isLeapYear()
 
-### 判断指定日期是否为闰年
+### Determine whether the specified date is a leap year
 
 #### Parameters
 
-| Parameter | Introduction  |   Require   |
-|:---------:|:-------------:|:-----------:|
-| datetime  | 任意格式时间字符串或时间戳 | 可选, 默认为当前时间 |
+| Parameter |            Introduction             |                Require                 |
+|:---------:|:-----------------------------------:|:--------------------------------------:|
+| datetime  | Any format time string or timestamp | Optional, defaults to the current time |
 
 #### Return Values
 
-> 如果是闰年返回 `true`, 否则返回 `false`
+> 'true' if it's a leap year, 'false' if it's otherwise
 
 #### Example code
 
 ```php
-/* 判断指定日期是否为闰年 */
+/* Determine whether the specified date is a leap year */
 TimeHelper::isLeapYear('2020-3-2 10:15:33');
 // true
 
-/* 判断今年是否为闰年 */
+/* Determine if this year is a leap year */
 TimeHelper::isLeapYear();
 // false
 ```
 
 ## daysInYear()
 
-### 计算指定日期所在年份的天数
+### Count the number of days in the year in which the specified date is located
 
 #### Parameters
 
-| Parameter | Introduction  |   Require   |
-|:---------:|:-------------:|:-----------:|
-| datetime  | 任意格式时间字符串或时间戳 | 可选, 默认为当前时间 |
+| Parameter |            Introduction             |                Require                 |
+|:---------:|:-----------------------------------:|:--------------------------------------:|
+| datetime  | Any format time string or timestamp | Optional, defaults to the current time |
 
 #### Return Values
 
-> 返回指定日期所在年份的天数
+> Returns the number of days in the year in which the specified date is located
 
 #### Example code
 
 ```php
-/* 计算以下日期当年的天数 */
+/* Calculate the number of days in the current year for the following dates */
 TimeHelper::daysInYear(1646360133);
 // 365
 ```
 
 ## daysInMonth()
 
-### 计算指定日期所在月份的天数
+### Count the number of days in the month in which the specified date falls on
 
 #### Parameters
 
-| Parameter | Introduction  |   Require   |
-|:---------:|:-------------:|:-----------:|
-| datetime  | 任意格式时间字符串或时间戳 | 可选, 默认为当前时间 |
+| Parameter |            Introduction             |                Require                 |
+|:---------:|:-----------------------------------:|:--------------------------------------:|
+| datetime  | Any format time string or timestamp | Optional, defaults to the current time |
 
 #### Return Values
 
-> 返回指定日期所在月份的天数
+> Returns the number of days in the month in which the specified date falls on
 
 #### Example code
 
 ```php
-/* 计算以下日期当月的天数 */
+/* Calculate the number of days in the month for the following dates */
 TimeHelper::daysInMonth('2020-2-1');
 // 29
 
-/* 计算本月的天数 */
+/* Calculate the number of days in the month */
 TimeHelper::daysInMonth();
 // 31
 ```

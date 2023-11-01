@@ -3,19 +3,19 @@ import {sidebar} from "vuepress-theme-hope";
 export const enSidebar = sidebar({
     "/en/": [
         {
-            text: "开始",
+            text: "Getting Started",
             icon: "rainbow",
             prefix: "getting-started/",
             children: "structure",
         },
         {
-            text: "使用",
+            text: "Usage",
             icon: "laptop-code",
             prefix: "usage/",
             children: "structure",
         },
         {
-            text: "附录",
+            text: "Appendices",
             icon: "book",
             prefix: "appendices/",
             children: "structure",

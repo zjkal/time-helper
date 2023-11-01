@@ -1,34 +1,34 @@
 ---
 home: true
-title: 主页
+title: Home
 icon: home
 heroImage: /logo.svg
 heroText: TimeHelper
-tagline: 一个简单快捷的PHP日期时间助手类库 ✨
+tagline: a smart PHP datetime helper library ✨
 actions:
-  - text: 使用文档
-    link: /getting-started/introduction.md
+  - text: DOCUMENTATION
+    link: /en/getting-started/introduction.md
     type: primary
 
 features:
-  - title: 简单易用
+  - title: Light
     icon: mug-hot
-    details: 不依赖任何扩展,支持Composer,开箱即用
+    details: It does not rely on any extensions and is ready to use out of the box
     link: false
 
-  - title: 化繁为简
+  - title: Easy
     icon: wand-magic-sparkles
-    details: 所有方法都可以传入任意类型的时间日期格式或时间戳
+    details: All methods can accept either arbitrary date and time formats or timestamps
     link: false
 
-  - title: 快捷高效
+  - title: Smart
     icon: rocket
-    details: 所有操作只需要一个静态方法即可搞定
+    details: All operations can be accomplished with just one static method for each
     link: false
 
-  - title: 长期维护
+  - title: Long-term
     icon: umbrella
-    details: 作者为自由职业者,保证项目的长期稳定和持续更新
+    details: The author is a freelancer committed to ensuring the project's long-term.
     link: false
 
 
@@ -36,27 +36,27 @@ copyright: false
 footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>"
 ---
 
-## 安装
+## Installation
 
 ::: info
-版本要求: PHP >= 7.1
+Require: PHP >= 7.1
 :::
 
-安装非常简单，因为它是一个标准的 [Composer](https://getcomposer.org/) 包，直接使用以下命令安装。
+Installation is very simple as it is a standard [Composer](https://getcomposer.org/) package, which can be installed directly using the following command.
 
 ```bash
 composer require zjkal/time-helper
 ```
 
-## 更新
+## Update
 ```bash
 composer update
 ```
 
-## QQ频道
+## QQ channel
 
-点击或扫一扫以下二维码,加入QQ频道
+Click or scan the following QR code to join the QQ channel
 
-[![QQ频道:世界上最好的编程语言](https://zjkal.cn/assets/images/qq_pindao_a1.png)](https://pd.qq.com/s/7h2hvcuxs)
+[![QQ Channel: The best programming language in the world](https://zjkal.cn/assets/images/qq_pindao_a1.png)](https://pd.qq.com/s/7h2hvcuxs)
 
 <!-- markdownlint-disable -->

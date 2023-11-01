@@ -3,17 +3,17 @@ import {navbar} from "vuepress-theme-hope";
 export const enNavbar = navbar([
     "/en/",
     {
-        text: "使用文档",
+        text: "Documentation",
         icon: "laptop-code",
-        link: "/getting-started/introduction.md",
+        link: "/en/getting-started/introduction.md",
     },
     {
-        text: "更新日志",
+        text: "Changlog",
         icon: "book",
-        link: "/appendices/chang-log.md",
+        link: "/en/appendices/chang-log.md",
     },
     {
-        text: "代码仓库",
+        text: "Code Repository",
         icon: "cube",
         children: [
             {
@@ -27,7 +27,7 @@ export const enNavbar = navbar([
         ],
     },
     {
-        text: "支持作者",
+        text: "Support the author",
         icon: "heart",
         link: "https://zjkal.cn/sponsor/",
     },

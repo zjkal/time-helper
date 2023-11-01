@@ -10,9 +10,9 @@ order: 3
 
 #### Parameters
 
-|    参数    |       描述       | 是否必须 |
-|:--------:|:--------------:|:----:|
-| datetime | 任意类型的字符串时间或时间戳 |  必须  |
+| Parameter |  Introduction  | Require |
+|:---------:|:--------------:|:-------:|
+| datetime  | 任意类型的字符串时间或时间戳 |   必须    |
 
 #### Return Values
 
@@ -32,9 +32,9 @@ TimeHelper::isToday('2020-4-10 23:01:11');
 
 #### Parameters
 
-|    参数    |       描述       | 是否必须 |
-|:--------:|:--------------:|:----:|
-| datetime | 任意类型的字符串时间或时间戳 |  必须  |
+| Parameter |  Introduction  | Require |
+|:---------:|:--------------:|:-------:|
+| datetime  | 任意类型的字符串时间或时间戳 |   必须    |
 
 #### Return Values
 
@@ -54,9 +54,9 @@ TimeHelper::isThisWeek('2020-5-1');
 
 #### Parameters
 
-|    参数    |       描述       | 是否必须 |
-|:--------:|:--------------:|:----:|
-| datetime | 任意类型的字符串时间或时间戳 |  必须  |
+| Parameter |  Introduction  | Require |
+|:---------:|:--------------:|:-------:|
+| datetime  | 任意类型的字符串时间或时间戳 |   必须    |
 
 #### Return Values
 
@@ -76,9 +76,9 @@ TimeHelper::isThisMonth(1586451741);
 
 #### Parameters
 
-|    参数    |       描述       | 是否必须 |
-|:--------:|:--------------:|:----:|
-| datetime | 任意类型的字符串时间或时间戳 |  必须  |
+| Parameter |  Introduction  | Require |
+|:---------:|:--------------:|:-------:|
+| datetime  | 任意类型的字符串时间或时间戳 |   必须    |
 
 #### Return Values
 
@@ -98,9 +98,9 @@ TimeHelper::isThisYear('Apr 11, 2023');
 
 #### Parameters
 
-|    参数    |       描述       |     是否必须     |
-|:--------:|:--------------:|:------------:|
-| datetime | 任意类型的字符串时间或时间戳 | 可选, 默认值为当前日期 |
+| Parameter |  Introduction  |   Require    |
+|:---------:|:--------------:|:------------:|
+| datetime  | 任意类型的字符串时间或时间戳 | 可选, 默认值为当前日期 |
 
 #### Return Values
 
@@ -124,9 +124,9 @@ TimeHelper::getWeekDay();
 
 #### Parameters
 
-|    参数    |       描述       |     是否必须     |
-|:--------:|:--------------:|:------------:|
-| datetime | 任意类型的字符串时间或时间戳 | 可选, 默认值为当前日期 |
+| Parameter |  Introduction  |   Require    |
+|:---------:|:--------------:|:------------:|
+| datetime  | 任意类型的字符串时间或时间戳 | 可选, 默认值为当前日期 |
 
 #### Return Values
 
@@ -146,9 +146,9 @@ TimeHelper::isWeekday('Mar 8, 2023');
 
 #### Parameters
 
-|    参数    |       描述       |     是否必须     |
-|:--------:|:--------------:|:------------:|
-| datetime | 任意类型的字符串时间或时间戳 | 可选, 默认值为当前日期 |
+| Parameter |  Introduction  |   Require    |
+|:---------:|:--------------:|:------------:|
+| datetime  | 任意类型的字符串时间或时间戳 | 可选, 默认值为当前日期 |
 
 #### Return Values
 

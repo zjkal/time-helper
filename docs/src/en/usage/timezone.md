@@ -14,7 +14,7 @@ order: 9
 
 #### Parameters
 
-|      参数      |          描述           |          是否必须          |
+|  Parameter   |     Introduction      |        Require         |
 |:------------:|:---------------------:|:----------------------:|
 |  toTimezone  |         目标时区          |           必须           |
 | fromTimezone |          原时区          | 可选, 默认为当前PHP运行环境所设置的时区 |

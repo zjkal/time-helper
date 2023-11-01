@@ -33,11 +33,11 @@ TimeHelper::secondEndToday();
 
 ### 获取N分钟的秒数
 
-* 参数
+* Parameter
 
-|   参数    |     描述     |   是否必须    |
-|:-------:|:----------:|:---------:|
-| minutes | 要返回多少分钟的秒数 | 可选, 默认值为1 |
+| Parameter | Introduction |  Require  |
+|:---------:|:------------:|:---------:|
+|  minutes  |  要返回多少分钟的秒数  | 可选, 默认值为1 |
 
 #### Return Values
 
@@ -57,9 +57,9 @@ TimeHelper::secondMinute(5);
 
 #### Parameters
 
-|  参数   |     描述     |   是否必须    |
-|:-----:|:----------:|:---------:|
-| hours | 要返回多少小时的秒数 | 可选, 默认值为1 |
+| Parameter | Introduction |  Require  |
+|:---------:|:------------:|:---------:|
+|   hours   |  要返回多少小时的秒数  | 可选, 默认值为1 |
 
 #### Return Values
 
@@ -79,9 +79,9 @@ TimeHelper::secondHour(10);
 
 #### Parameters
 
-|  参数  |    描述     |   是否必须    |
-|:----:|:---------:|:---------:|
-| days | 要返回多少天的秒数 | 可选, 默认值为1 |
+| Parameter | Introduction |  Require  |
+|:---------:|:------------:|:---------:|
+|   days    |  要返回多少天的秒数   | 可选, 默认值为1 |
 
 #### Return Values
 
@@ -101,9 +101,9 @@ TimeHelper::secondDay();
 
 #### Parameters
 
-|  参数   |    描述     |   是否必须    |
-|:-----:|:---------:|:---------:|
-| weeks | 要返回多少周的秒数 | 可选, 默认值为1 |
+| Parameter | Introduction |  Require  |
+|:---------:|:------------:|:---------:|
+|   weeks   |  要返回多少周的秒数   | 可选, 默认值为1 |
 
 #### Return Values
 

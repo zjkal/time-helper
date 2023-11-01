@@ -15,9 +15,9 @@ next: /en/appendices/special-note.md
 
 #### Parameters
 
-|    参数    |       描述       |    是否必须     |
-|:--------:|:--------------:|:-----------:|
-| datetime | 任意格式的时间字符串或时间戳 | 可选, 默认为当前时间 |
+| Parameter |  Introduction  |   Require   |
+|:---------:|:--------------:|:-----------:|
+| datetime  | 任意格式的时间字符串或时间戳 | 可选, 默认为当前时间 |
 
 #### Return Values
 
@@ -41,9 +41,9 @@ ChinaHoliday::isWorkday();
 
 #### Parameters
 
-|    参数    |       描述       |    是否必须     |
-|:--------:|:--------------:|:-----------:|
-| datetime | 任意格式的时间字符串或时间戳 | 可选, 默认为当前时间 |
+| Parameter |  Introduction  |   Require   |
+|:---------:|:--------------:|:-----------:|
+| datetime  | 任意格式的时间字符串或时间戳 | 可选, 默认为当前时间 |
 
 #### Return Values
 

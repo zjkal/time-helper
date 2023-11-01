@@ -14,10 +14,10 @@ order: 7
 
 #### Parameters
 
-|    参数    |          描述           |        是否必须        |
-|:--------:|:---------------------:|:------------------:|
-|  format  | 日期格式,用法与系统函数date()的一致 | 可选, 默认为Y-m-d H:i:s |
-| datetime |    任意类型的字符串时间或时间戳     |    可选, 默认为当前时间     |
+| Parameter |     Introduction      |      Require       |
+|:---------:|:---------------------:|:------------------:|
+|  format   | 日期格式,用法与系统函数date()的一致 | 可选, 默认为Y-m-d H:i:s |
+| datetime  |    任意类型的字符串时间或时间戳     |    可选, 默认为当前时间     |
 
 #### Return Values
 
@@ -41,9 +41,9 @@ TimeHelper::format('F j, Y, g:i a',1698762509);
 
 #### Parameters
 
-|    参数     |     描述     | 是否必须 |
-|:---------:|:----------:|:----:|
-| timestamp | 要判断的字符串或数字 |  必须  |
+| Parameter | Introduction | Require |
+|:---------:|:------------:|:-------:|
+| timestamp |  要判断的字符串或数字  |   必须    |
 
 #### Return Values
 
@@ -67,9 +67,9 @@ TimeHelper::isTimestamp(164636013);
 
 #### Parameters
 
-|    参数    |       描述       |    是否必须     |
-|:--------:|:--------------:|:-----------:|
-| datetime | 任意类型的字符串时间或时间戳 | 可选, 默认为当前时间 |
+| Parameter |  Introduction  |   Require   |
+|:---------:|:--------------:|:-----------:|
+| datetime  | 任意类型的字符串时间或时间戳 | 可选, 默认为当前时间 |
 
 #### Return Values
 

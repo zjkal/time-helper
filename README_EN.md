@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-    <img src="https://github.com/zjkal/time-helper/raw/main/logo.svg" alt="TimeHelper" width="180" />
+    <img src="logo.svg" alt="TimeHelper" width="180" />
     <br/>
     <br/>
     <a href="https://github.com/zjkal/time-helper/blob/main/README.md" target="_blank">中文文档</a> | English Document
@@ -323,10 +323,6 @@ ChinaHoliday::isHoliday(1646360133);
 > v1.0.0 Aug 25, 2022
 > * Separate from tp-helper's time class
 </details>
-
-## 💖sponsor me
-
-Your recognition is the motivation to move on, if you think `TimeHelper` is helpful to you, please [🙏support me](https://zjkal.cn/sponsor), thank you!
 
 ## 📖License
 

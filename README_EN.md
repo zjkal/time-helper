@@ -3,7 +3,7 @@
     <img src="logo.svg" alt="TimeHelper" width="180" />
     <br/>
     <br/>
-    <a href="https://github.com/zjkal/time-helper/blob/main/README.md" target="_blank">中文文档</a> | English Document
+    <a href="https://github.com/zjkal/time-helper/blob/main/README.md" target="_blank">中文</a> | English
 </p>
 <p align="center">
     <a href="https://github.com/zjkal/time-helper/blob/main/LICENSE" target="_blank">

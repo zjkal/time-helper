@@ -32,8 +32,8 @@ features:
     link: false
 
 
-copyright: false
-footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>"
+copyright: "MIT LICENSE"
+footer: false
 ---
 
 ## Installation
@@ -52,11 +52,5 @@ composer require zjkal/time-helper
 ```bash
 composer update
 ```
-
-## QQ channel
-
-Click or scan the following QR code to join the QQ channel
-
-[![QQ Channel: The best programming language in the world](https://zjkal.cn/assets/images/qq_pindao_a1.png)](https://pd.qq.com/s/7h2hvcuxs)
 
 <!-- markdownlint-disable -->

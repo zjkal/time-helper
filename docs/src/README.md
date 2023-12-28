@@ -32,8 +32,8 @@ features:
     link: false
 
 
-copyright: "<a href='https://beian.miit.gov.cn/' target='_blank' style='color:var(--dark-grey);font-weight: normal'>冀ICP备2023033034号</a>"
-footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>"
+copyright: "MIT LICENSE"
+footer: false
 ---
 
 ## 安装
@@ -52,11 +52,5 @@ composer require zjkal/time-helper
 ```bash
 composer update
 ```
-
-## QQ频道
-
-点击或扫一扫以下二维码,加入QQ频道
-
-[![QQ频道:世界上最好的编程语言](https://zjkal.cn/assets/images/qq_pindao_a1.png)](https://pd.qq.com/s/7h2hvcuxs)
 
 <!-- markdownlint-disable -->

@@ -26,9 +26,4 @@ export const zhNavbar = navbar([
             }
         ],
     },
-    {
-        text: "支持作者",
-        icon: "heart",
-        link: "https://zjkal.cn/sponsor/",
-    },
 ]);

@@ -21,7 +21,7 @@ export default hopeTheme({
             sidebar: zhSidebar,
             displayFooter: true,
             copyright: false,
-            footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>",
+            footer: "MIT LICENSE | Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>",
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
             },
@@ -37,7 +37,7 @@ export default hopeTheme({
             sidebar: enSidebar,
             displayFooter: true,
             copyright: false,
-            footer: "MIT LICENSE | Copyright © 2023 <a href='https://zjkal.cn' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>",
+            footer: "MIT LICENSE | Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>",
             // page meta
             metaLocales: {
                 editLink: "Edit this page on GitHub",

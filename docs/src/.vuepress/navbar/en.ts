@@ -26,9 +26,4 @@ export const enNavbar = navbar([
             }
         ],
     },
-    {
-        text: "Support the author",
-        icon: "heart",
-        link: "https://zjkal.cn/sponsor/",
-    },
 ]);

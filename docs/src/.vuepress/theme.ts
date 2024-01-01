@@ -46,15 +46,6 @@ export default hopeTheme({
     },
 
     plugins: {
-        // You should generate and use your own comment service
-        comment: {
-            provider: "Giscus",
-            repo: "zjkal/time-helper",
-            repoId: "R_kgDOH4BKSg",
-            category: "Announcements",
-            categoryId: "DIC_kwDOH4BKSs4CRG_O",
-        },
-
         // All features are enabled for demo, only preserve features you need here
         mdEnhance: {
             align: true,

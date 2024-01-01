@@ -3,10 +3,10 @@ import {enNavbar, zhNavbar} from "./navbar";
 import {enSidebar, zhSidebar} from "./sidebar";
 
 export default hopeTheme({
-    hostname: "https://time.zjkal.cn",
+    hostname: "https://time.0x1.site",
     author: {
         name: "zjkal",
-        url: "https://zjkal.cn",
+        url: "https://github.com/zjkal",
     },
     iconAssets: "fontawesome-with-brands",
     logo: "/logo.svg",

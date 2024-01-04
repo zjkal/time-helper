@@ -42,11 +42,7 @@ composer require zjkal/time-helper
 
 ## 🌈Usage
 
-import the TimeHelper helper class into your class.
-
-```php
-use zjkal\TimeHelper;
-```
+Check the [Documentation](https://time.0x1.site/) or read the brief instructions below
 
 ### 1. Get the required number of seconds.
 

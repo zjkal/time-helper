@@ -42,11 +42,8 @@ composer require zjkal/time-helper
 
 ## 🌈使用文档
 
-首先在类中引用TimeHelper助手类
+查看[使用文档](https://time.0x1.site/)或阅读以下简要说明
 
-```php
-use zjkal\TimeHelper;
-```
 
 ### 1. 获取需要的秒数
 

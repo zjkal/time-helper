@@ -50,7 +50,6 @@ export default hopeTheme({
         mdEnhance: {
             align: true,
             attrs: true,
-            card: true,
             codetabs: true,
             demo: true,
             figure: true,

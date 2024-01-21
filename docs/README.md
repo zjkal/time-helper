@@ -1,4 +1,4 @@
-### 这是一个基于Vuepress-Hope的文档系统,直接查看Markdown文件可能体验不佳,请访问[https://time.0x1.site](https://time.zjkal.cn)
+### 这是一个基于Vuepress-Hope的文档系统,直接查看Markdown文件可能体验不佳,请访问[https://time.0x1.site](https://time.0x1.site)
 
 ### 添加函数请遵循以下结构:
 

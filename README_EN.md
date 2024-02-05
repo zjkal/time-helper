@@ -260,6 +260,9 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃Changelog
 
+> v1.1.5 Feb 5, 2024
+> * Streamline and optimize your code
+
 > v1.1.4 Oct 25, 2023
 > * Added data for Chinese holidays in 2024
 

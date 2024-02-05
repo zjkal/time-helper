@@ -218,9 +218,4 @@ class TimeHelperTest extends TestCase
         print TimeHelper::compare('2023-9-1 12:00:00', '2023-8-1 12:00:00');
     }
 
-    public function testFormatSpecialDateTime()
-    {
-        $this->expectOutputString('2023-10-01 12:00:00');
-        print TimeHelper::formatSpecialDateTime('2023年10月1日 12时', 'Y-m-d H:i:s');
-    }
 }

@@ -15,10 +15,10 @@ use InvalidArgumentException;
  */
 class TimeHelper
 {
-    //常见日期格式
-    public static $date_formats = ['Y-m-d', 'm/d/Y', 'd.m.Y', 'd/m/Y', 'Y年m月d日', 'Y年m月', 'Y年m月d号', 'Y/m/d', 'Y.m.d', 'Y.m'];
-    //常见时间格式
-    public static $time_formats = ['H', 'H:i', 'H:i:s', 'H点', 'H点i分', 'H点i分s秒', 'H时', 'H时i分', 'H时i分s秒'];
+    //常见的特殊日期格式
+    private static $date_formats = ['Y-m-d', 'm/d/Y', 'd.m.Y', 'd/m/Y', 'Y年m月d日', 'Y年m月', 'Y年m月d号', 'Y/m/d', 'Y.m.d', 'Y.m'];
+    //常见的特殊时间格式
+    private static $time_formats = ['H', 'H:i', 'H:i:s', 'H点', 'H点i分', 'H点i分s秒', 'H时', 'H时i分', 'H时i分s秒'];
 
     /**
      * 判断是否为时间戳格式
@@ -59,11 +59,32 @@ class TimeHelper
             if ($timestamp) {
                 return $timestamp;
             } else {
-                //强制转化时间格式
-                $datetime = self::formatSpecialDateTime($datetime);
-                if ($datetime !== false) {
-                    return strtotime($datetime);
+                /* 尝试处理特殊的日期格式 */
+                [$date, $time] = explode(' ', $datetime);
+                if ($date) {
+                    //获取时间的格式
+                    $time_format_str = '';
+                    if ($time) {
+                        foreach (self::$time_formats as $time_format) {
+                            if (date_create_from_format($time_format, $time) !== false) {
+                                $time_format_str = $time_format;
+                                break;
+                            }
+                        }
+                    }
+                    foreach (self::$date_formats as $date_format) {
+                        //获取日期的格式
+                        if (date_create_from_format($date_format, $date) !== false) {
+                            $datetime_format = ($time_format_str) ? "$date_format $time_format_str" : $date_format;
+                            //获取日期时间对象
+                            $datetime_obj = date_create_from_format($datetime_format, $datetime);
+                            if ($datetime_obj !== false) {
+                                return strtotime($datetime_obj->format('Y-m-d' . ($time_format_str ? ' H:i:s' : '')));
+                            }
+                        }
+                    }
                 }
+
                 throw new InvalidArgumentException('Param datetime must be a timestamp or a string time');
             }
         }
@@ -122,7 +143,7 @@ class TimeHelper
     /**
      * 讲时间转换为友好显示格式
      * @param int|string $datetime 时间日期的字符串或数字
-     * @param string     $lang 语言,默认为中文,如果要显示英文传入en即可
+     * @param string     $lang     语言,默认为中文,如果要显示英文传入en即可
      * @return string 转换后的友好时间格式
      */
     public static function toFriendly($datetime, string $lang = 'zh'): string
@@ -660,47 +681,6 @@ class TimeHelper
             return 0;
         }
     }
-
-    /**
-     * 格式化特殊日期时间
-     * @param string $datetime
-     * @param string|null $format 参数为空则根据日期时间自动格式化为 Y-m-d 或 Y-m-d H:i:s
-     * @return false|string
-     */
-    public static function formatSpecialDateTime(string $datetime, string $format = null)
-    {
-        [$date, $time] = explode(' ', $datetime);
-        if (!$date) {
-            return false;
-        }
-        //获取时间的格式
-        $time_format_str = '';
-        if ($time) {
-            foreach (self::$time_formats as $time_format) {
-                if (date_create_from_format($time_format, $time) !== false) {
-                    $time_format_str = $time_format;
-                    break;
-                }
-            }
-        }
-        foreach (self::$date_formats as $date_format) {
-            //获取日期的格式
-            if (date_create_from_format($date_format, $date) !== false) {
-                $datetime_format = ($time_format_str) ? "$date_format $time_format_str" : $date_format;
-                //获取日期时间对象
-                $datetime_obj = date_create_from_format($datetime_format, $datetime);
-                if ($datetime_obj !== false) {
-                    if ($format) {
-                        return $datetime_obj->format($format);
-                    }
-                    return $datetime_obj->format('Y-m-d' . ($time_format_str ? ' H:i:s' : ''));
-                }
-            }
-        }
-
-        return false;
-    }
-
 
     /* 开发计划: 返回日期范围,主要用于SQL查询, 比如今天,昨天,最近7天, 本月, 本周等等. 为了方便使用, 会另外再起一个类 */
 }

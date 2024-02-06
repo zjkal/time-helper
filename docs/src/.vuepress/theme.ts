@@ -20,8 +20,8 @@ export default hopeTheme({
             // sidebar
             sidebar: zhSidebar,
             displayFooter: true,
-            copyright: false,
-            footer: "MIT LICENSE | Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>",
+            copyright: "",
+            footer: "Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a> | <a href='https://github.com/zjkal/time-helper/blob/main/LICENSE' target='_blank' style='color:var(--dark-grey);font-weight: normal'>MIT LICENSE</a>",
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
             },
@@ -36,8 +36,8 @@ export default hopeTheme({
             // sidebar
             sidebar: enSidebar,
             displayFooter: true,
-            copyright: false,
-            footer: "MIT LICENSE | Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>",
+            copyright: "",
+            footer: "Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a> | <a href='https://github.com/zjkal/time-helper/blob/main/LICENSE' target='_blank' style='color:var(--dark-grey);font-weight: normal'>MIT LICENSE</a>",
             // page meta
             metaLocales: {
                 editLink: "Edit this page on GitHub",

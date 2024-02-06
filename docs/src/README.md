@@ -32,8 +32,8 @@ features:
     link: false
 
 
-copyright: false
-footer: "MIT LICENSE | Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a>"
+copyright: ""
+footer: "Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a> | <a href='https://github.com/zjkal/time-helper/blob/main/LICENSE' target='_blank' style='color:var(--dark-grey);font-weight: normal'>MIT LICENSE</a>"
 ---
 
 ## 安装

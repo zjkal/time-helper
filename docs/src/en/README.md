@@ -30,10 +30,6 @@ features:
     icon: umbrella
     details: The author is a freelancer committed to ensuring the project's long-term
     link: false
-
-
-copyright: ""
-footer: "Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a> | <a href='https://github.com/zjkal/time-helper/blob/main/LICENSE' target='_blank' style='color:var(--dark-grey);font-weight: normal'>MIT LICENSE</a>"
 ---
 
 ## Installation

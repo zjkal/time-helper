@@ -2,6 +2,8 @@ import {hopeTheme} from "vuepress-theme-hope";
 import {enNavbar, zhNavbar} from "./navbar";
 import {enSidebar, zhSidebar} from "./sidebar";
 
+const footer: string = "Copyright © 2024 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a> | <a href='https://github.com/zjkal/time-helper/blob/main/LICENSE' target='_blank' style='color:var(--dark-grey);font-weight: normal'>MIT LICENSE</a>"
+
 export default hopeTheme({
     hostname: "https://time.0x1.site",
     author: {
@@ -21,7 +23,7 @@ export default hopeTheme({
             sidebar: zhSidebar,
             displayFooter: true,
             copyright: "",
-            footer: "Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a> | <a href='https://github.com/zjkal/time-helper/blob/main/LICENSE' target='_blank' style='color:var(--dark-grey);font-weight: normal'>MIT LICENSE</a>",
+            footer: footer,
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
             },
@@ -37,7 +39,7 @@ export default hopeTheme({
             sidebar: enSidebar,
             displayFooter: true,
             copyright: "",
-            footer: "Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a> | <a href='https://github.com/zjkal/time-helper/blob/main/LICENSE' target='_blank' style='color:var(--dark-grey);font-weight: normal'>MIT LICENSE</a>",
+            footer: footer,
             // page meta
             metaLocales: {
                 editLink: "Edit this page on GitHub",

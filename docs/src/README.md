@@ -30,10 +30,6 @@ features:
     icon: umbrella
     details: 作者为自由职业者,保证项目的长期稳定和持续更新
     link: false
-
-
-copyright: ""
-footer: "Copyright © 2023 <a href='https://github.com/zjkal' target='_blank' style='color:var(--dark-grey);font-weight: normal'>zjkal</a> | <a href='https://github.com/zjkal/time-helper/blob/main/LICENSE' target='_blank' style='color:var(--dark-grey);font-weight: normal'>MIT LICENSE</a>"
 ---
 
 ## 安装

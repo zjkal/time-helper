@@ -42,7 +42,7 @@ composer require zjkal/time-helper
 
 ## 🌈Usage
 
-Check the [Documentation](https://time.0x1.site/) or read the brief instructions below
+Check the [Documentation](https://time.0x1.site/en/) or read the brief instructions below
 
 ### 1. Get the required number of seconds.
 

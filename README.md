@@ -328,6 +328,12 @@ ChinaHoliday::isHoliday(1646360133);
   <img src="https://contrib.rocks/image?repo=zjkal/time-helper" />
 </a>
 
+## 🐧QQ频道
+<a href="https://pd.qq.com/s/7h2hvcuxs">
+  <img src="https://static.0x1.site/qrcode-qqpd.png" />
+</a>
+
+
 ## 📖开源协议
 
 TimeHelper遵循[MIT开源协议](https://github.com/zjkal/time-helper/blob/main/LICENSE), 意味着您无需任何授权, 即可免费将TimeHelper应用到您的项目中

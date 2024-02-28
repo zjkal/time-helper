@@ -49,7 +49,7 @@ composer require zjkal/time-helper
 composer update
 ```
 
-## QQ频道
+## 扫以下二维码加入QQ频道
 <a href="https://pd.qq.com/s/7h2hvcuxs">
   <img src="https://static.0x1.site/qrcode-qqpd.png" />
 </a>

@@ -13,12 +13,12 @@ actions:
 features:
   - title: 简单易用
     icon: mug-hot
-    details: 不依赖任何扩展,支持Composer,开箱即用
+    details: 不依赖任何扩展,支持Composer,开箱即用.
     link: false
 
   - title: 化繁为简
     icon: wand-magic-sparkles
-    details: 所有方法都可以传入任意类型的时间日期格式或时间戳
+    details: 所有方法都可以传入任意类型的时间日期格式或时间戳.
     link: false
 
   - title: 快捷高效
@@ -28,7 +28,7 @@ features:
 
   - title: 长期维护
     icon: umbrella
-    details: 作者为自由职业者,保证项目的长期稳定和持续更新
+    details: 作者为自由职业者,保证项目的长期稳定和持续更新.
     link: false
 ---
 

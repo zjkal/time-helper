@@ -146,6 +146,18 @@ class TimeHelperTest extends TestCase
         print TimeHelper::isToday('2023-8-1 12:00:00');
     }
 
+    public function testIsYesterday()
+    {
+        $this->expectOutputString(false);
+        print TimeHelper::isYesterday('2023-8-1 12:00:00');
+    }
+
+    public function testIsTomorrow()
+    {
+        $this->expectOutputString(false);
+        print TimeHelper::isTomorrow('2023-8-1 12:00:00');
+    }
+
     public function testBeforeMinute()
     {
         $this->expectOutputString('1693540200');

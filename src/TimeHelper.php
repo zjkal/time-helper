@@ -194,11 +194,24 @@ class TimeHelper
     public static function isToday($datetime): bool
     {
         $timestamp = self::toTimestamp($datetime);
-        if (date('Y-m-d', $timestamp) == date('Y-m-d')) {
-            return true;
-        } else {
-            return false;
-        }
+        return date('Y-m-d', $timestamp) == date('Y-m-d');
+    }
+
+    /**
+     * 判断日期是否为昨天
+     * @param string|int $datetime 时间日期
+     * @return bool 如果是昨天则返回True,否则返回False
+     */
+    public static function isYesterday($datetime): bool
+    {
+        $timestamp = self::toTimestamp($datetime);
+        return date('Y-m-d', $timestamp) == date('Y-m-d', strtotime('-1 day'));
+    }
+
+    public static function isTomorrow($datetime): bool
+    {
+        $timestamp = self::toTimestamp($datetime);
+        return date('Y-m-d', $timestamp) == date('Y-m-d', strtotime('+1 day'));
     }
 
     /**
@@ -682,5 +695,5 @@ class TimeHelper
         }
     }
 
-    /* 开发计划: 返回日期范围,主要用于SQL查询, 比如今天,昨天,最近7天, 本月, 本周等等. 为了方便使用, 会另外再起一个类 */
+    /* 开发计划: 一, 返回当前是第几个季度, getQuarter(),返回1234.  二, 返回日期范围,主要用于SQL查询, 比如今天,昨天,最近7天, 本月, 本周等等. 为了方便使用, 会另外再起一个类 */
 }

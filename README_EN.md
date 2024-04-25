@@ -84,6 +84,12 @@ TimeHelper::toFriendly(1646186290, 'en');
 //Determine if a date is today.
 TimeHelper::isToday('2020-4-10 23:01:11');
 
+// Determine if a date is yesterday.
+TimeHelper::isYesterday(1586451741);
+
+// Determine if a date is tomorrow.
+TimeHelper::isTomorrow('2020-4-12');
+
 // Determine if a date is this week.
 TimeHelper::isThisWeek('2020-5-1');
 
@@ -260,6 +266,10 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃Changelog
 
+> v1.1.6 Apr 25, 2024
+> * Added method isYesterday() to determine if it is yesterday
+> * Added method isTomorrow() to determine if it is tomorrow
+
 > v1.1.5 Feb 5, 2024
 > * Streamline and optimize your code
 
@@ -268,6 +278,8 @@ ChinaHoliday::isHoliday(1646360133);
 
 > v1.1.3 Oct 19, 2023
 > * Improved the compatibility of the toTimestamp() method and can convert time in some special formats
+
+<details><summary>Click to read more</summary>
 
 > v1.1.2 Sep 16, 2023
 > * Added method compare() to compare two times sooner or later
@@ -279,8 +291,6 @@ ChinaHoliday::isHoliday(1646360133);
 > * The ChinaHoliday class has been added, which is specially used to maintain methods related to Chinese holidays
 > * Added the method isWorkday() to judge whether it is a Chinese working day
 > * Added the method isHoliday() to judge whether it is a Chinese holiday
-
-<details><summary>Click to read more</summary>
 
 > v1.0.10 Mar 13, 2023
 > * Add the method isWeekday() to judge whether the specified date is a normal day

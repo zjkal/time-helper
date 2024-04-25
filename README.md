@@ -85,6 +85,12 @@ TimeHelper::toFriendly(1646186290, 'en');
 //判断日期是否为今天
 TimeHelper::isToday('2020-4-10 23:01:11');
 
+//判断日期是否为昨天
+TimeHelper::isYesterday('2020-4-10 23:01:11');
+
+//判断日期是否为明天
+TimeHelper::isTomorrow('2020-4-10 23:01:11');
+
 //判断日期是否为本周
 TimeHelper::isThisWeek('2020-5-1');
 
@@ -260,6 +266,10 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃更新日志
 
+> v1.1.6 2024年4月25日
+> * 增加了判断是否为昨天的方法isYesterday()
+> * 增加了判断是否为明天的方法isTomorrow()
+
 > v1.1.5 2024年2月5日
 > * 精简和优化代码
 
@@ -268,6 +278,8 @@ ChinaHoliday::isHoliday(1646360133);
 
 > v1.1.3 2023年10月19日
 > * 提升了toTimestamp()方法的兼容性,可以转换一些特殊格式的时间了
+
+<details><summary>点击查看更多</summary>
 
 > v1.1.2 2023年9月16日
 > * 增加了比较两个时间早晚的方法compare()
@@ -279,8 +291,6 @@ ChinaHoliday::isHoliday(1646360133);
 > * 增加了ChinaHoliday类,专门用于维护国内节假日相关的方法
 > * 增加了判断是否为国内工作日的方法isWorkday()
 > * 增加了判断是否为国内节假日的方法isHoliday()
-
-<details><summary>点击查看更多</summary>
 
 > v1.0.10 2023年3月13日
 > * 增加判断指定日期是否为平常日的方法isWeekday()

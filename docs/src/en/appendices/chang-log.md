@@ -4,6 +4,10 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.6 Apr 25, 2024
+> * Added method isYesterday() to determine if it is yesterday
+> * Added method isTomorrow() to determine if it is tomorrow
+
 > v1.1.5 Feb 5, 2024
 > * Streamline and optimize your code
 

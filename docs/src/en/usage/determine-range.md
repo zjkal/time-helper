@@ -26,6 +26,50 @@ TimeHelper::isToday('2020-4-10 23:01:11');
 // false
 ```
 
+## isYesterday()
+
+### Determine whether the date is yesterday
+
+#### Parameters
+
+| Parameter |             Introduction             | Require  |
+|:---------:|:------------------------------------:|:--------:|
+| datetime  | Any type of string time or timestamp | required |
+
+#### Return Values
+
+> Result of Bool type: 'true' or 'false'
+
+#### Example code
+
+```php
+/* Determine whether the date is yesterday */
+TimeHelper::isYesterday('2020-4-10 23:01:11');
+// false
+```
+
+## isTomorrow()
+
+### Determine whether the date is tomorrow
+
+#### Parameters
+
+| Parameter |             Introduction             | Require  |
+|:---------:|:------------------------------------:|:--------:|
+| datetime  | Any type of string time or timestamp | required |
+
+#### Return Values
+
+> Result of Bool type: 'true' or 'false'
+
+#### Example code
+
+```php
+/* Determine whether the date is tomorrow */
+TimeHelper::isTomorrow('2020-4-10 23:01:11');
+// false
+```
+
 ## isThisWeek()
 
 ### Determine if the date is this week

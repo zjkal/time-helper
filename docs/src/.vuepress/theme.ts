@@ -1,6 +1,7 @@
 import {hopeTheme} from "vuepress-theme-hope";
 import {enNavbar, zhNavbar} from "./navbar";
 import {enSidebar, zhSidebar} from "./sidebar";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 const footer: string = "Copyright © 2024 <a href='https://github.com/zjkal' target='_blank' style='font-weight: normal'>zjkal</a> | Theme by <a href='https://github.com/vuepress-theme-hope/vuepress-theme-hope' target='_blank' style='font-weight: normal'>Hope</a> | Powered by <a href='https://vercel.com/' target='_blank' style='font-weight: normal'>Vercel</a>"
 
@@ -48,6 +49,7 @@ export default hopeTheme({
     },
 
     plugins: {
+        searchPro: true,
         // All features are enabled for demo, only preserve features you need here
         mdEnhance: {
             align: true,

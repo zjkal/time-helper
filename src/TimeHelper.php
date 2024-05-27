@@ -16,9 +16,9 @@ use InvalidArgumentException;
 class TimeHelper
 {
     //常见的特殊日期格式
-    private static $date_formats = ['Y-m-d', 'm/d/Y', 'd.m.Y', 'd/m/Y', 'Y年m月d日', 'Y年m月', 'Y年m月d号', 'Y/m/d', 'Y.m.d', 'Y.m'];
+    private static $date_formats = ['Y-m-d', 'm/d/Y', 'd.m.Y', 'm.d.y', 'd/m/Y', 'Y年m月d日', 'Y年m月', 'Y年m月d号', 'Y/m/d', 'Y.m.d', 'Y.m', 'F d, Y', 'M d, Y', 'F j, Y', 'M j, Y', 'F jS, Y', 'M jS, Y'];
     //常见的特殊时间格式
-    private static $time_formats = ['H', 'H:i', 'H:i:s', 'H点', 'H点i分', 'H点i分s秒', 'H时', 'H时i分', 'H时i分s秒'];
+    private static $time_formats = ['H', 'H:i', 'H:i:s', 'H点', 'H点i分', 'H点i分s秒', 'H时', 'H时i分', 'H时i分s秒', 'g:i a', 'h:i a'];
 
     /**
      * 判断是否为时间戳格式

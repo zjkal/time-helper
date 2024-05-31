@@ -291,6 +291,49 @@ class TimeHelper
         return in_array(self::getWeekDay($datetime), [6, 7]);
     }
 
+    //获得两个日期得差量对象
+    private static function getDateDiff($datetime, $new_datetime = null): \DateInterval
+    {
+        $datetime = self::format('Y-m-d', $datetime);
+        $new_datetime = $new_datetime ? self::format('Y-m-d', $new_datetime) : self::format();
+        return date_diff(date_create($datetime), date_create($new_datetime));
+    }
+
+    /**
+     * 返回两个日期相差的秒数(如果之传入一个日期,则与当前时间比较)
+     * @param $datetime
+     * @param $new_datetime
+     * @return int
+     */
+    public static function diffSeconds($datetime, $new_datetime = null): int
+    {
+        $timestamp = self::toTimestamp($datetime);
+        $new_timestamp = $new_datetime ? self::toTimestamp($new_datetime) : time();
+        return abs($new_timestamp - $timestamp);
+    }
+
+    /**
+     * 返回两个日期相差分钟数(如果之传入一个日期,则与当前时间比较)
+     * @param $datetime
+     * @param $new_datetime
+     * @return int
+     */
+    public static function diffMinutes($datetime, $new_datetime = null): int
+    {
+        return intval(self::diffSeconds($datetime, $new_datetime) / 60);
+    }
+
+    /**
+     * 返回两个日期相差小时数(如果之传入一个日期,则与当前时间比较)
+     * @param $datetime
+     * @param $new_datetime
+     * @return int
+     */
+    public static function diffHours($datetime, $new_datetime = null): int
+    {
+        return intval(self::diffSeconds($datetime, $new_datetime) / 3600);
+    }
+
     /**
      * 返回两个日期相差天数(如果只传入一个日期,则与当天时间比较)
      * @param int|string $datetime     要计算的时间
@@ -299,14 +342,7 @@ class TimeHelper
      */
     public static function diffDays($datetime, $new_datetime = null): int
     {
-        $datetime = date('Y-m-d', self::toTimestamp($datetime));
-        if ($new_datetime) {
-            $new_datetime = date('Y-m-d', self::toTimestamp($new_datetime));
-        } else {
-            $new_datetime = date('Y-m-d');
-        }
-
-        return date_diff(date_create($datetime), date_create($new_datetime))->days;
+        return self::getDateDiff($datetime, $new_datetime)->days;
     }
 
     /**
@@ -317,14 +353,7 @@ class TimeHelper
      */
     public static function diffWeeks($datetime, $new_datetime = null): int
     {
-        $datetime = date('Y-m-d', self::toTimestamp($datetime));
-        if ($new_datetime) {
-            $new_datetime = date('Y-m-d', self::toTimestamp($new_datetime));
-        } else {
-            $new_datetime = date('Y-m-d');
-        }
-
-        return intval(date_diff(date_create($datetime), date_create($new_datetime))->days / 7);
+        return intval(self::diffDays($datetime, $new_datetime) / 7);
     }
 
     /**
@@ -335,14 +364,7 @@ class TimeHelper
      */
     public static function diffMonths($datetime, $new_datetime = null): int
     {
-        $datetime = date('Y-m-d', self::toTimestamp($datetime));
-        if ($new_datetime) {
-            $new_datetime = date('Y-m-d', self::toTimestamp($new_datetime));
-        } else {
-            $new_datetime = date('Y-m-d');
-        }
-
-        $diff = date_diff(date_create($datetime), date_create($new_datetime));
+        $diff = self::getDateDiff($datetime, $new_datetime);
         return $diff->y * 12 + $diff->m;
     }
 
@@ -354,14 +376,7 @@ class TimeHelper
      */
     public static function diffYears($datetime, $new_datetime = null): int
     {
-        $datetime = date('Y-m-d', self::toTimestamp($datetime));
-        if ($new_datetime) {
-            $new_datetime = date('Y-m-d', self::toTimestamp($new_datetime));
-        } else {
-            $new_datetime = date('Y-m-d');
-        }
-
-        return date_diff(date_create($datetime), date_create($new_datetime))->y;
+        return self::getDateDiff($datetime, $new_datetime)->y;
     }
 
     /**

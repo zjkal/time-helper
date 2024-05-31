@@ -91,6 +91,17 @@ class TimeHelper
     }
 
     /**
+     * 将任意格式的时间转换为指定格式
+     * @param string     $format   格式化字符串
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return false|string 格式化后的时间字符串
+     */
+    public static function format(string $format = 'Y-m-d H:i:s', $datetime = null): string
+    {
+        return date($format, self::toTimestamp($datetime));
+    }
+
+    /**
      * 返回截止到今天晚上零点之前的秒数
      * @return int 秒数
      */
@@ -148,13 +159,7 @@ class TimeHelper
      */
     public static function toFriendly($datetime, string $lang = 'zh'): string
     {
-        $time = self::toTimestamp($datetime);
-
-        $birthday = new DateTime();
-        $birthday->setTimestamp($time);
-
-        $now = new DateTime();
-        $interval = $birthday->diff($now);
+        $interval = self::getDateDiff($datetime);
 
         $count = 0;
         $type = '';
@@ -193,8 +198,7 @@ class TimeHelper
      */
     public static function isToday($datetime): bool
     {
-        $timestamp = self::toTimestamp($datetime);
-        return date('Y-m-d', $timestamp) == date('Y-m-d');
+        return self::format('Y-m-d', $datetime) == self::format('Y-m-d');
     }
 
     /**
@@ -204,14 +208,17 @@ class TimeHelper
      */
     public static function isYesterday($datetime): bool
     {
-        $timestamp = self::toTimestamp($datetime);
-        return date('Y-m-d', $timestamp) == date('Y-m-d', strtotime('-1 day'));
+        return self::format('Y-m-d', $datetime) == self::format('Y-m-d', strtotime('-1 day'));
     }
 
+    /**
+     * 判断日期是否为明天
+     * @param string|int $datetime 时间日期
+     * @return bool 如果是明天则返回True,否则返回False
+     */
     public static function isTomorrow($datetime): bool
     {
-        $timestamp = self::toTimestamp($datetime);
-        return date('Y-m-d', $timestamp) == date('Y-m-d', strtotime('+1 day'));
+        return self::format('Y-m-d', $datetime) == self::format('Y-m-d', strtotime('+1 day'));
     }
 
     /**
@@ -224,11 +231,7 @@ class TimeHelper
         $week_start = strtotime(date('Y-m-d 00:00:00', strtotime('this week')));
         $week_end = strtotime(date('Y-m-d 23:59:59', strtotime('last day next week')));
         $timestamp = self::toTimestamp($datetime);
-        if ($timestamp >= $week_start && $timestamp <= $week_end) {
-            return true;
-        } else {
-            return false;
-        }
+        return $timestamp >= $week_start && $timestamp <= $week_end;
     }
 
     /**
@@ -238,12 +241,7 @@ class TimeHelper
      */
     public static function isThisMonth($datetime): bool
     {
-        $timestamp = self::toTimestamp($datetime);
-        if (date('Y-m', $timestamp) == date('Y-m')) {
-            return true;
-        } else {
-            return false;
-        }
+        return self::format('Y-m', $datetime) == self::format('Y-m');
     }
 
     /**
@@ -253,12 +251,7 @@ class TimeHelper
      */
     public static function isThisYear($datetime): bool
     {
-        $timestamp = self::toTimestamp($datetime);
-        if (date('Y', $timestamp) == date('Y')) {
-            return true;
-        } else {
-            return false;
-        }
+        return self::format('Y', $datetime) == self::format('Y');
     }
 
     /**
@@ -268,7 +261,7 @@ class TimeHelper
      */
     public static function getWeekDay($datetime = null): int
     {
-        return intval($datetime ? date('N', self::toTimestamp($datetime)) : date('N'));
+        return intval(self::format('N', $datetime));
     }
 
     /**
@@ -295,7 +288,7 @@ class TimeHelper
     private static function getDateDiff($datetime, $new_datetime = null): \DateInterval
     {
         $datetime = self::format('Y-m-d', $datetime);
-        $new_datetime = $new_datetime ? self::format('Y-m-d', $new_datetime) : self::format();
+        $new_datetime = self::format('Y-m-d', $new_datetime);
         return date_diff(date_create($datetime), date_create($new_datetime));
     }
 
@@ -308,7 +301,7 @@ class TimeHelper
     public static function diffSeconds($datetime, $new_datetime = null): int
     {
         $timestamp = self::toTimestamp($datetime);
-        $new_timestamp = $new_datetime ? self::toTimestamp($new_datetime) : time();
+        $new_timestamp = self::toTimestamp($new_datetime);
         return abs($new_timestamp - $timestamp);
     }
 
@@ -389,9 +382,7 @@ class TimeHelper
     public static function beforeMinute(int $minute = 1, $datetime = null, bool $round = false): int
     {
         $date = new DateTime();
-        if ($datetime !== null) {
-            $date->setTimestamp(self::toTimestamp($datetime));
-        }
+        $date->setTimestamp(self::toTimestamp($datetime));
         $timestamp = $date->modify(sprintf('-%d minute', $minute))->getTimestamp();
         return $round ? strtotime(date('Y-m-d H:i:00', $timestamp)) : $timestamp;
     }
@@ -626,24 +617,13 @@ class TimeHelper
     }
 
     /**
-     * 将任意格式的时间转换为指定格式
-     * @param string     $format   格式化字符串
-     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
-     * @return false|string 格式化后的时间字符串
-     */
-    public static function format(string $format = 'Y-m-d H:i:s', $datetime = null): string
-    {
-        return date($format, self::toTimestamp($datetime));
-    }
-
-    /**
      * 判断该日期是否为闰年
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
      * @return bool 闰年返回true,否则返回false
      */
     public static function isLeapYear($datetime = null): bool
     {
-        return date('L', self::toTimestamp($datetime)) == 1;
+        return self::format('L', $datetime) == 1;
     }
 
     /**
@@ -663,7 +643,7 @@ class TimeHelper
      */
     public static function daysInMonth($datetime = null): int
     {
-        return intval(date('t', self::toTimestamp($datetime)));
+        return intval(self::format('t', $datetime));
     }
 
     /**
@@ -720,9 +700,6 @@ class TimeHelper
      * TODO: 返回当前是第几小时, getHour(),返回0-23.
      * TODO: 返回当前是第几分钟, getMinute(),返回0-59.
      * TODO: 返回当前是第几秒, getSecond(),返回0-59.
-     * TODO: 比较两个时间相差的秒数
-     * TODO: 比较两个时间相差的分钟数
-     * TODO: 比较两个时间相差的小时数
      * TODO: 为beforeWeek和afterWeek增加取整方法
      * TODO: 修改before和after相关方法,使取整不仅可以向前,还可以向后,如afterMonth可以返回该月最后一天的23点59分59秒的时间戳
      * TODO: 返回日期范围,主要用于SQL查询, 比如今天,昨天,最近7天, 本月, 本周等等. 为了方便使用, 会另外再起一个类

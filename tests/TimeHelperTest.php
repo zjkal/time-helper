@@ -136,8 +136,8 @@ class TimeHelperTest extends TestCase
 
     public function testDiffWeeks()
     {
-        $this->expectOutputString('1');
-        print TimeHelper::diffWeeks('2023-9-1 12:00:00', '2023-9-8 12:00:00');
+        $this->expectOutputString('57');
+        print TimeHelper::diffWeeks('2022-9-1 12:00:00', '2023-10-8 12:00:00');
     }
 
     public function testIsToday()
@@ -196,14 +196,32 @@ class TimeHelperTest extends TestCase
 
     public function testDiffMonths()
     {
-        $this->expectOutputString('12');
-        print TimeHelper::diffMonths('2023-9-1 12:00:00', '2024-9-1 12:00:00');
+        $this->expectOutputString('36');
+        print TimeHelper::diffMonths('2021-9-1 12:00:00', '2024-9-1 12:00:00');
     }
 
     public function testDiffDays()
     {
-        $this->expectOutputString('366');
-        print TimeHelper::diffDays('2023-9-1 12:00:00', '2024-9-1 12:00:00');
+        $this->expectOutputString('731');
+        print TimeHelper::diffDays('2022-9-1 12:00:00', '2024-9-1 12:00:00');
+    }
+
+    public function testDiffHours()
+    {
+        $this->expectOutputString('216');
+        print TimeHelper::diffHours('2023-9-1 12:00:00', '2023-9-10 12:00:00');
+    }
+
+    public function testDiffMinutes()
+    {
+        $this->expectOutputString('12960');
+        print TimeHelper::diffMinutes('2023-9-1 12:00:00', '2023-9-10 12:00:00');
+    }
+
+    public function testDiffSeconds()
+    {
+        $this->expectOutputString('777600');
+        print TimeHelper::diffSeconds('2023-9-1 12:00:00', '2023-9-10 12:00:00');
     }
 
     public function testIsLeapYear()

@@ -360,13 +360,13 @@ ChinaHoliday::isHoliday(1646360133);
 ## 😎开发者们
 
 <a href="https://github.com/zjkal/time-helper/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zjkal/time-helper" />
+  <img src="https://contrib.rocks/image?repo=zjkal/time-helper"  alt=""/>
 </a>
 
 ## 🐧扫以下二维码加入QQ频道
 
 <a href="https://pd.qq.com/s/7h2hvcuxs">
-  <img src="https://static.0x1.site/qrcode-qqpd.png" />
+  <img src="https://static.0x1.site/qrcode-qqpd.png"  alt=""/>
 </a>
 
 ## 📖开源协议

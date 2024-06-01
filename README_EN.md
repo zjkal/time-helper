@@ -359,7 +359,7 @@ I would like to thank Jetbrains for providing me with the IDE open source licens
 
 ## 😎Contributors
 <a href="https://github.com/zjkal/time-helper/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zjkal/time-helper" />
+  <img src="https://contrib.rocks/image?repo=zjkal/time-helper"  alt=""/>
 </a>
 
 ## 📖License

@@ -51,7 +51,8 @@ composer update
 
 ## ❤️Sponsored by JetBrains
 I would like to thank Jetbrains for providing me with the IDE open source license to complete the development work on this and other open source projects.
-
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/zjkal)
+<a href="https://www.jetbrains.com/?from=https://github.com/zjkal">
+  <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg"  alt=""/>
+</a>
 
 <!-- markdownlint-disable -->

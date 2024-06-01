@@ -4,6 +4,13 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.7 June 1, 2024
+> * Added method diffSeconds() to calculate the difference in seconds between two dates.
+> * Added method diffMinutes() to calculate the difference in minutes between two dates.
+> * Added method diffHours() to calculate the difference in hours between two dates.
+> * Added modifyTimestamp() method to modify the specified time based on the date string.
+> * Streamline the code
+
 > v1.1.6 Apr 25, 2024
 > * Added method isYesterday() to determine if it is yesterday
 > * Added method isTomorrow() to determine if it is tomorrow

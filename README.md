@@ -117,6 +117,15 @@ TimeHelper::isWeekend(1586451741);
 *如果只传入一个参数,则与当前时间比较*
 
 ```php
+//计算两个日期相差的秒数
+TimeHelper::diffSeconds('2022-4-10 23:01:11',1586451741)
+
+//计算两个日期相差的分钟数
+TimeHelper::diffMinutes('Apr 11, 2020 11:51:21','Apr 11, 2020 11:31:21')
+
+//计算两个日期相差的小时数
+TimeHelper::afterHour(1586451741,1586491741)
+
 //计算两个日期相差天数
 TimeHelper::diffDays('2022-4-10 23:01:11','Apr 11, 2020');
 
@@ -209,6 +218,9 @@ TimeHelper::isTimestamp(1646360133);
 
 //将任意时间类型的字符串转为时间戳
 TimeHelper::toTimestamp('Apr 11, 2020');
+
+//根据日期字符串, 修改指定时间, 并返回修改后的时间戳
+TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00');
 ```
 
 ### 8.平闰年相关

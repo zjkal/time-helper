@@ -116,6 +116,15 @@ TimeHelper::isWeekend(1586451741);
 *If only one parameter is passed in, it will be compared to the current time.*
 
 ```php
+//Calculate the number of seconds between two dates
+TimeHelper::diffSeconds('2022-4-10 23:01:11',1586451741)
+
+//Calculate the number of minutes between two dates
+TimeHelper::diffMinutes('Apr 11, 2020 11:51:21','Apr 11, 2020 11:31:21')
+
+//Calculate the number of hours between two dates
+TimeHelper::afterHour(1586451741,1586491741)
+
 //Calculate the difference in days between two dates.
 TimeHelper::diffDays('2022-4-10 23:01:11','Apr 11, 2020');
 
@@ -208,6 +217,9 @@ TimeHelper::isTimestamp(1646360133);
 
 //Convert any time string to a timestamp.
 TimeHelper::toTimestamp('Apr 11, 2020');
+
+//Based on the date string, modify the specified time and return the modified timestamp
+TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00');
 ```
 
 ### 8.Leap year calculation

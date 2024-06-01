@@ -7,6 +7,11 @@ use PHPUnit\Framework\TestCase;
 
 class TimeHelperTest extends TestCase
 {
+    public function testModifyTimestamp()
+    {
+        $this->expectOutputString('1693627200');
+        print TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00');
+    }
 
     public function testAfterMonth()
     {

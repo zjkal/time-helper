@@ -394,10 +394,7 @@ class TimeHelper
      */
     public static function beforeMinute(int $minute = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('-%d minute', $minute))->getTimestamp();
-        $timestamp = self::modifyTimestamp(sprintf('-%d minute', $minute), $timestamp);
+        $timestamp = self::modifyTimestamp(sprintf('-%d minute', $minute), $datetime);
         return $round ? strtotime(date('Y-m-d H:i:00', $timestamp)) : $timestamp;
     }
 
@@ -410,9 +407,7 @@ class TimeHelper
      */
     public static function afterMinute(int $minute = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('+%d minute', $minute))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('+%d minute', $minute), $datetime);
         return $round ? strtotime(date('Y-m-d H:i:00', $timestamp)) : $timestamp;
     }
 
@@ -425,9 +420,7 @@ class TimeHelper
      */
     public static function beforeHour(int $hour = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('-%d hour', $hour))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('-%d hour', $hour), $datetime);
         return $round ? strtotime(date('Y-m-d H:00:00', $timestamp)) : $timestamp;
     }
 
@@ -440,9 +433,7 @@ class TimeHelper
      */
     public static function afterHour(int $hour = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('+%d hour', $hour))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('+%d hour', $hour), $datetime);
         return $round ? strtotime(date('Y-m-d H:00:00', $timestamp)) : $timestamp;
     }
 
@@ -455,9 +446,7 @@ class TimeHelper
      */
     public static function beforeDay(int $day = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('-%d day', $day))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('-%d day', $day), $datetime);
         return $round ? strtotime(date('Y-m-d 00:00:00', $timestamp)) : $timestamp;
     }
 
@@ -470,11 +459,8 @@ class TimeHelper
      */
     public static function afterDay(int $day = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('+%d day', $day))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('+%d day', $day), $datetime);
         return $round ? strtotime(date('Y-m-d 00:00:00', $timestamp)) : $timestamp;
-
     }
 
     /**
@@ -485,9 +471,7 @@ class TimeHelper
      */
     public static function beforeWeek(int $week = 1, $datetime = null): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        return $date->modify(sprintf('-%d week', $week))->getTimestamp();
+        return self::modifyTimestamp(sprintf('-%d week', $week), $datetime);
     }
 
     /**
@@ -498,9 +482,7 @@ class TimeHelper
      */
     public static function afterWeek(int $week = 1, $datetime = null): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        return $date->modify(sprintf('+%d week', $week))->getTimestamp();
+        return self::modifyTimestamp(sprintf('+%d week', $week), $datetime);
     }
 
     /**
@@ -512,9 +494,7 @@ class TimeHelper
      */
     public static function beforeMonth(int $month = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('-%d month', $month))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('-%d month', $month), $datetime);
         return $round ? strtotime(date('Y-m-1 00:00:00', $timestamp)) : $timestamp;
     }
 
@@ -527,9 +507,7 @@ class TimeHelper
      */
     public static function afterMonth(int $month = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('+%d month', $month))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('+%d month', $month), $datetime);
         return $round ? strtotime(date('Y-m-1 00:00:00', $timestamp)) : $timestamp;
     }
 
@@ -542,9 +520,7 @@ class TimeHelper
      */
     public static function beforeYear(int $year = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('-%d year', $year))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('-%d year', $year), $datetime);
         return $round ? strtotime(date('Y-1-1 00:00:00', $timestamp)) : $timestamp;
     }
 
@@ -557,9 +533,7 @@ class TimeHelper
      */
     public static function afterYear(int $year = 1, $datetime = null, bool $round = false): int
     {
-        $date = new DateTime();
-        $date->setTimestamp(self::toTimestamp($datetime));
-        $timestamp = $date->modify(sprintf('+%d year', $year))->getTimestamp();
+        $timestamp = self::modifyTimestamp(sprintf('+%d year', $year), $datetime);
         return $round ? strtotime(date('Y-1-1 00:00:00', $timestamp)) : $timestamp;
     }
 

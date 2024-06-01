@@ -4,6 +4,87 @@ order: 4
 
 # 🍊 Calculate Difference
 
+## diffSeconds()
+
+### Calculate the number of seconds between two dates
+
+#### Parameters
+
+|  Parameter   |                         Introduction                         |                Require                 |
+|:------------:|:------------------------------------------------------------:|:--------------------------------------:|
+|   datetime   | Time to be calculated (any type of string time or timestamp) |                required                |
+| new_datetime |    Time to compare (any type of string time or timestamp)    | Optional, defaults to the current time |
+
+#### Return Values
+
+> The number of seconds between the two dates
+
+#### Example code
+
+```php
+/* Calculate the number of seconds between the following two dates */
+TimeHelper::diffSeconds('2023-9-1 12:00:00', 'Sep 9, 2023 12:00:00')
+// 777600
+
+/* Calculate the number of seconds in which the following time differs from the current time */
+TimeHelper::diffSeconds(1717223549);
+// 3072
+```
+
+## diffMinutes()
+
+### Calculate the number of minutes between two dates
+
+#### Parameters
+
+|  Parameter   |                         Introduction                         |                Require                 |
+|:------------:|:------------------------------------------------------------:|:--------------------------------------:|
+|   datetime   | Time to be calculated (any type of string time or timestamp) |                required                |
+| new_datetime |    Time to compare (any type of string time or timestamp)    | Optional, defaults to the current time |
+
+#### Return Values
+
+> The number of minutes between the two dates
+
+#### Example code
+
+```php
+/* Calculate the number of minutes between the following two dates */
+TimeHelper::diffMinutes('Sep 1, 2023 12:00:00', '2023-9-10 12:00:00');
+// 12960
+
+/* Calculate the number of minutes by which the following time differs from the current time */
+TimeHelper::diffMinutes(1717223549);
+// 30
+```
+
+## diffHours()
+
+### Calculate the number of hours between two dates
+
+#### Parameters
+
+|  Parameter   |                         Introduction                         |                Require                 |
+|:------------:|:------------------------------------------------------------:|:--------------------------------------:|
+|   datetime   | Time to be calculated (any type of string time or timestamp) |                required                |
+| new_datetime |    Time to compare (any type of string time or timestamp)    | Optional, defaults to the current time |
+
+#### Return Values
+
+> The number of hours between the two dates
+
+#### Example code
+
+```php
+/* Calculate the number of hours between the following two dates */
+TimeHelper::diffHours('2023-9-1 12:00:00', '2023-9-10 12:00:00');
+// 216
+
+/* Calculate the number of hours in which the following time differs from the current time */
+TimeHelper::diffHours('2023-9-1 12:00:00');
+// 36
+```
+
 ## diffDays()
 
 ### Calculate the number of days between the two dates

@@ -86,3 +86,26 @@ TimeHelper::toTimestamp('Apr 11, 2020');
 TimeHelper::toTimestamp('2023年9月 5点');
 // 1693515600
 ```
+
+## modifyTimestamp()
+
+### Modify the specified time based on the date string
+
+#### Parameters
+
+| Parameter |             Introduction             |                Require                 |
+|:---------:|:------------------------------------:|:--------------------------------------:|
+| modifier  |       Date modification string       |                Required                |
+| datetime  | Any type of string time or timestamp | Optional, defaults to the current time |
+
+#### Return Values
+
+> Modified date and time stamp
+
+#### Example code
+
+```php
+/* Add one day to the specified date */
+TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00');
+// 1693627200
+```

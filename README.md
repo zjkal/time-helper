@@ -44,7 +44,6 @@ composer require zjkal/time-helper
 
 查看[使用文档](https://time.0x1.site/)或阅读以下简要说明
 
-
 ### 1. 获取需要的秒数
 
 *一般用于设置缓存时间,设置结束时间等*
@@ -124,7 +123,7 @@ TimeHelper::diffSeconds('2022-4-10 23:01:11',1586451741)
 TimeHelper::diffMinutes('Apr 11, 2020 11:51:21','Apr 11, 2020 11:31:21')
 
 //计算两个日期相差的小时数
-TimeHelper::afterHour(1586451741,1586491741)
+TimeHelper::diffHours(1586451741,1586491741)
 
 //计算两个日期相差天数
 TimeHelper::diffDays('2022-4-10 23:01:11','Apr 11, 2020');
@@ -278,6 +277,13 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃更新日志
 
+> v1.1.7 2024年6月1日
+> * 增加了计算两个日期相差秒数的方法diffSeconds()
+> * 增加了计算两个日期相差分钟数的方法diffMinutes()
+> * 增加了计算两个日期相差小时数的方法diffHours()
+> * 增加了根据日期字符串, 修改指定时间的方法modifyTimestamp()
+> * 精简代码
+
 > v1.1.6 2024年4月25日
 > * 增加了判断是否为昨天的方法isYesterday()
 > * 增加了判断是否为明天的方法isTomorrow()
@@ -346,16 +352,19 @@ ChinaHoliday::isHoliday(1646360133);
 </details>
 
 ## ❤️由 JetBrains 赞助
+
 非常感谢 Jetbrains 为我提供的 IDE 开源许可，让我完成此项目和其他开源项目上的开发工作。
 
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/zjkal)
 
 ## 😎开发者们
+
 <a href="https://github.com/zjkal/time-helper/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zjkal/time-helper" />
 </a>
 
 ## 🐧扫以下二维码加入QQ频道
+
 <a href="https://pd.qq.com/s/7h2hvcuxs">
   <img src="https://static.0x1.site/qrcode-qqpd.png" />
 </a>

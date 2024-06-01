@@ -123,7 +123,7 @@ TimeHelper::diffSeconds('2022-4-10 23:01:11',1586451741)
 TimeHelper::diffMinutes('Apr 11, 2020 11:51:21','Apr 11, 2020 11:31:21')
 
 //Calculate the number of hours between two dates
-TimeHelper::afterHour(1586451741,1586491741)
+TimeHelper::diffHours(1586451741,1586491741)
 
 //Calculate the difference in days between two dates.
 TimeHelper::diffDays('2022-4-10 23:01:11','Apr 11, 2020');
@@ -277,6 +277,13 @@ ChinaHoliday::isHoliday(1646360133);
 > **Special Notes**: All time-related methods can accept time in any format or timestamp. However, please note that for dates in the format of m/d/y or d-m-y, if the separator is a slash (/), the American m/d/y format is used. If the separator is a hyphen (-) or a dot (.), the European d-m-y format is used. To avoid potential errors, it is recommended to use the YYYY-MM-DD format or other formats as much as possible.
 
 ## 📃Changelog
+
+> v1.1.7 June 1, 2024
+> * 增加了计算两个日期相差秒数的方法diffSeconds()
+> * Added method diffMinutes() to calculate the difference in minutes between two dates.
+> * Added method diffHours() to calculate the difference in hours between two dates.
+> * Added modifyTimestamp() method to modify the specified time based on the date string.
+> * Streamline the code
 
 > v1.1.6 Apr 25, 2024
 > * Added method isYesterday() to determine if it is yesterday

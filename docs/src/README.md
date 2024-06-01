@@ -49,9 +49,14 @@ composer require zjkal/time-helper
 composer update
 ```
 
-## 扫以下二维码加入QQ频道
+## ❤️由 JetBrains 赞助
+非常感谢 Jetbrains 为我提供的 IDE 开源许可，让我完成此项目和其他开源项目上的开发工作。
+
+[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/zjkal)
+
+## 扫一扫加入QQ频道
 <a href="https://pd.qq.com/s/7h2hvcuxs">
-  <img src="https://static.0x1.site/qrcode-qqpd.png" />
+  <img src="https://static.0x1.site/qrcode-qqpd.png"  alt=""/>
 </a>
 
 

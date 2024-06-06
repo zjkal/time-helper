@@ -278,6 +278,9 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃Changelog
 
+> v1.1.8 June 6, 2024
+> * Fixed a bug to get friendly time
+
 > v1.1.7 June 1, 2024
 > * Added method diffSeconds() to calculate the difference in seconds between two dates.
 > * Added method diffMinutes() to calculate the difference in minutes between two dates.
@@ -289,6 +292,8 @@ ChinaHoliday::isHoliday(1646360133);
 > * Added method isYesterday() to determine if it is yesterday
 > * Added method isTomorrow() to determine if it is tomorrow
 
+<details><summary>Click to read more</summary>
+
 > v1.1.5 Feb 5, 2024
 > * Streamline and optimize your code
 
@@ -297,8 +302,6 @@ ChinaHoliday::isHoliday(1646360133);
 
 > v1.1.3 Oct 19, 2023
 > * Improved the compatibility of the toTimestamp() method and can convert time in some special formats
-
-<details><summary>Click to read more</summary>
 
 > v1.1.2 Sep 16, 2023
 > * Added method compare() to compare two times sooner or later
@@ -353,11 +356,13 @@ ChinaHoliday::isHoliday(1646360133);
 </details>
 
 ## ❤️Sponsored by JetBrains
+
 I would like to thank Jetbrains for providing me with the IDE open source license to complete the development work on this and other open source projects.
 
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/zjkal)
 
 ## 😎Contributors
+
 <a href="https://github.com/zjkal/time-helper/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zjkal/time-helper"  alt=""/>
 </a>

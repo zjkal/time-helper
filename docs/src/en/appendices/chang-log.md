@@ -4,6 +4,9 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.8 June 6, 2024
+> * Fixed a bug to get friendly time
+
 > v1.1.7 June 1, 2024
 > * Added method diffSeconds() to calculate the difference in seconds between two dates.
 > * Added method diffMinutes() to calculate the difference in minutes between two dates.

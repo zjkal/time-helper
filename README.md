@@ -277,6 +277,9 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃更新日志
 
+> v1.1.8 2024年6月6日
+> * 修复了获取友好时间的错误
+
 > v1.1.7 2024年6月1日
 > * 增加了计算两个日期相差秒数的方法diffSeconds()
 > * 增加了计算两个日期相差分钟数的方法diffMinutes()
@@ -288,6 +291,8 @@ ChinaHoliday::isHoliday(1646360133);
 > * 增加了判断是否为昨天的方法isYesterday()
 > * 增加了判断是否为明天的方法isTomorrow()
 
+<details><summary>点击查看更多</summary>
+
 > v1.1.5 2024年2月5日
 > * 精简和优化代码
 
@@ -296,8 +301,6 @@ ChinaHoliday::isHoliday(1646360133);
 
 > v1.1.3 2023年10月19日
 > * 提升了toTimestamp()方法的兼容性,可以转换一些特殊格式的时间了
-
-<details><summary>点击查看更多</summary>
 
 > v1.1.2 2023年9月16日
 > * 增加了比较两个时间早晚的方法compare()

@@ -2,6 +2,7 @@
 
 namespace zjkal\tests;
 
+use Cassandra\Time;
 use zjkal\TimeHelper;
 use PHPUnit\Framework\TestCase;
 
@@ -251,6 +252,12 @@ class TimeHelperTest extends TestCase
     {
         $this->expectOutputString('1');
         print TimeHelper::compare('2023-9-1 12:00:00', '2023-8-1 12:00:00');
+    }
+
+    public function testToFriendly()
+    {
+        $this->expectOutputString('just now');
+        print TimeHelper::toFriendly(time(), 'en');
     }
 
 }

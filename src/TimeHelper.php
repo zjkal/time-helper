@@ -198,7 +198,7 @@ class TimeHelper
         }
 
         if (empty($type)) {
-            return $lang == 'zh' ? '未知' : 'unknown';
+            return $lang == 'zh' ? '刚刚' : 'just now';
         } else {
             return $count . $type . ($lang == 'zh' ? '前' : (($count > 1 ? 's' : '') . ' ago'));
         }
@@ -300,8 +300,8 @@ class TimeHelper
     //获得两个日期得差量对象
     private static function getDateDiff($datetime, $new_datetime = null): \DateInterval
     {
-        $datetime = self::format('Y-m-d', $datetime);
-        $new_datetime = self::format('Y-m-d', $new_datetime);
+        $datetime = self::format('Y-m-d H:i:s', $datetime);
+        $new_datetime = self::format('Y-m-d H:i:s', $new_datetime);
         return date_diff(date_create($datetime), date_create($new_datetime));
     }
 

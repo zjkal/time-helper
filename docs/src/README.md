@@ -51,7 +51,7 @@ composer update
 
 ## ❤️由 JetBrains 赞助
 非常感谢 Jetbrains 为我提供的 IDE 开源许可，让我完成此项目和其他开源项目上的开发工作。
-<a href="https://www.jetbrains.com/?from=https://github.com/zjkal">
+<a href="https://www.jetbrains.com/">
   <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg"  alt=""/>
 </a>
 

@@ -4,6 +4,9 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.9 July 2, 2024
+> * Added method to get the current time now()
+
 > v1.1.8 June 6, 2024
 > * Fixed a bug to get friendly time
 

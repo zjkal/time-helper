@@ -92,7 +92,7 @@ class TimeHelper
 
     /**
      * 将任意格式的时间转换为指定格式
-     * @param string     $format   格式化字符串
+     * @param string     $format   格式化字符串(默认为:Y-m-d H:i:s)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
      * @return false|string 格式化后的时间字符串
      */
@@ -654,6 +654,16 @@ class TimeHelper
         } else {
             return 0;
         }
+    }
+
+    /**
+     * 获取当前时间
+     * @param string $format 格式化字符串(默认为:Y-m-d H:i:s)
+     * @return string
+     */
+    public static function now(string $format = 'Y-m-d H:i:s'): string
+    {
+        return date($format);
     }
 
     /**

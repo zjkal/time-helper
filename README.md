@@ -220,6 +220,9 @@ TimeHelper::toTimestamp('Apr 11, 2020');
 
 //根据日期字符串, 修改指定时间, 并返回修改后的时间戳
 TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00');
+
+//获取当前时间(默认格式为Y-m-d H:i:s)
+TimeHelper::now();
 ```
 
 ### 8.平闰年相关

@@ -109,3 +109,29 @@ TimeHelper::toTimestamp('2023年9月 5点');
 TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00');
 // 1693627200
 ```
+
+## now()
+
+### Get the current time
+
+#### Parameters
+
+| Parameter |                            Introduction                            |             Require              |
+|:---------:|:------------------------------------------------------------------:|:--------------------------------:|
+|  format   | The date format is the same as that of the system function date(). | Optional, default is Y-m-d H:i:s |
+
+#### Return Values
+
+> Specifies the current time of the format
+
+#### Example code
+
+```php
+/* `Get the current time` */
+TimeHelper::now();
+// 2024年7月2日 10:01:33
+
+/* Gets the current time in the specified format */
+TimeHelper::now('M d, Y H:i:s');
+// July 2, 2024 10:01:33
+```

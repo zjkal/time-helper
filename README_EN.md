@@ -220,6 +220,9 @@ TimeHelper::toTimestamp('Apr 11, 2020');
 
 //Based on the date string, modify the specified time and return the modified timestamp
 TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00');
+
+//Get the current time(default format is Y-m-d H:i:s)
+TimeHelper::now();
 ```
 
 ### 8.Leap year calculation

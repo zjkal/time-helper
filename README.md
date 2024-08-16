@@ -367,10 +367,6 @@ ChinaHoliday::isHoliday(1646360133);
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/)
 
 ## 😎开发者们
-
-<a href="https://github.com/zjkal/time-helper/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zjkal/time-helper"  alt=""/>
-</a>
 <!-- readme: contributors -start -->
 <table>
 	<tbody>
@@ -414,6 +410,7 @@ ChinaHoliday::isHoliday(1646360133);
 	<tbody>
 </table>
 <!-- readme: contributors -end -->
+
 ## 🐧扫以下二维码加入QQ频道
 
 <a href="https://pd.qq.com/s/7h2hvcuxs">

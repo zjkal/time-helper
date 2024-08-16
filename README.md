@@ -371,7 +371,8 @@ ChinaHoliday::isHoliday(1646360133);
 <a href="https://github.com/zjkal/time-helper/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zjkal/time-helper"  alt=""/>
 </a>
-
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
 ## 🐧扫以下二维码加入QQ频道
 
 <a href="https://pd.qq.com/s/7h2hvcuxs">

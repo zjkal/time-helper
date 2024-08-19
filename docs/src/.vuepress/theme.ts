@@ -3,7 +3,7 @@ import {enNavbar, zhNavbar} from "./navbar";
 import {enSidebar, zhSidebar} from "./sidebar";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 
-const footer: string = "Copyright © 2024 <a href='https://github.com/zjkal' target='_blank' style='font-weight: normal'>zjkal</a> | Theme by <a href='https://github.com/vuepress-theme-hope/vuepress-theme-hope' target='_blank' style='font-weight: normal'>Hope</a> | Powered by <a href='https://vercel.com/' target='_blank' style='font-weight: normal'>Vercel</a> | Sponsored by <a href='https://www.jetbrains.com/' target='_blank' style='font-weight: normal'>JetBrains</a>"
+const footer: string = "Copyright © 2024 <a href='https://github.com/zjkal' target='_blank' style='font-weight: normal'>zjkal</a> | Theme by <a href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral' target='_blank' style='font-weight: normal'>Hope</a> | Powered by <a href='https://vercel.com/' target='_blank' style='font-weight: normal'>Vercel</a> | Sponsored by <a href='https://www.jetbrains.com/' target='_blank' style='font-weight: normal'>JetBrains</a> | CDN by <a href='' target='_blank'><img src='/upyun.png' alt='upyun' style='vertical-align: middle;width: 60px'></a>"
 
 export default hopeTheme({
     hostname: "https://time.0x1.site",

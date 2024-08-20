@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-    <img src="https://static.0x1.site/logo-time-helper.svg" alt="TimeHelper" width="180" />
+    <img src="https://cdn.0x1.site/logo-time-helper.svg" alt="TimeHelper" width="180" />
     <br/>
     <br/>
     中文 | <a href="https://github.com/zjkal/time-helper/blob/main/README_EN.md" target="_blank">English</a>

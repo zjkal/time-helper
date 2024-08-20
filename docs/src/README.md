@@ -57,7 +57,7 @@ composer update
 
 ## 扫一扫加入QQ频道
 <a href="https://pd.qq.com/s/7h2hvcuxs">
-  <img src="https://static.0x1.site/qrcode-qqpd.png"  alt=""/>
+  <img src="https://cdn.0x1.site/qrcode-qqpd.png"  alt=""/>
 </a>
 
 <!-- markdownlint-disable -->

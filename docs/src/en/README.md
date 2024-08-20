@@ -2,7 +2,7 @@
 home: true
 title: Home
 icon: home
-heroImage: /logo.svg
+heroImage: https://cdn.0x1.site/logo-time-helper.svg
 heroText: TimeHelper
 tagline: a smart PHP datetime helper library ✨
 actions:

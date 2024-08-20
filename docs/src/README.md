@@ -2,7 +2,7 @@
 home: true
 title: 主页
 icon: home
-heroImage: /logo.svg
+heroImage: https://cdn.0x1.site/logo-time-helper.svg
 heroText: TimeHelper
 tagline: 一个简单快捷的PHP日期时间助手类库 ✨
 actions:

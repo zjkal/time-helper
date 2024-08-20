@@ -414,7 +414,7 @@ ChinaHoliday::isHoliday(1646360133);
 ## 🐧扫以下二维码加入QQ频道
 
 <a href="https://pd.qq.com/s/7h2hvcuxs">
-  <img src="https://cdn.0x1.site/qrcode-qqpd.png"  alt=""/>
+  <img src="https://cdn.0x1.site/qrcode-qqpd.png"  alt="QQ频道-世界上最好的编程语言"/>
 </a>
 
 ## 📖开源协议

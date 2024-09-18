@@ -18,10 +18,6 @@ export default defineUserConfig({
     },
     theme,
     bundler: viteBundler({}),
-    markdown: {
-        code: {
-            lineNumbers: false
-        }
-    }
+    markdown: {}
 });
 

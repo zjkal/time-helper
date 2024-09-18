@@ -360,13 +360,8 @@ ChinaHoliday::isHoliday(1646360133);
 > * 从tp-helper的时间类中独立出来
 </details>
 
-## ❤️由 JetBrains 赞助
-
-非常感谢 Jetbrains 为我提供的 IDE 开源许可，让我完成此项目和其他开源项目上的开发工作。
-
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/)
-
 ## 😎开发者们
+
 <!-- readme: contributors -start -->
 <table>
 	<tbody>
@@ -410,6 +405,12 @@ ChinaHoliday::isHoliday(1646360133);
 	<tbody>
 </table>
 <!-- readme: contributors -end -->
+
+## ❤️由 JetBrains 赞助
+
+非常感谢 Jetbrains 为我提供的 IDE 开源许可，让我完成此项目和其他开源项目上的开发工作。
+
+[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/)
 
 ## 🐧扫以下二维码加入QQ频道
 

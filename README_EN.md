@@ -361,17 +361,17 @@ ChinaHoliday::isHoliday(1646360133);
 > * Separate from tp-helper's time class
 </details>
 
-## ❤️Sponsored by JetBrains
-
-I would like to thank Jetbrains for providing me with the IDE open source license to complete the development work on this and other open source projects.
-
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/)
-
 ## 😎Contributors
 
 <a href="https://github.com/zjkal/time-helper/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zjkal/time-helper"  alt=""/>
 </a>
+
+## ❤️Sponsored by JetBrains
+
+I would like to thank Jetbrains for providing me with the IDE open source license to complete the development work on this and other open source projects.
+
+[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/)
 
 ## 📖License
 

@@ -1,6 +1,6 @@
 import {defineUserConfig} from "vuepress";
-import {hopeTheme} from "vuepress-theme-hope";
 import {viteBundler} from '@vuepress/bundler-vite'
+import theme from "./theme.js";
 
 export default defineUserConfig({
     base: "/",
@@ -16,7 +16,7 @@ export default defineUserConfig({
             description: "",
         },
     },
-    theme: hopeTheme({}),
+    theme,
     bundler: viteBundler({}),
     markdown: {
         code: {

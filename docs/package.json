@@ -11,6 +11,7 @@
     "docs:update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.15",
     "@vuepress/client": "2.0.0-rc.0",
     "@vuepress/plugin-search": "2.0.0-rc.0",
     "mathjax-full": "^3.2.2",

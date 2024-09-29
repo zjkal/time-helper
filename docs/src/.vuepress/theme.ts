@@ -94,5 +94,13 @@ export default hopeTheme({
             tabs: true,
             vPre: true,
         },
+        comment: {
+            provider: "Giscus",
+            repo: "zjkal/time-helper",
+            repoId: "R_kgDOH4BKSg",
+            category: "Announcements",
+            categoryId: "DIC_kwDOH4BKSs4CRG_O",
+            inputPosition: "top",
+        }
     },
 });

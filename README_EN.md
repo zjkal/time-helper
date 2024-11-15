@@ -281,6 +281,9 @@ ChinaHoliday::isHoliday(1646360133);
 
 ## 📃Changelog
 
+> v1.1.10 Nov 16, 2024
+> * Added data on Chinese holidays for 2025
+
 > v1.1.9 July 2, 2024
 > * Added method to get the current time now()
 

@@ -46,7 +46,7 @@ composer require zjkal/time-helper
 
 ## 更新
 
-当发现新版本时，更新也非常简单。
+当发现新版本时，更新也非常简单，直接使用以下命令即可完成更新。
 
 ```bash
 composer update

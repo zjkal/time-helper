@@ -45,6 +45,9 @@ composer require zjkal/time-helper
 ```
 
 ## Update
+
+Updating is also very simple when a new version is discovered.
+
 ```bash
 composer update
 ```

@@ -1,8 +1,8 @@
 <?php
 
 namespace zjkal\tests;
+date_default_timezone_set('Asia/Shanghai');
 
-use Cassandra\Time;
 use zjkal\TimeHelper;
 use PHPUnit\Framework\TestCase;
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace zjkal\tests;
+date_default_timezone_set('Asia/Shanghai');
 
 use PHPUnit\Framework\TestCase;
 use zjkal\ChinaHoliday;
@@ -10,13 +11,13 @@ class ChinaHolidayTest extends TestCase
 
     public function testIsWorkday()
     {
-        $this->expectOutputString(true);
-        print ChinaHoliday::isWorkday('2023-01-29');
+        $this->expectOutputString(false);
+        print ChinaHoliday::isWorkday('2025-01-01 00:00:00');
     }
 
     public function testIsHoliday()
     {
-        $this->expectOutputString(false);
-        print ChinaHoliday::isHoliday('2023-01-28');
+        $this->expectOutputString(true);
+        print ChinaHoliday::isHoliday('1735660800');
     }
 }

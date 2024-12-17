@@ -2,6 +2,7 @@
 declare (strict_types=1);
 
 namespace zjkal;
+date_default_timezone_set('Asia/Shanghai');
 
 /**
  * 这个类专门用于判断国内的节假日,比如:某天是否为工作日/节假日

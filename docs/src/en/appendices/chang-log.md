@@ -4,6 +4,9 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.11 December 17, 2024
+> * Fixed a bug that could cause the wrong calculation of holiday data due to the difference in the time zone setting of the PHP runtime.
+
 > v1.1.10 Nov 16, 2024
 > * Added data on Chinese holidays for 2025
 

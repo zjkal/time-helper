@@ -19,7 +19,7 @@
         <img src="https://poser.pugx.org/zjkal/time-helper/downloads" alt="Total Downloads">
     </a>
     <a href="https://github.com/zjkal/time-helper" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/php.yml?branch=main" alt="GitHub Workflow Status">
+        <img src="https://img.shields.io/github/actions/workflow/status/zjkal/time-helper/.github/workflows/composer.yml?branch=main" alt="GitHub Workflow Status">
     </a>
 </p>
 

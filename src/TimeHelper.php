@@ -621,7 +621,7 @@ class TimeHelper
      * @return string
      * @throws Exception
      */
-    public static function timezoneFormat(string $toTimezone, string $fromTimezone = null, $datetime = 'now', string $format = 'Y-m-d H:i:s'): string
+    public static function timezoneFormat(string $toTimezone, ?string $fromTimezone = null, $datetime = 'now', string $format = 'Y-m-d H:i:s'): string
     {
         if (self::isTimestamp($datetime)) {
             $date = new DateTime();

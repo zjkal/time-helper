@@ -2,7 +2,7 @@
 order: 3
 ---
 
-# 😎Contributors
+# 😎 Contributors
 
 <table>
 	<tbody>

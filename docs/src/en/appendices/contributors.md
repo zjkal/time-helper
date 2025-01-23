@@ -4,7 +4,6 @@ order: 3
 
 ## 😎Contributors
 
-<!-- readme: contributors -start -->
 <table>
 	<tbody>
 		<tr>
@@ -53,4 +52,3 @@ order: 3
 		</tr>
 	<tbody>
 </table>
-<!-- readme: contributors -end -->

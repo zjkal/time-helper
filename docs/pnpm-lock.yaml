@@ -1612,8 +1612,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@5.4.6:
-    resolution: {integrity: sha512-IeL5f8OO5nylsgzd9tq4qD2QqI0k2CQLGrWD0rCN0EQJZpBK5vJAx0I+GDkMOXxQX/OfFHMuLIx6ddAxGX/k+Q==}
+  vite@5.4.14:
+    resolution: {integrity: sha512-EK5cY7Q1D8JNhSaPKVK4pwBFvaTmZxEnoKXLG/U9gmdDcihQGNzFlgIvaxezFR4glP1LsuiedwMBqCXH3wZccA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -2296,9 +2296,9 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-vue@5.1.4(vite@5.4.6(@types/node@22.5.5)(sass@1.79.1))(vue@3.5.6)':
+  '@vitejs/plugin-vue@5.1.4(vite@5.4.14(@types/node@22.5.5)(sass@1.79.1))(vue@3.5.6)':
     dependencies:
-      vite: 5.4.6(@types/node@22.5.5)(sass@1.79.1)
+      vite: 5.4.14(@types/node@22.5.5)(sass@1.79.1)
       vue: 3.5.6
 
   '@vue/compiler-core@3.5.6':
@@ -2359,7 +2359,7 @@ snapshots:
 
   '@vuepress/bundler-vite@2.0.0-rc.15(@types/node@22.5.5)(sass@1.79.1)':
     dependencies:
-      '@vitejs/plugin-vue': 5.1.4(vite@5.4.6(@types/node@22.5.5)(sass@1.79.1))(vue@3.5.6)
+      '@vitejs/plugin-vue': 5.1.4(vite@5.4.14(@types/node@22.5.5)(sass@1.79.1))(vue@3.5.6)
       '@vuepress/client': 2.0.0-rc.15
       '@vuepress/core': 2.0.0-rc.15
       '@vuepress/shared': 2.0.0-rc.15
@@ -2369,7 +2369,7 @@ snapshots:
       postcss: 8.4.47
       postcss-load-config: 6.0.1(postcss@8.4.47)
       rollup: 4.27.3
-      vite: 5.4.6(@types/node@22.5.5)(sass@1.79.1)
+      vite: 5.4.14(@types/node@22.5.5)(sass@1.79.1)
       vue: 3.5.6
       vue-router: 4.4.5(vue@3.5.6)
     transitivePeerDependencies:
@@ -3468,7 +3468,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@5.4.6(@types/node@22.5.5)(sass@1.79.1):
+  vite@5.4.14(@types/node@22.5.5)(sass@1.79.1):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47

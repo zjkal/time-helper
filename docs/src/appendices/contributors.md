@@ -50,5 +50,5 @@ order: 3
                 </a>
             </td>
 		</tr>
-	<tbody>
+	</tbody>
 </table>

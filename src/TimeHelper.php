@@ -16,7 +16,10 @@ use InvalidArgumentException;
 class TimeHelper
 {
     //常见的特殊日期格式
-    private static $date_formats = ['Y-m-d', 'm/d/Y', 'd.m.Y', 'm.d.y', 'd/m/Y', 'Y年m月d日', 'Y年m月', 'Y年m月d号', 'Y/m/d', 'Y.m.d', 'Y.m', 'F d, Y', 'M d, Y', 'F j, Y', 'M j, Y', 'F jS, Y', 'M jS, Y'];
+    private static $date_formats = [
+        'Y-m-d', 'm/d/Y', 'd.m.Y', 'm.d.y', 'd/m/Y', 'Y年m月d日', 'Y年m月', 'Y年m月d号',
+        'Y/m/d', 'Y.m.d', 'Y.m', 'F d, Y', 'M d, Y', 'F j, Y', 'M j, Y', 'F jS, Y', 'M jS, Y'
+    ];
     //常见的特殊时间格式
     private static $time_formats = ['H', 'H:i', 'H:i:s', 'H点', 'H点i分', 'H点i分s秒', 'H时', 'H时i分', 'H时i分s秒', 'g:i a', 'h:i a'];
 
@@ -39,7 +42,8 @@ class TimeHelper
 
     /**
      * 将任意时间类型的参数转为时间戳
-     * 请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或者使用 date_create_from_format() 函数。
+     * 请注意 m/d/y 或 d-m-y 格式的日期，如果分隔符是斜线（/），则使用美洲的 m/d/y 格式。如果分隔符是横杠（-）或者点（.），则使用欧洲的 d-m-y 格式。
+     * 为了避免潜在的错误，您应该尽可能使用 YYYY-MM-DD 格式或者使用 date_create_from_format() 函数。
      * @param int|string $datetime 要转换为时间戳的字符串或数字,如果为空则返回当前时间戳
      * @return int 时间戳
      */
@@ -297,7 +301,7 @@ class TimeHelper
         return in_array(self::getWeekDay($datetime), [6, 7]);
     }
 
-    //获得两个日期得差量对象
+    //获得两个日期的差量对象
     private static function getDateDiff($datetime, $new_datetime = null): \DateInterval
     {
         $datetime = self::format('Y-m-d H:i:s', $datetime);

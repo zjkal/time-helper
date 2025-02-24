@@ -40,7 +40,7 @@ features:
 
 安装非常简单，因为它是一个标准的 [Composer](https://getcomposer.org/) 包，直接使用以下命令安装。
 
-```bash
+```bash:no-line-numbers
 composer require zjkal/time-helper
 ```
 
@@ -48,7 +48,7 @@ composer require zjkal/time-helper
 
 当发现新版本时，更新也非常简单，直接使用以下命令即可完成更新。
 
-```bash
+```bash:no-line-numbers
 composer update
 ```
 

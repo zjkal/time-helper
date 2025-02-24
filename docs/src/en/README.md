@@ -40,7 +40,7 @@ Require: PHP >= 7.1
 
 Installation is very simple as it is a standard [Composer](https://getcomposer.org/) package, which can be installed directly using the following command.
 
-```bash
+```bash:no-line-numbers
 composer require zjkal/time-helper
 ```
 
@@ -48,7 +48,7 @@ composer require zjkal/time-helper
 
 When a new version is discovered, the update is also very simple, and it can be done directly using the following command.
 
-```bash
+```bash:no-line-numbers
 composer update
 ```
 

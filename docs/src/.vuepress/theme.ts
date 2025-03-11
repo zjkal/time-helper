@@ -17,7 +17,6 @@ export default hopeTheme({
         name: "zjkal",
         url: "https://github.com/zjkal",
     },
-    iconAssets: "fontawesome-with-brands",
     logo: "https://cdn.0x1.site/logo-time-helper.svg",
     repo: "zjkal/time-helper",
     repoDisplay: false,
@@ -53,47 +52,49 @@ export default hopeTheme({
             },
         },
     },
+    markdown: {
+        align: true,
+        attrs: true,
+        codeTabs: true,
+        demo: true,
+        figure: true,
+        gfm: true,
+        imgLazyload: true,
+        imgSize: true,
+        include: true,
+        mark: true,
+        playground: {
+            presets: ["ts", "vue"],
+        },
+
+        // install reveal.js before enabling it
+        revealjs: {
+            plugins: ["highlight", "math", "search", "notes", "zoom"],
+        },
+        stylize: [
+            {
+                matcher: "Recommended",
+                replacer: ({tag}) => {
+                    if (tag === "em")
+                        return {
+                            tag: "Badge",
+                            attrs: {type: "tip"},
+                            content: "Recommended",
+                        };
+                },
+            },
+        ],
+        sub: true,
+        sup: true,
+        tabs: true,
+        vPre: true,
+    },
 
     plugins: {
-        searchPro: true,
-        // All features are enabled for demo, only preserve features you need here
-        mdEnhance: {
-            align: true,
-            attrs: true,
-            codetabs: true,
-            demo: true,
-            figure: true,
-            gfm: true,
-            imgLazyload: true,
-            imgSize: true,
-            include: true,
-            mark: true,
-            playground: {
-                presets: ["ts", "vue"],
-            },
-
-            // install reveal.js before enabling it
-            revealJs: {
-                plugins: ["highlight", "math", "search", "notes", "zoom"],
-            },
-            stylize: [
-                {
-                    matcher: "Recommended",
-                    replacer: ({tag}) => {
-                        if (tag === "em")
-                            return {
-                                tag: "Badge",
-                                attrs: {type: "tip"},
-                                content: "Recommended",
-                            };
-                    },
-                },
-            ],
-            sub: true,
-            sup: true,
-            tabs: true,
-            vPre: true,
+        icon: {
+            assets: "fontawesome-with-brands",
         },
+        slimsearch: true,
         comment: {
             provider: "Giscus",
             repo: "zjkal/time-helper",

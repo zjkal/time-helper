@@ -2,7 +2,7 @@
 order: 6
 ---
 
-# 🍌 High Precision Timestamp
+# 🎯 High Precision Timestamp
 
 ::: tip
 It may be used to generate order numbers or to interface with other programming languages

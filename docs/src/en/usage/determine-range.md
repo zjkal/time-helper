@@ -2,7 +2,7 @@
 order: 3
 ---
 
-# 🍉 Determine Range
+# 📅 Determine Range
 
 ## isToday()
 

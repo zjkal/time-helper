@@ -2,7 +2,7 @@
 order: 4
 ---
 
-# 🍊 Calculate Difference
+# 🧮 Calculate Difference
 
 ## diffSeconds()
 

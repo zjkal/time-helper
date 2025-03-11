@@ -3,7 +3,7 @@ order: 1
 prev: /en/getting-started/installation.md
 ---
 
-# 🍇 Get Second
+# 🕘 Get Second
 
 ::: tip
 This is usually used for setting cache expiration time, setting end time, and so on.

@@ -2,7 +2,7 @@
 order: 2
 ---
 
-# 🍈 Friendly Format
+# 🌈 Friendly Format
 
 ::: tip
 It is generally used on social platforms, comments, forums, etc

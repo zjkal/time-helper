@@ -23,6 +23,10 @@ export const enNavbar = navbar([
             {
                 text: "Gitee",
                 link: "https://gitee.com/zjkal/time-helper"
+            },
+            {
+                text: "GitCode",
+                link: "https://gitcode.com/zjkal/time-helper"
             }
         ],
     },

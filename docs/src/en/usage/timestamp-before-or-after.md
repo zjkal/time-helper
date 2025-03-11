@@ -2,7 +2,7 @@
 order: 5
 ---
 
-# 🍋 Timestamp Before or After
+# ⚓ Timestamp Before or After
 
 ## beforeMinute()
 

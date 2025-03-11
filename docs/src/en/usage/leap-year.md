@@ -2,7 +2,7 @@
 order: 8
 ---
 
-# 🥭 Leap Year
+# 🌐 Leap Year
 
 ::: tip
 It is more convenient to use than the native method

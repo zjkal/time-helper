@@ -3,7 +3,7 @@ order: 10
 next: /en/appendices/special-note.md
 ---
 
-# 🍏 China Holiday
+# ⛱️ China Holiday
 
 ::: tip
 Specifically for China's holidays, it currently includes the holiday data of '2020-2024', and will continue to be updated in the future. In order to facilitate maintenance and use, a new class 'ChinaHoliday' was created

@@ -2,7 +2,7 @@
 order: 9
 ---
 
-# 🍎 Timezone
+# ✈️ Timezone
 
 ::: tip
 It mainly provides a way to get the time of different time zones and convert the time of different time zones

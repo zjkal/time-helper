@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.20",
-    "@vuepress/plugin-revealjs": "2.0.0-rc.82",
+    "@vuepress/plugin-revealjs": "2.0.0-rc.85",
     "@vuepress/plugin-slimsearch": "2.0.0-rc.85",
     "esbuild": "^0.25.1",
     "mathjax-full": "^3.2.2",

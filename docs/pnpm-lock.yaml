@@ -16,8 +16,8 @@ importers:
         specifier: 2.0.0-rc.20
         version: 2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1)
       '@vuepress/plugin-revealjs':
-        specifier: 2.0.0-rc.82
-        version: 2.0.0-rc.82(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
+        specifier: 2.0.0-rc.85
+        version: 2.0.0-rc.85(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
       '@vuepress/plugin-slimsearch':
         specifier: 2.0.0-rc.85
         version: 2.0.0-rc.85(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
@@ -38,7 +38,7 @@ importers:
         version: 2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)
       vuepress-theme-hope:
         specifier: 2.0.0-rc.74
-        version: 2.0.0-rc.74(@vuepress/plugin-revealjs@2.0.0-rc.82(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)))(@vuepress/plugin-slimsearch@2.0.0-rc.85(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)))(markdown-it@14.1.0)(mathjax-full@3.2.2)(sass-embedded@1.85.1)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
+        version: 2.0.0-rc.74(@vuepress/plugin-revealjs@2.0.0-rc.85(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)))(@vuepress/plugin-slimsearch@2.0.0-rc.85(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)))(markdown-it@14.1.0)(mathjax-full@3.2.2)(sass-embedded@1.85.1)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
 
 packages:
 
@@ -1045,8 +1045,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.20
 
-  '@vuepress/plugin-revealjs@2.0.0-rc.82':
-    resolution: {integrity: sha512-VVLY8bT7xDYZKmAjbFRVhDOzEZl3CBxAmmCNDruS4TPodRSpq2Zr6iSvMIFAe7Ec77oaqWFF5xtkQD0/X6+NPQ==}
+  '@vuepress/plugin-revealjs@2.0.0-rc.85':
+    resolution: {integrity: sha512-xWl5vf6jjflZm1FJgRM3FId9svs5DrrzXgByodBbzhgPJKB+esI/6N2oH7ZAxDA1bbW693IY+/+d/CWJMHx/7g==}
     peerDependencies:
       vuepress: 2.0.0-rc.20
 
@@ -3378,13 +3378,13 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vuepress/plugin-revealjs@2.0.0-rc.82(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))':
+  '@vuepress/plugin-revealjs@2.0.0-rc.85(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))':
     dependencies:
       '@mdit/plugin-uml': 0.16.0(markdown-it@14.1.0)
       '@types/markdown-it': 14.1.2
       '@types/reveal.js': 5.0.5
-      '@vuepress/helper': 2.0.0-rc.82(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
-      '@vueuse/core': 12.8.2
+      '@vuepress/helper': 2.0.0-rc.85(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
+      '@vueuse/core': 13.0.0(vue@3.5.13)
       reveal.js: 5.1.0
       vue: 3.5.13
       vuepress: 2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)
@@ -4581,7 +4581,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.74(@vuepress/plugin-revealjs@2.0.0-rc.82(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)))(@vuepress/plugin-slimsearch@2.0.0-rc.85(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)))(markdown-it@14.1.0)(mathjax-full@3.2.2)(sass-embedded@1.85.1)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)):
+  vuepress-theme-hope@2.0.0-rc.74(@vuepress/plugin-revealjs@2.0.0-rc.85(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)))(@vuepress/plugin-slimsearch@2.0.0-rc.85(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)))(markdown-it@14.1.0)(mathjax-full@3.2.2)(sass-embedded@1.85.1)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13)):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.83(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.80(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
@@ -4622,7 +4622,7 @@ snapshots:
       vuepress-plugin-md-enhance: 2.0.0-rc.74(markdown-it@14.1.0)(sass-embedded@1.85.1)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
       vuepress-shared: 2.0.0-rc.74(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
     optionalDependencies:
-      '@vuepress/plugin-revealjs': 2.0.0-rc.82(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
+      '@vuepress/plugin-revealjs': 2.0.0-rc.85(markdown-it@14.1.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
       '@vuepress/plugin-slimsearch': 2.0.0-rc.85(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.10)(sass-embedded@1.85.1))(vue@3.5.13))
       sass-embedded: 1.85.1
     transitivePeerDependencies:

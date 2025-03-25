@@ -32,6 +32,7 @@ export default hopeTheme({
             footer: footer,
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
+                contributors: "",
             },
         },
 

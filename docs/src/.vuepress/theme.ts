@@ -30,6 +30,7 @@ export default hopeTheme({
             displayFooter: true,
             copyright: "",
             footer: footer,
+            contributors: false,
             metaLocales: {
                 editLink: "在 GitHub 上编辑此页",
             },

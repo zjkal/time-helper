@@ -59,7 +59,7 @@ TimeHelper::beforeMinute(5);
 TimeHelper::afterMinute(20,'2022-3-2 10:15:33');
 // 1646188533
 
-/* 获取1分钟后的时间戳Get the timestamp after 1 minute */
+/* Get the timestamp after 1 minute */
 TimeHelper::afterMinute();
 // 1698734495
 ```

@@ -32,7 +32,7 @@
 - Fast and efficient: All operations can be completed with just `one static method`
 - Long-term maintenance: The author is a freelancer, ensuring `long-term stability` and `continuous updates`
 
-## 🎁 Example Code
+## 🎁 Examples
 
 ```php
 //Check if the specified date is a Chinese workday
@@ -84,11 +84,11 @@ composer require zjkal/time-helper
 
 ## 🌈 Documentation
 
-View [Documentation](https://time.0x1.site/)
+View [Documentation](https://time.0x1.site/en/)
 
 ## 📃 Changelog
 
-View [Changelog](https://time.0x1.site/appendices/chang-log.html)
+View [Changelog](https://time.0x1.site/en/appendices/chang-log.html)
 
 ## 😎 Developers
 

@@ -4,6 +4,9 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.13 May 3, 2025
+> * Added some ways to get the various parts of the time
+
 > v1.1.12 January 23, 2025
 > * Added compatibility with PHP8.4
 

@@ -1,6 +1,6 @@
 ---
 order: 10
-next: /appendices/special-note.md
+next: /usage/get-part-of-time.md
 ---
 
 # ⛱️ 判断国内节假日

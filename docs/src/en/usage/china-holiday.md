@@ -1,6 +1,6 @@
 ---
 order: 10
-next: /en/appendices/special-note.md
+next: /en/usage/get-part-of-time.md
 ---
 
 # ⛱️ China Holiday

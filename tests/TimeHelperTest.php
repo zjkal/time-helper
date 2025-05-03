@@ -260,4 +260,51 @@ class TimeHelperTest extends TestCase
         print TimeHelper::toFriendly(time(), 'en');
     }
 
+    public function testGetYear()
+    {
+        $this->expectOutputString('2023');
+        print TimeHelper::getYear('2023-9-1 12:00:00');
+    }
+
+    public function testGetQuarter()
+    {
+        $this->expectOutputString('3');
+        print TimeHelper::getQuarter('2023-9-1 12:00:00');
+    }
+
+    public function testGetMonth()
+    {
+        $this->expectOutputString('9');
+        print TimeHelper::getMonth('2023-9-1 12:00:00');
+    }
+
+    public function testGetWeek()
+    {
+        $this->expectOutputString('35');
+        print TimeHelper::getWeek('2023-9-1 12:00:00');
+    }
+
+    public function testGetDay()
+    {
+        $this->expectOutputString('1');
+        print TimeHelper::getDay('2023-9-1 12:00:00');
+    }
+
+    public function testGetHour()
+    {
+        $this->expectOutputString('12');
+        print TimeHelper::getHour('2023-9-1 12:00:00');
+    }
+
+    public function testGetMinute()
+    {
+        $this->expectOutputString('0');
+        print TimeHelper::getMinute('2023-9-1 12:00:00');
+    }
+
+    public function testGetSecond()
+    {
+        $this->expectOutputString('0');
+        print TimeHelper::getSecond('2023-9-1 12:00:00');
+    }
 }

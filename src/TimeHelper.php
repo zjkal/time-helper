@@ -1,5 +1,5 @@
 <?php
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace zjkal;
 
@@ -17,8 +17,23 @@ class TimeHelper
 {
     //常见的特殊日期格式
     private static $date_formats = [
-        'Y-m-d', 'm/d/Y', 'd.m.Y', 'm.d.y', 'd/m/Y', 'Y年m月d日', 'Y年m月', 'Y年m月d号',
-        'Y/m/d', 'Y.m.d', 'Y.m', 'F d, Y', 'M d, Y', 'F j, Y', 'M j, Y', 'F jS, Y', 'M jS, Y'
+        'Y-m-d',
+        'm/d/Y',
+        'd.m.Y',
+        'm.d.y',
+        'd/m/Y',
+        'Y年m月d日',
+        'Y年m月',
+        'Y年m月d号',
+        'Y/m/d',
+        'Y.m.d',
+        'Y.m',
+        'F d, Y',
+        'M d, Y',
+        'F j, Y',
+        'M j, Y',
+        'F jS, Y',
+        'M jS, Y'
     ];
     //常见的特殊时间格式
     private static $time_formats = ['H', 'H:i', 'H:i:s', 'H点', 'H点i分', 'H点i分s秒', 'H时', 'H时i分', 'H时i分s秒', 'g:i a', 'h:i a'];
@@ -548,7 +563,8 @@ class TimeHelper
      */
     public static function getTimestamp(int $level = 0): int
     {
-        if ($level === 0) return time();
+        if ($level === 0)
+            return time();
         list($msc, $sec) = explode(' ', microtime());
         if ($level === 1) {
             return intval(sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000));
@@ -671,15 +687,87 @@ class TimeHelper
     }
 
     /**
+     * 返回当前的年份,如2025
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 当前年份
+     */
+    public static function getYear($datetime = null): int
+    {
+        return intval(date('Y', self::toTimestamp($datetime)));
+    }
+
+    /** 
+     * 返回当前的季度,如1,2,3,4
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 当前季度
+     */
+    public static function getQuarter($datetime = null): int
+    {
+        return intval(date('n', self::toTimestamp($datetime)) / 3);
+    }
+
+    /**
+     * 返回当前的月份,如1,2,3,4,5,6,7,8,9,10,11,12
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 当前月份
+     */
+    public static function getMonth($datetime = null): int
+    {
+        return intval(date('m', self::toTimestamp($datetime)));
+    }
+
+    /**
+     * 返回当前是该年的第几周
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 当前周数
+     */
+    public static function getWeek($datetime = null): int
+    {
+        return intval(date('W', self::toTimestamp($datetime)));
+    }
+
+    /**
+     * 返回当前是该月的第几天
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 当前天数
+     */
+    public static function getDay($datetime = null): int
+    {
+        return intval(date('d', self::toTimestamp($datetime)));
+    }
+
+    /**
+     * 返回当前是该天的第几小时
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 当前小时数
+     */
+    public static function getHour($datetime = null): int
+    {
+        return intval(date('H', self::toTimestamp($datetime)));
+    }
+
+    /**
+     * 返回当前是该小时的第几分钟
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 当前分钟数
+     */
+    public static function getMinute($datetime = null): int
+    {
+        return intval(date('i', self::toTimestamp($datetime)));
+    }
+
+    /** 
+     * 返回当前是该分钟的第几秒
+     * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @return int 当前秒数
+     */
+    public static function getSecond($datetime = null): int
+    {
+        return intval(date('s', self::toTimestamp($datetime)));
+    }
+
+    /**
      * 后续开发计划:
-     * TODO: 返回当前是第几年, getYear(),返回4位数年份.
-     * TODO: 返回当前是第几个季度, getQuarter(),返回1234.
-     * TODO: 返回当前是第几个月, getMonth(),返回1-12.
-     * TODO: 返回当前是第几周, getWeek(),返回1-53.
-     * TODO: 返回当前是第几天, getDay(),返回1-31.
-     * TODO: 返回当前是第几小时, getHour(),返回0-23.
-     * TODO: 返回当前是第几分钟, getMinute(),返回0-59.
-     * TODO: 返回当前是第几秒, getSecond(),返回0-59.
      * TODO: 为beforeWeek和afterWeek增加取整方法
      * TODO: 修改before和after相关方法,使取整不仅可以向前,还可以向后,如afterMonth可以返回该月最后一天的23点59分59秒的时间戳
      * TODO: 返回日期范围,主要用于SQL查询, 比如今天,昨天,最近7天, 本月, 本周等等. 为了方便使用, 会另外再起一个类

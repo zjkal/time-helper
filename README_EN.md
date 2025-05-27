@@ -149,12 +149,6 @@ Many thanks to Jetbrains for providing me with an IDE open source license, allow
 
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/)
 
-## 🐧 Scan the QR code to join QQ Channel
-
-<a href="https://pd.qq.com/s/7h2hvcuxs">
-  <img src="https://cdn.0x1.site/qrcode-qqpd.png"  alt="QQ Channel - The Best Programming Language in the World"/>
-</a>
-
 ## 📖 License
 
 TimeHelper follows the [MIT License](https://github.com/zjkal/time-helper/blob/main/LICENSE), which means you can freely use TimeHelper in your projects without any authorization.

@@ -9,8 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Auto Release
-        uses: "marvinpinto/action-automatic-releases@latest"
+      - name: "Release"
+        uses: "./"
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          draft: true
+          command-name: "laminas:automatic-releases:release"
+          env:
+            "GITHUB_TOKEN": ${{ secrets.ORGANIZATION_ADMIN_TOKEN }}

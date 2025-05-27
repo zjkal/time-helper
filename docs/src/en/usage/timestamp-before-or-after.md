@@ -11,7 +11,7 @@ order: 5
 #### Parameters
 
 | Parameter |                                                   Introduction                                                   |                 Require                 |
-|:---------:|:----------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|
+| :-------: | :--------------------------------------------------------------------------------------------------------------: | :-------------------------------------: |
 |  minute   |                                                     minutes                                                      | Optional, the default value is 1 minute |
 | datetime  |                        Starts at a specified time (any type of string time or timestamp)                         | Optional, defaults to the current time  |
 |   round   | If true, the whole number is rounded up or not, and if true, the calculation starts from 0 seconds of the minute |       Optional, defaults to false       |
@@ -43,7 +43,7 @@ TimeHelper::beforeMinute(5);
 #### Parameters
 
 | Parameter |                                                   Introduction                                                   |                 Require                 |
-|:---------:|:----------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|
+| :-------: | :--------------------------------------------------------------------------------------------------------------: | :-------------------------------------: |
 |  minute   |                                                     minutes                                                      | Optional, the default value is 1 minute |
 | datetime  |                        Starts at a specified time (any type of string time or timestamp)                         | Optional, defaults to the current time  |
 |   round   | If true, the whole number is rounded up or not, and if true, the calculation starts from 0 seconds of the minute |       Optional, defaults to false       |
@@ -71,7 +71,7 @@ TimeHelper::afterMinute();
 #### Parameters
 
 | Parameter |                           Introduction                            |                Require                 |
-|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+| :-------: | :---------------------------------------------------------------: | :------------------------------------: |
 |   hour    |                               hours                               | Optional, the default value is 1 hour  |
 | datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
 |   round   |      If true, the whole is calculated from 0:00 of the hour       |      Optional, defaults to false       |
@@ -99,7 +99,7 @@ TimeHelper::beforeHour(datetime:'Apr 11, 2020');
 #### Parameters
 
 | Parameter |                           Introduction                            |                Require                 |
-|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+| :-------: | :---------------------------------------------------------------: | :------------------------------------: |
 |   hour    |                               hours                               | Optional, the default value is 1 hour  |
 | datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
 |   round   |      If true, the whole is calculated from 0:00 of the hour       |      Optional, defaults to false       |
@@ -123,7 +123,7 @@ TimeHelper::afterHour(2);
 #### Parameters
 
 | Parameter |                           Introduction                            |                Require                 |
-|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+| :-------: | :---------------------------------------------------------------: | :------------------------------------: |
 |    day    |                               days                                |  Optional, the default value is 1 day  |
 | datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
 |   round   |  If true, the whole value is calculated from 0:00:00 on that day  |      Optional, defaults to false       |
@@ -151,7 +151,7 @@ TimeHelper::beforeDay(3,1698734495);
 #### Parameters
 
 | Parameter |                           Introduction                            |                Require                 |
-|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
+| :-------: | :---------------------------------------------------------------: | :------------------------------------: |
 |    day    |                               days                                |  Optional, the default value is 1 day  |
 | datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
 |   round   |  If true, the whole value is calculated from 0:00:00 on that day  |      Optional, defaults to false       |
@@ -174,10 +174,11 @@ TimeHelper::afterDay(15);
 
 #### Parameters
 
-| Parameter |                           Introduction                            |                Require                 |
-|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
-|   week    |                               weeks                               |      Optional, default is 1 week       |
-| datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
+| Parameter |                                Introduction                                 |                Require                 |
+| :-------: | :-------------------------------------------------------------------------: | :------------------------------------: |
+|   week    |                                    weeks                                    |      Optional, default is 1 week       |
+| datetime  |      Starts at a specified time (any type of string time or timestamp)      | Optional, defaults to the current time |
+|   round   | If true, the rounding is calculated from 00:00:00 on the Monday of the week |      Optional, defaults to false       |
 
 #### Return Values
 
@@ -189,6 +190,10 @@ TimeHelper::afterDay(15);
 /* Obtain the timestamp 2 weeks before the specified time */
 TimeHelper::beforeWeek(2,'2022-4-24 23:01:11');
 // 1649602871
+
+/* Obtain the timestamp 2 weeks before the specified time, starting from 00:00:00 on the Monday */
+TimeHelper::beforeWeek(2,null,true);
+// 1649602871
 ```
 
 ## afterWeek()
@@ -197,10 +202,11 @@ TimeHelper::beforeWeek(2,'2022-4-24 23:01:11');
 
 #### Parameters
 
-| Parameter |                           Introduction                            |                Require                 |
-|:---------:|:-----------------------------------------------------------------:|:--------------------------------------:|
-|   week    |                               weeks                               |      Optional, default is 1 week       |
-| datetime  | Starts at a specified time (any type of string time or timestamp) | Optional, defaults to the current time |
+| Parameter |                                Introduction                                 |                Require                 |
+| :-------: | :-------------------------------------------------------------------------: | :------------------------------------: |
+|   week    |                                    weeks                                    |      Optional, default is 1 week       |
+| datetime  |      Starts at a specified time (any type of string time or timestamp)      | Optional, defaults to the current time |
+|   round   | If true, the rounding is calculated from 00:00:00 on the Monday of the week |      Optional, defaults to false       |
 
 #### Return Values
 
@@ -221,7 +227,7 @@ TimeHelper::afterWeek();
 #### Parameters
 
 | Parameter |                               Introduction                                |                Require                 |
-|:---------:|:-------------------------------------------------------------------------:|:--------------------------------------:|
+| :-------: | :-----------------------------------------------------------------------: | :------------------------------------: |
 |   month   |                                  months                                   | Optional, the default value is 1 month |
 | datetime  |     Starts at a specified time (any type of string time or timestamp)     | Optional, defaults to the current time |
 |   round   | If true, the rounding is calculated from 00:00:00 on the 1st of the month |      Optional, defaults to false       |
@@ -253,7 +259,7 @@ TimeHelper::beforeMonth(3);
 #### Parameters
 
 | Parameter |                               Introduction                                |                Require                 |
-|:---------:|:-------------------------------------------------------------------------:|:--------------------------------------:|
+| :-------: | :-----------------------------------------------------------------------: | :------------------------------------: |
 |   month   |                                  months                                   | Optional, the default value is 1 month |
 | datetime  |     Starts at a specified time (any type of string time or timestamp)     | Optional, defaults to the current time |
 |   round   | If true, the rounding is calculated from 00:00:00 on the 1st of the month |      Optional, defaults to false       |
@@ -281,7 +287,7 @@ TimeHelper::afterMonth(round:true);
 #### Parameters
 
 | Parameter |                                Introduction                                |                Require                 |
-|:---------:|:--------------------------------------------------------------------------:|:--------------------------------------:|
+| :-------: | :------------------------------------------------------------------------: | :------------------------------------: |
 |   year    |                                   years                                    |      Optional, default is 1 year       |
 | datetime  |     Starts at a specified time (any type of string time or timestamp)      | Optional, defaults to the current time |
 |   round   | If true, the rounding is calculated from 00:00:00 on January 1 of the year |      Optional, defaults to false       |
@@ -309,7 +315,7 @@ TimeHelper::beforeYear(0,null,true);
 #### Parameters
 
 | Parameter |                                Introduction                                |                Require                 |
-|:---------:|:--------------------------------------------------------------------------:|:--------------------------------------:|
+| :-------: | :------------------------------------------------------------------------: | :------------------------------------: |
 |   year    |                                   years                                    |      Optional, default is 1 year       |
 | datetime  |     Starts at a specified time (any type of string time or timestamp)      | Optional, defaults to the current time |
 |   round   | If true, the rounding is calculated from 00:00:00 on January 1 of the year |      Optional, defaults to false       |

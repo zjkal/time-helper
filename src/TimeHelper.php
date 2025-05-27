@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace zjkal;
@@ -486,22 +487,26 @@ class TimeHelper
      * 返回N星期前的时间戳,传入第二个参数,则从该时间开始计算
      * @param int        $week     星期数(默认为1星期)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前日期0点的时间戳
      * @return int 时间戳
      */
-    public static function beforeWeek(int $week = 1, $datetime = null): int
+    public static function beforeWeek(int $week = 1, $datetime = null, bool $round = false): int
     {
-        return self::modifyTimestamp(sprintf('-%d week', $week), $datetime);
+        $timestamp = self::modifyTimestamp(sprintf('-%d week', $week), $datetime);
+        return $round ? strtotime(date('Y-m-d 00:00:00', $timestamp)) : $timestamp;
     }
 
     /**
      * 返回N星期后的时间戳,传入第二个参数,则从该时间开始计算
      * @param int        $week     星期数(默认为1星期)
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
+     * @param bool       $round    是否取整(默认false),如果传入true,则返回当前日期0点的时间戳
      * @return int 时间戳
      */
-    public static function afterWeek(int $week = 1, $datetime = null): int
+    public static function afterWeek(int $week = 1, $datetime = null, bool $round = false): int
     {
-        return self::modifyTimestamp(sprintf('+%d week', $week), $datetime);
+        $timestamp = self::modifyTimestamp(sprintf('+%d week', $week), $datetime);
+        return $round ? strtotime(date('Y-m-d 00:00:00', $timestamp)) : $timestamp;
     }
 
     /**
@@ -768,7 +773,6 @@ class TimeHelper
 
     /**
      * 后续开发计划:
-     * TODO: 为beforeWeek和afterWeek增加取整方法
      * TODO: 修改before和after相关方法,使取整不仅可以向前,还可以向后,如afterMonth可以返回该月最后一天的23点59分59秒的时间戳
      * TODO: 返回日期范围,主要用于SQL查询, 比如今天,昨天,最近7天, 本月, 本周等等. 为了方便使用, 会另外再起一个类
      */

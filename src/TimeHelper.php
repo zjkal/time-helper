@@ -701,14 +701,14 @@ class TimeHelper
         return intval(date('Y', self::toTimestamp($datetime)));
     }
 
-    /** 
+    /**
      * 返回当前的季度,如1,2,3,4
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
      * @return int 当前季度
      */
     public static function getQuarter($datetime = null): int
     {
-        return intval(date('n', self::toTimestamp($datetime)) / 3);
+        return intval(ceil(date('n', self::toTimestamp($datetime)) / 3));
     }
 
     /**
@@ -761,7 +761,7 @@ class TimeHelper
         return intval(date('i', self::toTimestamp($datetime)));
     }
 
-    /** 
+    /**
      * 返回当前是该分钟的第几秒
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
      * @return int 当前秒数

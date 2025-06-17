@@ -268,8 +268,8 @@ class TimeHelperTest extends TestCase
 
     public function testGetQuarter()
     {
-        $this->expectOutputString('3');
-        print TimeHelper::getQuarter('2023-9-1 12:00:00');
+        $this->assertSame(1, TimeHelper::getQuarter('2023-1-1 12:00:00'));
+        $this->assertSame(4, TimeHelper::getQuarter('2023-10-24 12:00:00'));
     }
 
     public function testGetMonth()

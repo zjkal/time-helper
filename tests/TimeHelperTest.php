@@ -10,260 +10,217 @@ class TimeHelperTest extends TestCase
 {
     public function testModifyTimestamp()
     {
-        $this->expectOutputString('1693627200');
-        print TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00');
+        $this->assertSame(1693627200, TimeHelper::modifyTimestamp('+1 day', '2023-9-1 12:00:00'));
     }
 
     public function testAfterMonth()
     {
-        $this->expectOutputString('1696132800');
-        print TimeHelper::afterMonth(1, '2023-9-1 12:00:00');
+        $this->assertSame(1696132800, TimeHelper::afterMonth(1, '2023-9-1 12:00:00'));
     }
 
     public function testSecondMinute()
     {
-        $this->expectOutputString('3600');
-        print TimeHelper::secondMinute(60);
+        $this->assertSame(3600, TimeHelper::secondMinute(60));
     }
 
     public function testBeforeYear()
     {
-        $this->expectOutputString('1641009600');
-        print TimeHelper::beforeYear(1, '2023-1-1 12:00:00');
+        $this->assertSame(1641009600, TimeHelper::beforeYear(1, '2023-1-1 12:00:00'));
     }
 
     public function testAfterHour()
     {
-        $this->expectOutputString('1693544400');
-        print TimeHelper::afterHour(1, '2023-9-1 12:00:00');
+        $this->assertSame(1693544400, TimeHelper::afterHour(1, '2023-9-1 12:00:00'));
     }
 
     public function testSecondHour()
     {
-        $this->expectOutputString('3600');
-        print TimeHelper::secondHour(1);
+        $this->assertSame(3600, TimeHelper::secondHour(1));
     }
 
     public function testSecondWeek()
     {
-        $this->expectOutputString('604800');
-        print TimeHelper::secondWeek(1);
+        $this->assertSame(604800, TimeHelper::secondWeek(1));
     }
 
     public function testBeforeMonth()
     {
-        $this->expectOutputString('1669867200');
-        print TimeHelper::beforeMonth(1, '2023-1-1 12:00:00');
+        $this->assertSame(1669867200, TimeHelper::beforeMonth(1, '2023-1-1 12:00:00'));
     }
 
     public function testIsThisYear()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isThisYear('2022-1-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isThisYear('2022-1-1 12:00:00'));
     }
 
     public function testDaysInMonth()
     {
-        $this->expectOutputString('31');
-        print TimeHelper::daysInMonth('2023-1-1 12:00:00');
+        $this->assertSame(31, TimeHelper::daysInMonth('2023-1-1 12:00:00'));
     }
 
     public function testBeforeWeek()
     {
-        $this->expectOutputString('1671940800');
-        print TimeHelper::beforeWeek(1, '2023-1-1 12:00:00');
+        $this->assertSame(1671940800, TimeHelper::beforeWeek(1, '2023-1-1 12:00:00'));
     }
 
     public function testBeforeDay()
     {
-        $this->expectOutputString('1693281600');
-        print TimeHelper::beforeDay(3, '2023-9-1 12:00:00');
+        $this->assertSame(1693281600, TimeHelper::beforeDay(3, '2023-9-1 12:00:00'));
     }
 
     public function testAfterMinute()
     {
-        $this->expectOutputString('1693541400');
-        print TimeHelper::afterMinute(10, '2023-9-1 12:00:00');
+        $this->assertSame(1693541400, TimeHelper::afterMinute(10, '2023-9-1 12:00:00'));
     }
 
     public function testAfterDay()
     {
-        $this->expectOutputString('1693972800');
-        print TimeHelper::afterDay(5, '2023-9-1 12:00:00');
+        $this->assertSame(1693972800, TimeHelper::afterDay(5, '2023-9-1 12:00:00'));
     }
 
     public function testIsTimestamp()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isTimestamp('2023-9-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isTimestamp('2023-9-1 12:00:00'));
     }
 
     public function testAfterYear()
     {
-        $this->expectOutputString('1725163200');
-        print TimeHelper::afterYear(1, '2023-9-1 12:00:00');
+        $this->assertSame(1725163200, TimeHelper::afterYear(1, '2023-9-1 12:00:00'));
     }
 
     public function testBeforeHour()
     {
-        $this->expectOutputString('1693537200');
-        print TimeHelper::beforeHour(1, '2023-9-1 12:00:00');
+        $this->assertSame(1693537200, TimeHelper::beforeHour(1, '2023-9-1 12:00:00'));
     }
 
     public function testIsWeekday()
     {
-        $this->expectOutputString(true);
-        print TimeHelper::isWeekday('2023-9-1 12:00:00');
+        $this->assertSame(true, TimeHelper::isWeekday('2023-9-1 12:00:00'));
     }
 
     public function testFormat()
     {
-        $this->expectOutputString('Sep 01, 2023 12:00');
-        print TimeHelper::format('M d, Y H:i', '2023-9-1 12:00:00');
+        $this->assertSame('Sep 01, 2023 12:00', TimeHelper::format('M d, Y H:i', '2023-9-1 12:00:00'));
     }
 
     public function testAfterWeek()
     {
-        $this->expectOutputString('1694145600');
-        print TimeHelper::afterWeek(1, '2023-9-1 12:00:00');
+        $this->assertSame(1694145600, TimeHelper::afterWeek(1, '2023-9-1 12:00:00'));
     }
 
     public function testToTimestamp()
     {
-        $this->expectOutputString('1693540800');
-        print TimeHelper::toTimestamp('2023-9-1 12:00:00');
+        $this->assertSame(1693540800, TimeHelper::toTimestamp('2023-9-1 12:00:00'));
     }
 
     public function testIsThisMonth()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isThisMonth('2023-8-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isThisMonth('2023-8-1 12:00:00'));
     }
 
     public function testDiffWeeks()
     {
-        $this->expectOutputString('57');
-        print TimeHelper::diffWeeks('2022-9-1 12:00:00', '2023-10-8 12:00:00');
+        $this->assertSame(57, TimeHelper::diffWeeks('2022-9-1 12:00:00', '2023-10-8 12:00:00'));
     }
 
     public function testIsToday()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isToday('2023-8-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isToday('2023-8-1 12:00:00'));
     }
 
     public function testIsYesterday()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isYesterday('2023-8-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isYesterday('2023-8-1 12:00:00'));
     }
 
     public function testIsTomorrow()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isTomorrow('2023-8-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isTomorrow('2023-8-1 12:00:00'));
     }
 
     public function testBeforeMinute()
     {
-        $this->expectOutputString('1693540200');
-        print TimeHelper::beforeMinute(10, '2023-9-1 12:00:00');
+        $this->assertSame(1693540200, TimeHelper::beforeMinute(10, '2023-9-1 12:00:00'));
     }
 
     public function testDaysInYear()
     {
-        $this->expectOutputString('365');
-        print TimeHelper::daysInYear('2023-1-1 12:00:00');
+        $this->assertSame(365, TimeHelper::daysInYear('2023-1-1 12:00:00'));
     }
 
     public function testGetWeekDay()
     {
-        $this->expectOutputString('5');
-        print TimeHelper::getWeekDay('2023-9-1 12:00:00');
+        $this->assertSame(5, TimeHelper::getWeekDay('2023-9-1 12:00:00'));
     }
 
     public function testIsWeekend()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isWeekend('2023-9-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isWeekend('2023-9-1 12:00:00'));
     }
 
     public function testDiffYears()
     {
-        $this->expectOutputString('2');
-        print TimeHelper::diffYears('2023-9-1 12:00:00', '2025-9-1 12:00:00');
+        $this->assertSame(2, TimeHelper::diffYears('2023-9-1 12:00:00', '2025-9-1 12:00:00'));
     }
 
     public function testIsThisWeek()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isThisWeek('2023-7-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isThisWeek('2023-7-1 12:00:00'));
     }
 
     public function testDiffMonths()
     {
-        $this->expectOutputString('36');
-        print TimeHelper::diffMonths('2021-9-1 12:00:00', '2024-9-1 12:00:00');
+        $this->assertSame(36, TimeHelper::diffMonths('2021-9-1 12:00:00', '2024-9-1 12:00:00'));
     }
 
     public function testDiffDays()
     {
-        $this->expectOutputString('731');
-        print TimeHelper::diffDays('2022-9-1 12:00:00', '2024-9-1 12:00:00');
+        $this->assertSame(731, TimeHelper::diffDays('2022-9-1 12:00:00', '2024-9-1 12:00:00'));
     }
 
     public function testDiffHours()
     {
-        $this->expectOutputString('216');
-        print TimeHelper::diffHours('2023-9-1 12:00:00', '2023-9-10 12:00:00');
+        $this->assertSame(216, TimeHelper::diffHours('2023-9-1 12:00:00', '2023-9-10 12:00:00'));
     }
 
     public function testDiffMinutes()
     {
-        $this->expectOutputString('12960');
-        print TimeHelper::diffMinutes('2023-9-1 12:00:00', '2023-9-10 12:00:00');
+        $this->assertSame(12960, TimeHelper::diffMinutes('2023-9-1 12:00:00', '2023-9-10 12:00:00'));
     }
 
     public function testDiffSeconds()
     {
-        $this->expectOutputString('777600');
-        print TimeHelper::diffSeconds('2023-9-1 12:00:00', '2023-9-10 12:00:00');
+        $this->assertSame(777600, TimeHelper::diffSeconds('2023-9-1 12:00:00', '2023-9-10 12:00:00'));
     }
 
     public function testIsLeapYear()
     {
-        $this->expectOutputString(false);
-        print TimeHelper::isLeapYear('2023-1-1 12:00:00');
+        $this->assertSame(false, TimeHelper::isLeapYear('2023-1-1 12:00:00'));
     }
 
     public function testTimezoneFormat()
     {
-        $this->expectOutputString('18:15:33');
-        print TimeHelper::timezoneFormat('Europe/London', 'America/Los_Angeles', 'Aug 15, 2023 10:15:33', 'H:i:s');
+        $this->assertSame('18:15:33', TimeHelper::timezoneFormat('Europe/London', 'America/Los_Angeles', 'Aug 15, 2023 10:15:33', 'H:i:s'));
     }
 
     public function testSecondDay()
     {
-        $this->expectOutputString('86400');
-        print TimeHelper::secondDay(1);
+        $this->assertSame(86400, TimeHelper::secondDay(1));
     }
 
     public function testCompare()
     {
-        $this->expectOutputString('1');
-        print TimeHelper::compare('2023-9-1 12:00:00', '2023-8-1 12:00:00');
+        $this->assertSame(1, TimeHelper::compare('2023-9-1 12:00:00', '2023-8-1 12:00:00'));
     }
 
     public function testToFriendly()
     {
-        $this->expectOutputString('just now');
-        print TimeHelper::toFriendly(time(), 'en');
+        $this->assertSame('just now', TimeHelper::toFriendly(time(), 'en'));
     }
 
     public function testGetYear()
     {
-        $this->expectOutputString('2023');
-        print TimeHelper::getYear('2023-9-1 12:00:00');
+        $this->assertSame(2023, TimeHelper::getYear('2023-9-1 12:00:00'));
     }
 
     public function testGetQuarter()
@@ -274,37 +231,31 @@ class TimeHelperTest extends TestCase
 
     public function testGetMonth()
     {
-        $this->expectOutputString('9');
-        print TimeHelper::getMonth('2023-9-1 12:00:00');
+        $this->assertSame(9, TimeHelper::getMonth('2023-9-1 12:00:00'));
     }
 
     public function testGetWeek()
     {
-        $this->expectOutputString('35');
-        print TimeHelper::getWeek('2023-9-1 12:00:00');
+        $this->assertSame(35, TimeHelper::getWeek('2023-9-1 12:00:00'));
     }
 
     public function testGetDay()
     {
-        $this->expectOutputString('1');
-        print TimeHelper::getDay('2023-9-1 12:00:00');
+        $this->assertSame(1, TimeHelper::getDay('2023-9-1 12:00:00'));
     }
 
     public function testGetHour()
     {
-        $this->expectOutputString('12');
-        print TimeHelper::getHour('2023-9-1 12:00:00');
+        $this->assertSame(12, TimeHelper::getHour('2023-9-1 12:00:00'));
     }
 
     public function testGetMinute()
     {
-        $this->expectOutputString('0');
-        print TimeHelper::getMinute('2023-9-1 12:00:00');
+        $this->assertSame(20, TimeHelper::getMinute('2023-9-1 12:20:20'));
     }
 
     public function testGetSecond()
     {
-        $this->expectOutputString('0');
-        print TimeHelper::getSecond('2023-9-1 12:00:00');
+        $this->assertSame(6, TimeHelper::getSecond('2023-9-1 12:00:06'));
     }
 }

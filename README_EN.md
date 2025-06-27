@@ -143,7 +143,11 @@ View [Changelog](https://time.0x1.site/en/appendices/chang-log.html)
 </table>
 <!-- readme: contributors -end -->
 
-## ❤️ Sponsored by JetBrains
+## ❤️ Sponsor
+
+CDN acceleration and security protection for this project are sponsored by Tencent EdgeOne.
+
+[![](https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png)](https://edgeone.ai/?from=github)
 
 Many thanks to Jetbrains for providing me with an IDE open source license, allowing me to complete this project and other open source projects.
 

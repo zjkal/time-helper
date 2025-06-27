@@ -144,11 +144,15 @@ composer require zjkal/time-helper
 </table>
 <!-- readme: contributors -end -->
 
-## ❤️ 由 JetBrains 赞助
+## ❤️ 赞助
+
+本项目的 CDN 加速和安全保护由腾讯 EdgeOne 赞助。
+
+[![](https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png)](https://edgeone.ai/?from=github)
 
 非常感谢 Jetbrains 为我提供的 IDE 开源许可，让我完成此项目和其他开源项目上的开发工作。
 
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/)
+[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=github)
 
 ## 🐧 扫以下二维码加入 QQ 频道
 

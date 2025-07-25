@@ -12,7 +12,6 @@ const commonLocales: object = {
         "Powered by <a href='https://vercel.com/' target='_blank' style='font-weight: normal'>Vercel</a> | " +
         "Built with <a href='https://github.com/vuejs/vuepress' target='_blank' style='font-weight: normal'>VuePress</a> | " +
         "Theme by <a href='https://github.com/vuepress-theme-hope/vuepress-theme-hope' target='_blank' style='font-weight: normal'>Hope</a> | " +
-        "Sponsored by <a href='https://www.jetbrains.com/' target='_blank' style='font-weight: normal'>JetBrains</a> | " +
         "CDN by <a href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral' target='_blank'><img src='https://cdn.0x1.site/upyun.png' alt='upyun' style='vertical-align: middle;width: 60px'></a>"
 }
 

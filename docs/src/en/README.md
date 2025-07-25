@@ -105,11 +105,4 @@ composer update
 </table>
 <!-- readme: contributors -end -->
 
-## ❤️Sponsored by JetBrains
-
-I would like to thank Jetbrains for providing me with the IDE open source license to complete the development work on this and other open source projects.
-<a href="https://www.jetbrains.com/">
-<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg"  alt=""/>
-</a>
-
 <!-- markdownlint-disable -->

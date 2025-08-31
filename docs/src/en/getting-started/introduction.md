@@ -13,7 +13,6 @@ order: 1
 * Light: It does not rely on any extensions and is ready to use out of the box
 * Easy: All methods can accept either arbitrary date and time formats or timestamps
 * Smart: All operations can be accomplished with just one static method for each
-* Long-term: The author is a freelancer committed to ensuring the project's long-term.
 
 ## Why not `Carbon`?
 

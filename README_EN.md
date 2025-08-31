@@ -30,7 +30,6 @@
 - Simple and easy to use: No dependencies, `ready to use`
 - Simplify complexity: All methods can accept `any type of date and time format` or `timestamp`
 - Fast and efficient: All operations can be completed with just `one static method`
-- Long-term maintenance: The author is a freelancer, ensuring `long-term stability` and `continuous updates`
 
 ## 🎁 Examples
 

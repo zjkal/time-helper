@@ -1,38 +1,38 @@
 {
-    "name": "time-helper-docs",
-    "version": "2.0.0",
-    "description": "time-helper documents of vuepress-theme-hope",
-    "license": "MIT",
-    "type": "module",
-    "scripts": {
-        "build": "vuepress build src",
-        "clean-dev": "vuepress dev src --clean-cache",
-        "dev": "vuepress dev src",
-        "update-package": "pnpm dlx vp-update"
-    },
-    "devDependencies": {
-        "@vuepress/bundler-vite": "2.0.0-rc.20",
-        "@vuepress/plugin-revealjs": "2.0.0-rc.90",
-        "@vuepress/plugin-slimsearch": "2.0.0-rc.90",
-        "mathjax-full": "^3.2.2",
-        "sass-embedded": "^1.86.0",
-        "vue": "^3.5.13",
-        "vuepress": "2.0.0-rc.20",
-        "vuepress-theme-hope": "2.0.0-rc.77"
-    },
-    "dependencies": {
-        "reveal.js": "^5.2.0"
-    },
-    "pnpm": {
-        "ignoredBuiltDependencies": [
-            "esbuild"
-        ],
-        "onlyBuiltDependencies": [
-            "esbuild",
-            "vue-demi"
-        ],
-        "overrides": {
-            "esbuild": "^0.25.1"
-        }
+  "name": "time-helper-docs",
+  "version": "2.0.0",
+  "description": "time-helper documents of vuepress-theme-hope",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "vuepress build src",
+    "clean-dev": "vuepress dev src --clean-cache",
+    "dev": "vuepress dev src",
+    "update-package": "pnpm dlx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "@vuepress/plugin-revealjs": "2.0.0-rc.112",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.112",
+    "mathjax-full": "^3.2.2",
+    "sass-embedded": "^1.92.1",
+    "vue": "^3.5.21",
+    "vuepress": "2.0.0-rc.24",
+    "vuepress-theme-hope": "2.0.0-rc.94"
+  },
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "vue-demi"
+    ],
+    "overrides": {
+      "esbuild": "^0.25.1"
     }
+  }
 }

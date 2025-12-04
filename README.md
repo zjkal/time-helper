@@ -73,6 +73,7 @@ TimeHelper::toTimestamp('Apr 11, 2020');
 //获取当前时间
 TimeHelper::now();
 ```
+更多用法请移步[使用文档](https://time.0x1.site/)
 
 ## 🚀 安装
 

@@ -4,6 +4,15 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.16 November 4, 2025
+> * Updated 2026 China holiday data
+
+> v1.1.15 June 17, 2025
+> * Fixed the bug in getting the current quarter
+
+> v1.1.14 May 27, 2025
+> * Added rounding parameters for beforeWeek and afterWeek methods
+
 > v1.1.13 May 3, 2025
 > * Added some ways to get the various parts of the time
 

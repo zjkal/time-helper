@@ -138,10 +138,18 @@ class TimeHelper
      * 返回截止到今天晚上零点之前的秒数
      * @return int 秒数
      */
-    public static function secondEndToday(): int
+    public static function secondUntilMidnight(): int
     {
         list($y, $m, $d) = explode('-', date('Y-m-d'));
         return mktime(23, 59, 59, intval($m), intval($d), intval($y)) - time();
+    }
+
+    /**
+     * @deprecated since 2.0, use secondUntilMidnight() instead
+     */
+    public static function secondEndToday(): int
+    {
+        return self::secondUntilMidnight();
     }
 
     /**

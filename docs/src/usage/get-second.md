@@ -9,7 +9,7 @@ prev: /getting-started/installation.md
 一般用于设置缓存时间,设置结束时间等
 :::
 
-## secondEndToday()
+## secondUntilMidnight()
 
 ### 获取到今天晚上零点之前的秒数
 
@@ -25,7 +25,7 @@ prev: /getting-started/installation.md
 
 ```php
 /* 获取到今天晚上零点之前的秒数 */
-TimeHelper::secondEndToday(); 
+TimeHelper::secondUntilMidnight(); 
 // 32811
 ```
 

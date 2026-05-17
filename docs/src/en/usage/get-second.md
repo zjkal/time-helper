@@ -9,7 +9,7 @@ prev: /en/getting-started/installation.md
 This is usually used for setting cache expiration time, setting end time, and so on.
 :::
 
-## secondEndToday()
+## secondUntilMidnight()
 
 ### Get the number of seconds until midnight tonight
 
@@ -25,7 +25,7 @@ This is usually used for setting cache expiration time, setting end time, and so
 
 ```php
 /* Get the number of seconds until midnight tonight */
-TimeHelper::secondEndToday(); 
+TimeHelper::secondUntilMidnight(); 
 // 32811
 ```
 

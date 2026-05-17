@@ -4,6 +4,9 @@ order: 2
 
 # 📄 更新日志
 
+> v1.1.17 2026年5月18日
+> * 修改secondEndToday方法名为secondUntilMidnight, 并标记为弃用
+
 > v1.1.16 2025年11月4日
 > * 更新2026年中国节假日数据
 

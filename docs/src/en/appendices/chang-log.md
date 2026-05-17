@@ -4,6 +4,9 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.17 May 18, 2026  
+> * Changed the method name from secondEndToday to secondUntilMidnight and marked it as deprecated
+
 > v1.1.16 November 4, 2025
 > * Updated 2026 China holiday data
 

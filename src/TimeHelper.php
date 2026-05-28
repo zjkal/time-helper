@@ -116,7 +116,7 @@ class TimeHelper
      * @param int|string $datetime 任意格式时间字符串或时间戳(默认为当前时间)
      * @return false|string 格式化后的时间字符串
      */
-    public static function format(string $format = 'Y-m-d H:i:s', $datetime = null): string
+    public static function format(string $format = 'Y-m-d H:i:s', $datetime = null)
     {
         return date($format, self::toTimestamp($datetime));
     }

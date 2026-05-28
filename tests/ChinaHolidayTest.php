@@ -11,13 +11,11 @@ class ChinaHolidayTest extends TestCase
 
     public function testIsWorkday()
     {
-        $this->expectOutputString(false);
-        print ChinaHoliday::isWorkday('2025-01-01 00:00:00');
+        $this->assertFalse(ChinaHoliday::isWorkday('2025-01-01 00:00:00'));
     }
 
     public function testIsHoliday()
     {
-        $this->expectOutputString(true);
-        print ChinaHoliday::isHoliday('1735660800');
+        $this->assertTrue(ChinaHoliday::isHoliday('1735660800'));
     }
 }

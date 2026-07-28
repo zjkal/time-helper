@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  esbuild: ^0.25.1
+
 importers:
 
   .:
@@ -2321,7 +2324,7 @@ packages:
       '@farmfe/core': '*'
       '@rspack/core': '*'
       bun-types-no-globals: '*'
-      esbuild: '*'
+      esbuild: ^0.25.1
       rolldown: '*'
       rollup: '*'
       unloader: '*'
@@ -2380,7 +2383,7 @@ packages:
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
       '@vitejs/devtools': ^0.3.0
-      esbuild: ^0.27.0 || ^0.28.0
+      esbuild: ^0.25.1
       jiti: '>=1.21.0'
       less: ^4.0.0
       sass: ^1.70.0

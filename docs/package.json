@@ -4,6 +4,10 @@
   "description": "time-helper documents of vuepress-theme-hope",
   "license": "MIT",
   "type": "module",
+  "packageManager": "pnpm@11.17.0",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "vuepress build src",
     "clean-dev": "vuepress dev src --clean-cache",
@@ -22,17 +26,5 @@
   },
   "dependencies": {
     "reveal.js": "^5.2.1"
-  },
-  "pnpm": {
-    "ignoredBuiltDependencies": [
-      "esbuild"
-    ],
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "vue-demi"
-    ],
-    "overrides": {
-      "esbuild": "^0.25.1"
-    }
   }
 }

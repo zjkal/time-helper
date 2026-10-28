@@ -88,7 +88,7 @@ TimeHelper::isValidDate('2026-02-31'); // false
 //按指定格式解析日期
 TimeHelper::parseExact('03/04/2026', 'd/m/Y'); // 2026年4月3日
 ```
-更多用法请移步[使用文档](https://time.0x1.site/)
+更多用法请移步[使用文档](https://time-helper-docs.vercel.app/)
 
 ## 🚀 安装
 
@@ -100,11 +100,11 @@ composer require zjkal/time-helper
 
 ## 🌈 使用文档
 
-查看[使用文档](https://time.0x1.site/)
+查看[使用文档](https://time-helper-docs.vercel.app/)
 
 ## 📃 更新日志
 
-查看[更新日志](https://time.0x1.site/appendices/chang-log.html)
+查看[更新日志](https://time-helper-docs.vercel.app/appendices/chang-log.html)
 
 ## 😎 开发者们
 

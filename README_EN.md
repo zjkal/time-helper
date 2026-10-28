@@ -87,7 +87,7 @@ TimeHelper::isValidDate('2026-02-31'); // false
 //Parse the date using the specified format
 TimeHelper::parseExact('03/04/2026', 'd/m/Y'); // April 3, 2026
 ```
-For more usage, please refer to [Documentation](https://time.0x1.site/en/)
+For more usage, please refer to [Documentation](https://time-helper-docs.vercel.app/en/)
 
 ## 🚀 Installation
 
@@ -99,11 +99,11 @@ composer require zjkal/time-helper
 
 ## 🌈 Documentation
 
-View [Documentation](https://time.0x1.site/en/)
+View [Documentation](https://time-helper-docs.vercel.app/en/)
 
 ## 📃 Changelog
 
-View [Changelog](https://time.0x1.site/en/appendices/chang-log.html)
+View [Changelog](https://time-helper-docs.vercel.app/en/appendices/chang-log.html)
 
 ## 😎 Developers
 

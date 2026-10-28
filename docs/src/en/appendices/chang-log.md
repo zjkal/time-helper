@@ -4,7 +4,7 @@ order: 2
 
 # 📄 Changelog
 
-> Unreleased
+> v1.1.18 Oct 28, 2026
 > * Added `TimeRange` ranges for days, weeks, months, quarters, and years, with period offsets and configurable endpoint checks. Period ranges use `[start, end)`.
 > * Added `TimeHelper::parseExact()` and `isValidDate()`, while keeping the existing flexible parsing interface.
 > * Fixed warnings when special date formats have no time part, zero timestamp parsing, time zone conversion for string timestamps, current-week boundaries, and friendly formatting for future dates.

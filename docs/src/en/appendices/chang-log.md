@@ -4,6 +4,13 @@ order: 2
 
 # 📄 Changelog
 
+> Unreleased
+> * Added `TimeRange` ranges for days, weeks, months, quarters, and years, with period offsets and configurable endpoint checks. Period ranges use `[start, end)`.
+> * Added `TimeHelper::parseExact()` and `isValidDate()`, while keeping the existing flexible parsing interface.
+> * Fixed warnings when special date formats have no time part, zero timestamp parsing, time zone conversion for string timestamps, current-week boundaries, and friendly formatting for future dates.
+> * Changed high precision timestamp calculations to use integer string concatenation. Milliseconds are truncated rather than rounded; nanosecond units do not imply nanosecond precision. Integer overflow throws an exception.
+> * Updated the holiday documentation to cover 2020–2026 and describe the fallback rules for years without data.
+
 > v1.1.17 May 18, 2026  
 > * Changed the method name from secondEndToday to secondUntilMidnight and marked it as deprecated
 

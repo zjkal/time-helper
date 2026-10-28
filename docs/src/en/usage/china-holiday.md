@@ -6,7 +6,7 @@ next: /en/usage/get-part-of-time.md
 # ⛱️ China Holiday
 
 ::: tip
-Specifically for China's holidays, it currently includes the holiday data of '2020-2024', and will continue to be updated in the future. In order to facilitate maintenance and use, a new class 'ChinaHoliday' was created
+Specifically for China's holidays, it currently includes holiday data for 2020–2026. Years without data fall back to Monday–Friday workdays and weekends off; this does not account for official holiday adjustments. A separate class, `ChinaHoliday`, provides these checks.
 :::
 
 ## isWorkday()

@@ -8,6 +8,12 @@ order: 6
 It may be used to generate order numbers or to interface with other programming languages
 :::
 
+Millisecond, microsecond, and nanosecond methods return Unix timestamps in different units. Calculations use integer string concatenation to avoid losing low-order digits through floating-point arithmetic.
+
+The underlying `microtime()` provides microsecond precision. Nanosecond values are microsecond values multiplied by 1000, so their last three digits are zero; this does not provide nanosecond measurement precision. Millisecond values are truncated rather than rounded up.
+
+If a result exceeds the platform's `PHP_INT_MAX`, the method throws `OverflowException`. A 64-bit PHP runtime is recommended.
+
 ## getTimestamp()
 
 ### To obtain a timestamp in seconds, you can use the system function time() instead
@@ -78,12 +84,12 @@ TimeHelper::getMicroTimestamp();
 
 #### Return Values
 
-> The timestamp of the current nanosecond
+> The current Unix timestamp in nanosecond units, with microsecond precision
 
 #### Example code
 
 ```php
 /* Obtain the current nanosecond timestamp */
 TimeHelper::getNanoTimestamp();
-// 1698762509279645820
+// 1698762509279645000
 ```

@@ -4,6 +4,9 @@ order: 7
 
 # ♻️ Conversion
 
+These methods keep their existing flexible parsing. To reject invalid dates or require an exact input format, see [Strict Date Parsing](./strict-parsing.md).
+`toTimestamp(0)` and `toTimestamp('0')` return the Unix epoch timestamp `0`; `null` and an empty string still mean the current time.
+
 ::: tip
 It is used to convert crawlers crawling web pages or third-party programs to connect with different time formats
 :::

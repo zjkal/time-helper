@@ -46,10 +46,11 @@ class TimeHelper
      */
     public static function isTimestamp($timestamp): bool
     {
-        $start = strtotime('1970-01-01 00:00:00');
+        // Unix 起点是绝对时刻，不能因默认时区位于 UTC 以西而排除 0。
+        $start = min(0, strtotime('1970-01-01 00:00:00'));
         $end = strtotime('2099-12-31 23:59:59');
         //判断是否为时间戳
-        if (!empty($timestamp) && is_numeric($timestamp) && $timestamp <= $end && $timestamp >= $start) {
+        if (is_numeric($timestamp) && $timestamp <= $end && $timestamp >= $start) {
             return true;
         } else {
             return false;
@@ -65,22 +66,24 @@ class TimeHelper
      */
     public static function toTimestamp($datetime = null): int
     {
-        if (empty($datetime)) {
+        // empty() 也会命中 0 和 '0'；将有效的零时间戳排除，其他空值保留原行为。
+        if (empty($datetime) && $datetime !== 0 && $datetime !== '0') {
             return time();
         }
 
-        $start = strtotime('1970-01-01 00:00:00');
+        $start = min(0, strtotime('1970-01-01 00:00:00'));
         $end = strtotime('2099-12-31 23:59:59');
         //判断是否为时间戳
         if (is_numeric($datetime) && $datetime <= $end && $datetime >= $start) {
             return intval($datetime);
         } else {
             $timestamp = strtotime($datetime);
-            if ($timestamp) {
+            // strtotime() 成功时也可能返回 0，只有 false 表示解析失败。
+            if ($timestamp !== false) {
                 return $timestamp;
             } else {
                 /* 尝试处理特殊的日期格式 */
-                [$date, $time] = explode(' ', $datetime);
+                [$date, $time] = array_pad(explode(' ', $datetime, 2), 2, '');
                 if ($date) {
                     //获取时间的格式
                     $time_format_str = '';
@@ -107,6 +110,40 @@ class TimeHelper
 
                 throw new InvalidArgumentException('Param datetime must be a timestamp or a string time');
             }
+        }
+    }
+
+    /**
+     * 按指定输出格式严格解析；未指定的字段从 1970-01-01 00:00:00 开始。
+     * 不接受自动进位、尾随字符或非规范补零；失败抛出 InvalidArgumentException。
+     */
+    public static function parseExact(string $datetime, string $format = 'Y-m-d H:i:s', ?string $timezone = null): int
+    {
+        if ($format === '' || strpos($datetime, "\0") !== false || strpos($format, "\0") !== false) {
+            throw new InvalidArgumentException('Invalid date or format');
+        }
+        try {
+            $zone = new DateTimeZone($timezone === null ? date_default_timezone_get() : $timezone);
+        } catch (Exception $e) {
+            throw new InvalidArgumentException('Invalid timezone', 0, $e);
+        }
+        $date = DateTime::createFromFormat('!' . $format, $datetime, $zone);
+        $errors = DateTime::getLastErrors();
+        if ($date === false || ($errors !== false && ($errors['warning_count'] > 0 || $errors['error_count'] > 0))
+            || $date->format($format) !== $datetime) {
+            throw new InvalidArgumentException('Date does not match format');
+        }
+        return $date->getTimestamp();
+    }
+
+    /** 判断日期是否严格匹配指定格式，不改变现有宽松解析行为。 */
+    public static function isValidDate(string $datetime, string $format = 'Y-m-d', ?string $timezone = null): bool
+    {
+        try {
+            self::parseExact($datetime, $format, $timezone);
+            return true;
+        } catch (InvalidArgumentException $e) {
+            return false;
         }
     }
 
@@ -228,7 +265,12 @@ class TimeHelper
         if (empty($type)) {
             return $lang == 'zh' ? '刚刚' : 'just now';
         } else {
-            return $count . $type . ($lang == 'zh' ? '前' : (($count > 1 ? 's' : '') . ' ago'));
+            $future = $interval->invert === 1;
+            if ($lang == 'zh') {
+                return $count . $type . ($future ? '后' : '前');
+            }
+            $text = $count . $type . ($count > 1 ? 's' : '');
+            return $future ? 'in ' . $text : $text . ' ago';
         }
     }
 
@@ -269,10 +311,8 @@ class TimeHelper
      */
     public static function isThisWeek($datetime): bool
     {
-        $week_start = strtotime(date('Y-m-d 00:00:00', strtotime('this week')));
-        $week_end = strtotime(date('Y-m-d 23:59:59', strtotime('last day next week')));
-        $timestamp = self::toTimestamp($datetime);
-        return $timestamp >= $week_start && $timestamp <= $week_end;
+        $range = TimeRange::week();
+        return TimeRange::contains($datetime, $range['start'], $range['end']);
     }
 
     /**
@@ -579,13 +619,14 @@ class TimeHelper
         if ($level === 0)
             return time();
         list($msc, $sec) = explode(' ', microtime());
-        if ($level === 1) {
-            return intval(sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000));
-        } elseif ($level === 2) {
-            return intval(sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000));
-        } else {
-            return intval(sprintf('%.0f', (floatval($msc) + floatval($sec)) * 1000 * 1000 * 1000));
+        $digits = $level === 1 ? 3 : ($level === 2 ? 6 : 9);
+        // microtime 只提供微秒精度；纳秒单位末三位为 0，避免浮点数损失。
+        $value = $sec . substr(substr($msc, 2, 6) . '000', 0, $digits);
+        if (strlen($value) > strlen((string) PHP_INT_MAX)
+            || (strlen($value) === strlen((string) PHP_INT_MAX) && strcmp($value, (string) PHP_INT_MAX) > 0)) {
+            throw new \OverflowException('Timestamp exceeds PHP_INT_MAX');
         }
+        return (int) $value;
     }
 
     /**
@@ -658,7 +699,7 @@ class TimeHelper
     {
         if (self::isTimestamp($datetime)) {
             $date = new DateTime();
-            $date->setTimestamp($datetime);
+            $date->setTimestamp((int) $datetime);
             $date->setTimezone(new DateTimeZone('UTC'));
         } else {
             if ($fromTimezone === null) {
@@ -782,6 +823,5 @@ class TimeHelper
     /**
      * 后续开发计划:
      * TODO: 修改before和after相关方法,使取整不仅可以向前,还可以向后,如afterMonth可以返回该月最后一天的23点59分59秒的时间戳
-     * TODO: 返回日期范围,主要用于SQL查询, 比如今天,昨天,最近7天, 本月, 本周等等. 为了方便使用, 会另外再起一个类
      */
 }

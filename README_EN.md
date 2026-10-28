@@ -71,6 +71,21 @@ TimeHelper::toTimestamp('Apr 11, 2020');
 
 //Get current time
 TimeHelper::now();
+
+//Get this month's start and end timestamps, including the start and excluding the end
+$range = TimeRange::month();
+
+//Get last month's start and end timestamps
+TimeRange::month(null, -1);
+
+//Check if the time is within the specified range
+TimeRange::contains('2026-10-27', '2026-10-01', '2026-11-01');
+
+//Check if the date is valid
+TimeHelper::isValidDate('2026-02-31'); // false
+
+//Parse the date using the specified format
+TimeHelper::parseExact('03/04/2026', 'd/m/Y'); // April 3, 2026
 ```
 For more usage, please refer to [Documentation](https://time.0x1.site/en/)
 

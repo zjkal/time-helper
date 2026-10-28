@@ -72,6 +72,21 @@ TimeHelper::toTimestamp('Apr 11, 2020');
 
 //获取当前时间
 TimeHelper::now();
+
+//获取本月的起止时间戳,包含起点,不包含终点
+$range = TimeRange::month();
+
+//获取上个月的起止时间戳
+TimeRange::month(null, -1);
+
+//判断时间是否在指定范围内
+TimeRange::contains('2026-10-27', '2026-10-01', '2026-11-01');
+
+//校验日期是否有效
+TimeHelper::isValidDate('2026-02-31'); // false
+
+//按指定格式解析日期
+TimeHelper::parseExact('03/04/2026', 'd/m/Y'); // 2026年4月3日
 ```
 更多用法请移步[使用文档](https://time.0x1.site/)
 

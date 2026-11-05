@@ -80,6 +80,13 @@ composer update
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/dkoin">
+                    <img src="https://avatars.githubusercontent.com/u/5207234?v=4" width="100;" alt="dkoin"/>
+                    <br />
+                    <sub><b>dkoin</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/ageChen">
                     <img src="https://avatars.githubusercontent.com/u/71121939?v=4" width="100;" alt="ageChen"/>
                     <br />
@@ -87,12 +94,14 @@ composer update
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/dkoin">
-                    <img src="https://avatars.githubusercontent.com/u/5207234?v=4" width="100;" alt="dkoin"/>
+                <a href="https://github.com/zookao">
+                    <img src="https://avatars.githubusercontent.com/u/7577176?v=4" width="100;" alt="zookao"/>
                     <br />
-                    <sub><b>dkoin</b></sub>
+                    <sub><b>caozongchao</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/wolf-leo">
                     <img src="https://avatars.githubusercontent.com/u/37436228?v=4" width="100;" alt="wolf-leo"/>
@@ -101,7 +110,7 @@ composer update
                 </a>
             </td>
 		</tr>
-	</tbody>
+	<tbody>
 </table>
 <!-- readme: contributors -end -->
 

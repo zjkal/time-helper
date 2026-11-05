@@ -4,6 +4,9 @@ order: 2
 
 # 📄 Changelog
 
+> v1.1.19 November 5, 2026
+> * Sync data of 2027 China holidays
+
 > v1.1.18 Oct 28, 2026
 > * Added `TimeRange` ranges for days, weeks, months, quarters, and years, with period offsets and configurable endpoint checks. Period ranges use `[start, end)`.
 > * Added `TimeHelper::parseExact()` and `isValidDate()`, while keeping the existing flexible parsing interface.
